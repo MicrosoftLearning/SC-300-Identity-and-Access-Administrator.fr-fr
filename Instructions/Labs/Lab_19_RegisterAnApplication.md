@@ -1,81 +1,79 @@
 ---
 lab:
-  title: "19\_- Inscrire une application"
+  title: 19 - Inscrire une application
   learning path: '03'
   module: Module 03 - Implement Access Management for Apps
 ---
 
-# Labo 19 - Inscrire une application
+# Labo 19 : Inscrire une application
 
 #### Durée estimée : 30 minutes
 
-### Exercice 1 - Inscrire une application
+### Exercice 1 : Inscrire une application
 
-#### Tâche 1 - Inscrire l’application
+#### Tâche 1 : inscrire une application
 
 L’inscription de votre application établit une relation d’approbation entre votre application et la plateforme d’identités Microsoft. L’approbation est unidirectionnelle : votre application approuve la plateforme d’identités Microsoft, et non le contraire.
 
-1. Connectez-vous au site [https://portal.azure.com](https://portal.azure.com) à l’aide d’un compte Administrateur général.
+1. Connectez-vous [https://entra.microsoft.com](https://entra.microsoft.com) en utilisant un compte d’administrateur général.
 
-2. Ouvrez le menu du portail et sélectionnez  **Azure Active Directory**.
+2. Ouvrez le menu du portail, puis sélectionnez  **Microsoft Entra ID**.
 
-3. Dans le panneau **Azure Active Directory**, sous **Gérer**, sélectionnez **Inscriptions d’applications**.
+3. Dans le menu **Identité**, sous **Applications**, sélectionnez **Inscriptions d’applications.**
 
 4. Dans la page **Inscriptions d’applications**, dans le menu, sélectionnez **+ Nouvelle inscription**.
 
 5. Dans le panneau **Inscrire une application**, inscrivez une application nommée **Demo App** en utilisant les valeurs par défaut. Vous n’avez pas besoin d’entrer l’URI de redirection.
 
-    ![Capture d’écran affichant le panneau Inscrire une application avec le nom et les paramètres par défaut mis en évidence](./media/lp3-mod3-register-an-application.png)
+    ![Capture d’écran affichant la page Inscrire une application avec les paramètres Nom et Valeur par défaut mis en surbrillance](./media/lp3-mod3-register-an-application.png)
 
-6. Une fois terminé, vous serez redirigé vers le panneau de **Demo app**.
+6. Une fois terminé, vous serez redirigé vers la page **Application de démonstration**.
 
 
-#### Tâche 2 - Configurer les paramètres de plateforme
+#### Tâche 2 : configurer les paramètres de plateforme
 
-Les paramètres de chaque type d’application, dont les URI de redirection, sont configurés dans  **Configurations de plateforme** dans le portail Azure. Certaines plateformes, comme les  **applications web** et  **monopages**, nécessitent de spécifier manuellement un URI de redirection. Pour les autres plateformes, comme les plateformes mobiles et de bureau, vous pouvez sélectionner des URI de redirection générés automatiquement quand vous configurez leurs autres paramètres.
+Les paramètres de chaque type d’application, y compris les URI de redirection, sont configurés dans  **Configurations de plateforme**  dans le Portail Azure. Certaines plateformes, comme les  **applications web**  et les  **applications monopages**, nécessitent de spécifier manuellement un URI de redirection. Pour les autres plateformes, comme les plateformes mobiles et de bureau, vous pouvez sélectionner des URI de redirection générés automatiquement quand vous configurez leurs autres paramètres.
 
 Pour configurer des paramètres d’application en fonction de la plateforme ou de l’appareil ciblé :
 
+Pour ajouter et modifier des URI de redirection pour vos applications inscrites, vous devez configurer leurs paramètres de plateforme.
 
-1. Pour ajouter et modifier des URI de redirection pour vos applications inscrites, vous devez configurer leurs paramètres de plateforme.
+1. Sélectionnez votre application dans les  **Inscriptions d’applications** dans le centre d’administration Microsoft Entra.
 
-1. Sélectionnez votre application dans  **Inscriptions d’applications** dans le portail Azure.
+2. Sous  **Gérer**, sélectionnez  **Authentification**.
 
-2. Sous **Gérer**, sélectionnez **Authentification**.
+3. Sous  **Configurations de plateformes**, sélectionnez  **+ Ajouter une plateforme**.
 
-3. Sous **Configurations de plateforme**, sélectionnez  **+ Ajouter une plateforme**.
-
-4. Dans **Configurer des plateformes**, sélectionnez la vignette correspondant à votre type d’application (plateforme) pour configurer ses paramètres.
+4. Dans  **Configurer des plateformes**, sélectionnez la vignette correspondant à votre type d’application (plateforme) pour configurer ses paramètres.
 
     ![Capture d’écran du volet Configuration de la plateforme dans le portail Azure](./media/configure-platforms.png)
 
     | Plate-forme| Paramètres de configuration|
     | :--- | :--- |
-    | web| Entrez un **URI de redirection** pour votre application, qui est l’emplacement où la plateforme d’identités Microsoft redirige le client d’un utilisateur et envoie des jetons de sécurité après authentification. Sélectionnez cette plateforme pour les applications web standard qui s’exécutent sur un serveur.|
-    | Application monopage| Entrez un **URI de redirection** pour votre application, qui est l’emplacement où la plateforme d’identités Microsoft redirige le client d’un utilisateur et envoie des jetons de sécurité après authentification. Sélectionnez cette plateforme si vous générez une application web côté client dans JavaScript ou avec un framework comme Angular, Vue.js, React.js ou Blazor WebAssembly.|
-    | iOS/macOS| Entrez l’ **ID de bundle** de l’application, qui se trouve dans Xcode dans  *Info.plist* ou Paramètres de build. Un URI de redirection est automatiquement généré quand vous spécifiez un ID de bundle.|
-    | Android| Entrez le **nom du package** de l’application, que vous trouverez dans le fichier AndroidManifest.xml. Générez et entrez ensuite le  **hachage de signature**. Un URI de redirection est automatiquement généré quand vous spécifiez ces paramètres.|
-    | Applications de bureau et mobiles| Sélectionnez l’un des **URI de redirection suggérés** ou spécifiez un **URI de redirection personnalisé**. Pour les applications de bureau, nous recommandons : [https://login.microsoftonline.com/common/oauth2/nativeclient](https://login.microsoftonline.com/common/oauth2/nativeclient). Sélectionnez cette plateforme pour les applications mobiles qui n’utilisent pas la dernière bibliothèque d’authentification Microsoft (MSAL) ou qui n’utilisent pas de répartiteur. Sélectionnez également cette plateforme pour les applications de bureau.|
+    | web| Saisissez un  **URI de redirection**  pour votre application, qui est l’emplacement où la plateforme d’identités Microsoft redirige le client d’un utilisateur et envoie des jetons de sécurité après authentification. Sélectionnez cette plateforme pour les applications web standard qui s’exécutent sur un serveur.|
+    | Application monopage| Saisissez un  **URI de redirection**  pour votre application, qui est l’emplacement où la plateforme d’identités Microsoft redirige le client d’un utilisateur et envoie des jetons de sécurité après authentification. Sélectionnez cette plateforme si vous générez une application web côté client dans JavaScript ou avec un framework comme Angular, Vue.js, React.js ou Blazor WebAssembly.|
+    | iOS/macOS| Entrez l’ **ID de bundle** de l’application, qui se trouve dans Xcode dans  *Info.plist*  ou Paramètres de build. Un URI de redirection est automatiquement généré quand vous spécifiez un ID de bundle.|
+    | Android| Entrez le  **Nom du package** de l’application, que vous trouverez dans le fichier AndroidManifest.xml. Générez et saisissez ensuite le  **code de hachage signature**. Un URI de redirection est automatiquement généré quand vous spécifiez ces paramètres.|
+    | Applications de bureau et mobiles| Sélectionnez l’un des  **URI de redirection suggérés**  ou spécifiez un  **URI de redirection personnalisé**. Pour les applications de bureau, nous recommandons [https://login.microsoftonline.com/common/oauth2/nativeclient](https://login.microsoftonline.com/common/oauth2/nativeclient). Sélectionnez cette plateforme pour les applications mobiles qui n’utilisent pas la dernière bibliothèque d’authentification Microsoft (MSAL) ou qui n’utilisent pas de répartiteur. Sélectionnez également cette plateforme pour les applications de bureau.|
 
-5. Sélectionnez **Configurer** pour effectuer la configuration de la plateforme.
+5. Sélectionnez  **Configurer**  pour effectuer la configuration de la plateforme.
 
-#### Tâche 3 - Ajouter des informations d’identification, un certificat et une clé secrète client
+#### Tâche 3 : ajouter des informations d’identification, un certificat et une clé secrète client
 
 Les informations d’identification sont utilisées par les applications clientes confidentielles qui accèdent à une API web. Les applications web, les autres API web ou les applications de type service et démon sont des exemples de clients confidentiels. Les informations d’identification permettent à votre application de s’authentifier de façon autonome, sans qu’aucune interaction utilisateur ne soit nécessaire au moment de l’exécution.
 
 Vous pouvez ajouter des certificats et des secrets clients (une chaîne) en tant qu’informations d’identification à votre inscription d’application cliente confidentielle.
 
-![Capture d’écran du portail Azure montrant le volet Certificats et secrets dans l’inscription d’une application.](./media/portal-05-app-reg-04-credentials.png)
+![Capture d’écran du portail Azure montrant le volet Certificats et clés secrètes dans une inscription d’application.](./media/portal-05-app-reg-04-credentials.png)
+
+    **Note**: Sometimes called a *public key*, certificates are the recommended credential type, because as they provide a higher level of assurance than a client secret. When using a trusted public certificate, you can add the certificate using the Certificates & secrets feature. Your certificate must be one of the following file types: .cer, .pem, .crt.
 
 
->**Remarque** : parfois appelés *clés publiques*, les certificats sont le type d’informations d’identification recommandé, car ils fournissent un niveau d’assurance plus élevé qu’une clé secrète client. Lors de l’utilisation d’un certificat public approuvé, vous pouvez ajouter le certificat à l’aide de la fonctionnalité « Certificats et secrets ». Votre certificat doit être un fichier de type .cer, .pem ou .crt.
+    **Note**: The client secret, also known as an *application password*, is a string value your app can use in place of a certificate to identity itself. It's the easier of the two credential types to use. It's often used during development, but is considered less secure than a certificate. You should use certificates in your applications running in production.
 
+1. Sélectionnez votre application dans les  **Inscriptions d’applications**  du Portail Azure.
 
->**Remarque** : la clé secrète client, également appelée *mot de passe d’application*, est une valeur de chaîne que votre application peut utiliser à la place d’un certificat pour s’identifier. Il est le plus facile des deux types d’informations d’identification à utiliser. Il est souvent utilisé pendant le développement, mais il est considéré comme moins sécurisé qu’un certificat. Vous devez utiliser des certificats dans vos applications qui s’exécutent en production.
-
-1. Sélectionnez votre application dans **Inscriptions d’applications** dans le portail Azure.
-
-2. Sélectionnez **Certificats et secrets**, puis **+ Nouveau secret client**.
+2. Sélectionnez  **Certificats et secrets**, puis  **+ Nouvelle clé secrète client**.
 
 3. Ajoutez une description pour votre clé secrète client.
 
@@ -83,36 +81,36 @@ Vous pouvez ajouter des certificats et des secrets clients (une chaîne) en tant
 
 5. Sélectionnez **Ajouter**.
 
-6. **Enregistrez la valeur du secret dans le Bloc-notes** pour pouvoir l’utiliser dans le code de votre application cliente. La page Certificat et secrets affiche la nouvelle valeur du secret. Il est important de copier cette valeur, car elle n’est affichée qu’une seule fois. Si vous actualisez la page et que vous y êtes revenez, elle s’affiche uniquement sous forme de valeur masquée.
+6. **Enregistrez la valeur du secret dans le Bloc-notes** , en vue d’une utilisation dans le code de votre application cliente. La page Certificat et Clés secrètes affiche la nouvelle valeur secrète. Il est important que vous copiiez cette valeur, car elle n’est affichée qu’une seule fois. Si vous actualisez la page et que vous y êtes revenez, elle s’affiche uniquement sous forme de valeur masquée.
 
-1. Ignorez les sections **Ajouter un URI de redirection** et **Configurer les paramètres de plateforme** . Vous n’avez pas besoin de configurer un URI de redirection pour une API web, car aucun utilisateur n’est connecté de manière interactive.
+7. Ignorez les sections  **Ajouter un URI de redirection**  et  **Configurer les paramètres de plateforme** . Vous n’avez pas besoin de configurer un URI de redirection pour une API web, car aucun utilisateur n’est connecté de manière interactive.
 
-1. Ignorez la section **Ajouter des informations d’identification** pour le moment. Votre API a besoin de ses propres informations d’identification uniquement si elle accède à une API en aval. Ce scénario n’est pas abordé dans cet article.
+8. Ignorez la section  **Ajouter des informations d’identification**  pour le moment. Votre API a besoin de ses propres informations d’identification uniquement si elle accède à une API en aval. Ce scénario n’est pas abordé dans cet article.
 
 Une fois votre API web inscrite, vous êtes prêt à ajouter les étendues que le code de votre API peut utiliser pour fournir une autorisation précise aux consommateurs de cette dernière.
 
 
-#### Tâche 5 - Ajouter une étendue
+#### Étape 5 : ajouter une étendue
 
 Le code d’une application cliente demande l’autorisation d’effectuer des opérations définies par votre API web en transmettant un jeton d’accès avec ses demandes à la ressource protégée (l’API web). Votre API web effectue ensuite l’opération demandée uniquement si le jeton d’accès qu’elle reçoit contient les étendues (également appelées « autorisations d’application ») requises pour l’opération.
 
 Tout d’abord, effectuez les étapes suivantes pour créer un exemple d’étendue nommé « Employees.Read.All » :
 
-1. Connectez-vous au portail Azure.
+1. Connectez-vous au centre d’administration Microsoft Entra.
 
-2. Si vous avez accès à plusieurs locataires, utilisez le filtre **Répertoire + abonnement** dans le menu supérieur pour sélectionner le locataire contenant l’inscription de votre application cliente.
+2. Si vous avez accès à plusieurs locataires, utilisez le filtre  **Répertoire + abonnement**  dans le menu du haut pour sélectionner le locataire contenant l’inscription de votre application cliente.
 
-3. Sélectionnez **Azure Active Directory** > **Inscriptions d’applications**, puis l’inscription d’application de votre API.
+3. Sélectionnez  **Identité**, puis **Applications**  et sélectionnez l’ **inscription d’application**, avant d’accéder à l’inscription de vos applications d’API.
 
-4. Sélectionnez **Exposer une API**, puis **+ Ajouter une étendue**.
+4. Sélectionnez  **Exposer une API**, puis  **+ Ajouter une étendue**.
 
     ![Volet Exposer une API d’une inscription d’application dans le portail Azure](./media/portal-02-expose-api.png)
 
-5. Vous êtes invité à définir un **URI d’ID d’application** si vous n’en avez pas encore configuré un. L’URI d’ID d’application, qui doit être globalement unique, fait office de préfixe pour les étendues que vous référencerez dans le code de votre API. Vous pouvez utiliser la valeur par défaut fournie, qui se présente sous la forme api://\<application-client-id\>, ou spécifier un URI plus lisible comme  `https://contoso.com/api`.
+5. Vous êtes invité(e) à définir un  **URI d’ID d’application** si vous n’en avez pas encore configuré un. L’URI d’ID d’application, qui doit être globalement unique, fait office de préfixe pour les étendues que vous référencerez dans le code de votre API. Vous pouvez utiliser la valeur par défaut fournie, qui se présente sous la forme api://\<application-client-id\>, ou spécifier un URI plus lisible comme  `https://contoso.com/api`.
 
 6. Cliquez sur **Enregistrer et continuer**.
 
-6. Spécifiez ensuite les attributs de l’étendue dans le  **volet Ajouter une étendue**. Pour cette procédure pas à pas, vous pouvez utiliser les exemples de valeurs ou spécifier les vôtres.
+6. Spécifiez ensuite les attributs de l’étendue dans le volet  **Ajouter une étendue**. Pour cette procédure pas à pas, vous pouvez utiliser les exemples de valeurs ou spécifier les vôtres.
 
     | Champ| Description| Exemple|
     | :--- | :--- | :--- |
@@ -123,23 +121,23 @@ Tout d’abord, effectuez les étapes suivantes pour créer un exemple d’éten
     | Nom d’affichage du consentement de l’utilisateur| Courte description de l’objectif de l’étendue. Affichée aux utilisateurs uniquement si vous définissez Qui peut donner son consentement sur Administrateurs et utilisateurs.| Accès en lecture seule à vos enregistrements sur les employés|
     | Description du consentement de l’utilisateur| Description plus détaillée de l’autorisation accordée par l’étendue. Affichée aux utilisateurs uniquement si vous définissez Qui peut donner son consentement sur Administrateurs et utilisateurs.| Autorisez l’application à avoir un accès en lecture seule à vos données sur l’employé.|
 
-7. Définissez l’ **état** sur **Activé**, puis sélectionnez **Ajouter une étendue**.
+7. Définissez le  **Statut**  sur  **Activé**, puis sélectionnez  **Ajouter une étendue**.
 
-8. (Facultatif) Pour supprimer les demandes de consentement des utilisateurs de votre application pour les étendues que vous avez définies, vous pouvez *préautoriser* l’application cliente à accéder à votre API web. Préautorisez  *uniquement* les applications clientes que vous approuvez, car vos utilisateurs n’auront pas la possibilité de refuser le consentement.
+8. (Facultatif) Pour supprimer les demandes de consentement des utilisateurs de votre application pour les étendues que vous avez définies, vous pouvez  *préautoriser*  l’application cliente à accéder à votre API web. Préautorisez  *uniquement*  les applications clientes que vous approuvez, car vos utilisateurs n’auront pas la possibilité de refuser le consentement.
 
-   1. Sous **Applications clientes autorisées**, sélectionnez **Ajouter une application cliente**.
+   1. Sous  **Applications clientes autorisées**, sélectionnez  **Ajouter une application cliente.**
 
-   2. Entrez l’ **ID d’application (client)** de l’application cliente que vous souhaitez préautoriser, par exemple celui d’une application web que vous avez inscrite précédemment.
+   2. Entrez l’ **ID d’application (client)**  de l’application cliente que vous souhaitez préautoriser, par exemple celui d’une application web que vous avez inscrite précédemment.
 
-   3. Sous **Étendues autorisées**, sélectionnez les étendues pour lesquelles vous souhaitez supprimer les invites de consentement, puis sélectionnez **Ajouter une application**.
+   3. Sous  **Étendues autorisées**, sélectionnez les étendues pour lesquelles vous souhaitez supprimer les invites de consentement, puis sélectionnez  **Ajouter une application**.
 
    4. Si vous avez effectué cette étape facultative, l’application cliente est désormais une application cliente préautorisée, et les utilisateurs ne sont pas invités à donner leur consentement quand ils s’y connectent.
 
-#### Tâche 6 - Ajouter une étendue nécessitant le consentement de l’administrateur
+#### Tâche 6 : ajouter une étendue nécessitant un consentement administrateur
 
 Ajoutez ensuite un autre exemple d’étendue nommé « Employees.Write.All » auquel seuls les administrateurs peuvent donner leur consentement. Les étendues qui nécessitent le consentement de l’administrateur sont généralement utilisées pour fournir l’accès à des opérations avec des privilèges plus élevés, et souvent par des applications clientes qui s’exécutent en tant que services back-end ou en tant que démons qui ne connectent pas un utilisateur de manière interactive.
 
-1. Pour ajouter l’exemple d’étendue Employees.Write.All, effectuez les étapes décrites ci-dessus, puis spécifiez les valeurs ci-dessous dans le volet **Ajouter une étendue**  :
+1. Pour ajouter l’exemple d’étendue « Employees.Write.All », effectuez les étapes décrites ci-dessus, puis spécifiez ces valeurs dans le volet  **Ajouter une étendue**  :
 
     | Champ| Exemple de valeur|
     | :--- | :--- |
@@ -150,45 +148,42 @@ Ajoutez ensuite un autre exemple d’étendue nommé « Employees.Write.All »
     | Nom d’affichage du consentement de l’utilisateur| Aucune (laisser vide)|
     | Description du consentement de l’utilisateur| Aucune (laisser vide)|
 
-    >**Remarque** : si vous avez correctement ajouté les deux exemples d’étendues décrits dans les sections précédentes, ils apparaissent dans le volet **Exposer une API** de l’inscription d’application de votre API web, comme dans l’image ci-dessous :
+    >**Remarque** : si vous avez correctement ajouté les deux exemples d’étendues décrits dans les sections précédentes, ils apparaissent dans le volet  **Exposer une API**  de l’inscription d’application de votre API web, semblable à cette image :
 
     ![Capture d’écran du volet Exposer une API montrant deux étendues exposées.](./media/portal-03-scopes-list.png)
 
-    Comme indiqué dans l’image, la chaîne complète d’une étendue est la concaténation de l’ **URI d’ID d’application** de votre API web et du **Nom de l’étendue**.
+    Comme indiqué dans l’image, la chaîne complète d’une étendue est la concaténation de l’ **URI d’ID d’application**  de votre API web et du  **Nom de l’étendue**.
 
-1. Testez l’API à l’aide de l’**URI d’ID d’application** avec « /Employees.Read.All » ajouté à la fin de l’URI.
-
-    >**Remarque** : par exemple, si l’URI d’ID d’application de votre API web est `https://contoso.com/api` et si le nom de l’étendue est Employees.Read.All, l’étendue complète est : `https://contoso.com/api/Employees.Read.All`
+        **Note**: For example, if your web API's application ID URI is `https://contoso.com/api` and the scope name is Employees.Read.All, the full scope is: `https://contoso.com/api/Employees.Read.All`
 
 
-    >**Remarque** : ensuite, vous allez configurer l’inscription d’une application cliente avec un accès à votre API web et les étendues que vous avez définies en suivant les étapes ci-dessus.
-    Une fois qu’une inscription d’application cliente est autorisée à accéder à votre API web, la plateforme d’identités Microsoft peut émettre un jeton d’accès OAuth 2.0 pour le client. Quand le client appelle l’API web, il présente un jeton d’accès dont la revendication d’étendue (scp) est définie sur les autorisations que vous avez spécifiées dans l’inscription d’application du client.
-    Vous pouvez exposer des étendues supplémentaires ultérieurement si nécessaire. Considérez que votre API web peut exposer plusieurs étendues associées à plusieurs opérations. Votre ressource peut contrôler l’accès à l’API web lors de l’exécution, en évaluant la ou les revendications de l’étendue (scp) dans le jeton d’accès OAuth 2.0 qu’elle reçoit.
+        **Note**: Next, you will configure a client app's registration with access to your web API and the scopes you defined by following the steps above.
+    Une fois qu’une inscription d’application cliente est autorisée à accéder à votre API web, la plateforme d’identités Microsoft peut émettre un jeton d’accès OAuth 2.0 pour le client. Quand le client appelle l’API web, il présente un jeton d’accès dont la revendication d’étendue (scp) est définie sur les autorisations que vous avez spécifiées dans l’inscription d’application du client. Vous pouvez exposer des étendues supplémentaires ultérieurement si nécessaire. Considérez que votre API web peut exposer plusieurs étendues associées à plusieurs opérations. Votre ressource peut contrôler l’accès à l’API web lors de l’exécution, en évaluant la ou les revendications de l’étendue (scp) dans le jeton d’accès OAuth 2.0 qu’elle reçoit.
 
 
-### Exercice 2 - Gérer l’inscription d’applications avec un rôle personnalisé
+### Exercice 2 : Créer un rôle personnalisé pour gérer l’inscription d’application
 
-#### Tâche 1 - Créer un rôle personnalisé pour accorder l’accès pour gérer les inscriptions des applications
+#### Tâche 1 : créer un rôle personnalisé pour accorder l’accès pour gérer les inscriptions des applications
 
-Vous devez créer un rôle personnalisé pour la gestion des applications. Ce nouveau rôle doit être limité uniquement aux autorisations spécifiques requises pour effectuer la gestion des informations d’identification.
+Vous devez créer un rôle personnalisé pour la gestion des applications. Ce nouveau rôle doit être limité aux autorisations spécifiques requises pour effectuer la gestion des informations d’identification.
 
-1. Connectez-vous à l’adresse  [https://portal.azure.com](https://portal.azure.com) à l’aide d’un compte Administrateur général.
+1. Connectez-vous au  [https://entra.microsoft.com](https://entra.microsoft.com)  en utilisant un compte d’administrateur général.
 
-2. Ouvrez le menu du portail et sélectionnez  **Azure Active Directory**.
+2. Ouvrez le menu du portail, puis sélectionnez  **Microsoft Entra ID**.
 
-3. Dans le panneau Azure Active Directory, sous **Gérer**, sélectionnez **Rôles et administrateurs**.
+3. Dans le menu de gauche **Identité**, sélectionnez **Rôles et administrateurs**.
 
-4. Dans le panneau Rôles et administrateurs, dans le menu, sélectionnez **+ Nouveau rôle personnalisé**.
+4. Sélectionnez ensuite l’**élément Rôles et administrateurs**, puis **+ Nouveau rôle personnalisé**.
 
     ![Image de l’écran affichant le panneau Rôles et administrateurs avec l’option de menu Nouveau rôle personnalisé mise en surbrillance](./media/lp3-mod1-new-custom-role.png)
 
-5. Dans le panneau Nouveau rôle personnalisé, sous l’onglet De base, dans la zone Nom, entrez **Mon rôle d’application personnalisé**.
+5. Dans la boîte de dialogue Nouveau rôle personnalisé, sous l’onglet Informations de base entrez **Mon rôle d’application personnalisé**.
 
 6. Passez en revue les options restantes, puis sélectionnez **Suivant**.
 
 7. Sous l’onglet Autorisations, passez en revue les autorisations disponibles.
 
-8. Dans la zone **Rechercher par nom d’autorisation ou par description**, entrez **informations d’identification**.
+8. Dans la zone **Rechercher par nom d’autorisation ou description**, entrez les **informations d’identification**.
 
 9. Dans les résultats, sélectionnez les autorisations **Gérer**, puis sélectionnez **Suivant**.
 
@@ -199,7 +194,7 @@ Vous devez créer un rôle personnalisé pour la gestion des applications. Ce no
 
     ![Image de l’écran affichant l’onglet Autorisations du nouveau rôle personnalisé avec les autorisations Rechercher, Gérer et Suivant en mis en surbrillance](./media/lp3-mod1-custom-role-permissions.png)
 
-    **Pourquoi choisir ces deux autorisations** - Pour l’approvisionnement d’applications, ces deux éléments sont les autorisations minimales nécessaires pour activer et appliquer l’authentification unique pour l’application ou le principal de service en cours de création. Ils permettent d’attribuer l’application d’entreprise à un ensemble d’utilisateurs ou de groupes.  D’autres autorisations peuvent également être accordées.  Vous pouvez obtenir la liste complète des autorisations disponibles à l’adresse `https://docs.microsoft.com/azure/active-directory/roles/custom-enterprise-app-permissions`.
+    **Pourquoi choisir les deux** : pour que l’application approvisionne ces deux éléments constituent les autorisations minimales nécessaires pour activer et appliquer l’authentification unique pour l’application ou le principal de service en cours de création et être en mesure d’affecter l’application entrée à un ensemble d’utilisateurs ou de groupes.  D’autres autorisations peuvent également être accordées.  Vous pouvez obtenir une liste complète des autorisations disponibles à l’adresse `https://docs.microsoft.com/azure/active-directory/roles/custom-enterprise-app-permissions`.
 
 10. Passez en revue les modifications, puis sélectionnez **Créer**.
 

@@ -1,53 +1,53 @@
 ---
 lab:
-  title: 4 - Configurer les paramètres de collaboration externe
+  title: "04\_: Configurer les paramètres de collaboration externe"
   learning path: '01'
   module: Module 01 - Implement an identity management solution
 ---
 
-# Labo 4 - Configurer les paramètres de collaboration externe
+# Labo 04 : Configurer les paramètres de collaboration externe
 
 ## Scénario de l’exercice
 
-Vous devez activer les paramètres de collaboration externe pour votre organisation pour l’accès aux invités approuvés.
+Vous devez activer les paramètres de collaboration externe pour votre organisation afin de permettre l’accès aux invités approuvés.
 
 #### Durée estimée : 5 minutes
 
-### Exercice 1 - Autoriser les utilisateurs invités à être invités dans votre organisation
+### Exercice 1 : Autoriser les utilisateurs invités à accéder à votre organisation
 
-#### Tâche 1 - Permettre aux utilisateurs invités d’effectuer une inscription en libre-service
+#### Tâche 1 : permettre aux utilisateurs invités d’effectuer une inscription en libre-service
 
-1. Connectez-vous au site [</bpt>"> [https://portal.azure.com](https://portal.azure.com) en tant qu’administrateur de locataire.
-2. Sélectionnez **</bpt>"> **Azure Active Directory**.
-3. Sélectionner **Paramètres utilisateur**.
-4. Sélectionnez **Gérer les paramètres de collaboration utilisateur externe**.
-5. Vérifiez que le paramètre **Activer l’inscription en libre-service pour les invités via les flux d’utilisateurs** est défini sur **OUI**.
+1. Connectez-vous à la plateforme  [https://entra.microsoft.com](https://entra.microsoft.com) en tant qu’administrateur client.
+2. Sélectionnez **Identité**, puis **Utilisateurs**.
+3. Ouvrez l’élément de menu **Tous les utilisateurs**, puis sélectionnez **Paramètres utilisateur**.
+4. Sélectionnez **Gérer les paramètres de collaboration externe**.
+5. Vérifiez que **OUI** est sélectionné pour le paramètre **Activer l’inscription en libre-service invité via des flux utilisateur**.
 6. Sélectionnez **Enregistrer** en haut de l’écran.
 
-#### Tâche 2 - Configurer les paramètres de collaboration externe
+#### Tâche 2 : configurer les paramètres de collaboration externe
 
-1. Connectez-vous au site [</bpt>"> [https://portal.azure.com](https://portal.azure.com) en tant qu’administrateur de locataire.
-2. Sélectionnez **</bpt>"> **Azure Active Directory**.
-3. Sélectionnez  **Identités externes > Tous les fournisseurs d’identité**.
-4. Sélectionnez le lien de notification **Code secret à usage unique par e-mail** que vous voyez en haut de l’écran.
+1. Connectez-vous à la plateforme  [https://entra.microsoft.com](https://entra.microsoft.com) en tant qu’administrateur client.
+2. Sélectionnez  **Identité**.
+3. Sélectionnez  **Identités externes**, puis cliquez sur le bouton **Tous les fournisseurs d’identité**.
+4. Sélectionnez le lien de notification **de code secret  à usage unique par e-mail** que vous voyez en haut de l’écran.
 
-    **Remarque** : un code secret à usage unique est un moyen très sécurisé d’inviter un utilisateur à rejoindre votre organisation.
+    **Remarque** : un code secret unique est un moyen très sécurisé d’inviter un utilisateur à rejoindre votre organisation.
     
 5. Vérifiez que l’option **Oui** est sélectionnée.
 6. Si nécessaire, sélectionnez **Enregistrer**.
-7. Sinon, sélectionnez `Home > Contoso Marketing >`**Identités** externes pour revenir à l’écran précédent.
-8. Sélectionnez **Paramètres de collaboration externe** sur la gauche.
+7. Sinon, sélectionnez `Home > Contoso Marketing >` **Identités externes** pour revenir à l’écran précédent.
+8. Sélectionnez à présent **Paramètres de collaboration externe** dans le menu de gauche.
 
 9. Sous  **Accès utilisateur invité**, passez en revue les niveaux d’accès disponibles, puis sélectionnez **L’accès des utilisateurs invités est limité aux propriétés et aux membres de leurs propres objets de répertoire (le plus restrictif)**.
 
     **REMARQUE**
-    - Les utilisateurs invités ont le même accès que les membres (le plus inclusif) : Cette option donne aux invités le même accès aux ressources Azure AD et aux données d’annuaire que les utilisateurs membres.
+    - Les utilisateurs invités ont le même accès que les membres (le plus inclusif) : Cette option donne aux invités le même accès aux ressources Microsoft Entra et aux données d’annuaire que les utilisateurs membres.
     - Les utilisateurs invités ont un accès limité aux propriétés et aux appartenances des objets d’annuaire : Ce paramètre empêche les invités d’effectuer certaines tâches d’annuaire, telles que l’énumération d’utilisateurs, de groupes ou d’autres ressources de répertoire. Les invités peuvent voir l’appartenance de tous les groupes non masqués.
     - L’accès utilisateur invité est limité aux propriétés et aux appartenances de ses propres objets d’annuaire (le plus restrictif) : Avec ce paramètre, les invités ne peuvent accéder qu’à leurs propres profils. Les invités ne sont pas autorisés à voir les profils, groupes ou appartenances à des groupes d’autres utilisateurs.
 
     ![Capture d’écran affichant les options de restriction d’accès des utilisateurs invités](./media/lp1-mod3-guest-user-access-restrictions.png)
 
-10. Sous  **Paramètres d’invitation d’invité**, sélectionnez **Utilisateurs membres et utilisateurs affectés à des rôles d’administrateur spécifiques peuvent convier des utilisateurs invités, notamment des invités disposant d’autorisations de membre** !
+10. Sous  **Paramètres d’invitation d’invité**, sélectionnez **Les utilisateurs membres et les utilisateurs affectés à des rôles d’administrateur spécifiques peuvent inviter des utilisateurs invités, y compris ceux disposant d’autorisations de membre**.
 
     **REMARQUE**
     - Toute personne de l’organisation peut inviter des utilisateurs invités, y compris des invités et des non administrateurs (option la plus inclusive) : Pour permettre aux invités de l’organisation d’inviter d’autres invités, y compris ceux qui ne sont pas membres de l’organisation, sélectionnez cette case d’option.
@@ -56,7 +56,7 @@ Vous devez activer les paramètres de collaboration externe pour votre organisat
     - Aucune personne dans l’organisation ne peut inviter des utilisateurs invités, y compris les administrateurs (option la plus restrictive) : Pour empêcher toute personne dans l’organisation d’inviter des invités, sélectionnez cette case d’option.
     - Si Les membres peuvent inviter est défini sur Non et Les administrateurs et utilisateurs ayant le rôle d’Inviteur d’invités peuvent inviter est défini sur Oui, les utilisateurs du rôle Inviteur d’invité pourront toujours inviter des utilisateurs.
 
-    ![Capture d’écran affichant les paramètres d'invitation « Les invités peuvent inviter » sur « Non » mis en surbrillance](./media/lp1-mod3-guest-user-invite-settings.png)
+    ![Capture d’écran affichant les paramètres d’invitation « Les invités peuvent inviter » sur « Non » mis en surbrillance](./media/lp1-mod3-guest-user-invite-settings.png)
 
 11. Sous  **Restrictions de collaboration**, passez en revue les options disponibles et appliquez les paramètres par défaut.
 

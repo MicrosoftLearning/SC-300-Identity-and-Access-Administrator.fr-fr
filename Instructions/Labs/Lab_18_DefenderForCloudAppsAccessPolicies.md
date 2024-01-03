@@ -1,117 +1,117 @@
 ---
 lab:
-  title: 18 - Stratégies d’accès Defender for Cloud Apps
+  title: "18\_: Stratégies d’accès Defender for Cloud Apps"
   learning path: '03'
   module: Module 03 - Implement Access Management for Apps
 ---
 
-# 18 - Stratégies d’accès et de session Defender for Cloud Apps
+# 18 : Microsoft Defender for Cloud Apps : stratégies d’accès et de session
 
 ## Scénario de l’exercice
 
-Microsoft Defender for Cloud Apps permet de créer des stratégies d’accès conditionnel supplémentaires spécifiques aux applications cloud surveillées.  Pour créer ces stratégies, accédez au menu Contrôle du portail Microsoft Defender for Cloud Apps.
+Microsoft Defender for Cloud Apps nous permet de créer des stratégies d’accès conditionnel supplémentaires spécifiques aux applications cloud que nous surveillons.  La création de ces stratégies peut être effectuée à partir du menu Contrôle dans le portail Microsoft Defender for Cloud Apps.
 
 #### Durée estimée : 20 minutes
 
-### Exercice 1 - Créer et tester la stratégie Contrôle d’application par accès conditionnel
+### Exercice 1 : Créer et tester la stratégie de contrôle d’accès conditionnel aux applications
 
-#### Tâche 1 - Confirmer que PradeepG a un accès inconditionnel à FORMS
+#### Tâche 1 : confirmer que PradeepG a un accès inconditionnel à FORMS
 
-1. Lancez une nouvelle fenêtre de **navigation privée**.
+1. Ouvrez une nouvelle fenêtre de **navigateur InPrivate**.
 2. Se connecter à [https://forms.microsoft.com](https://forms.microsoft.com).
-3. Sélectionnez l’icône de connexion dans le coin supérieur droit de la page.
-4. Connectez-vous en tant que Pradeep Gupta.
-   - Nom d’utilisateur = PradeepG@<<<your lab hoster provided domain>>>
-   - Mot de passe = le mot de passe de l’onglet Ressources
-5. Vérifiez que Microsoft Forms s’ouvre et que vous ne recevez aucun message d’avertissement.
-6. Fermez la fenêtre de navigation privée.
+3. Cliquez sur le bouton de connexion situé dans le coin supérieur droit de la page.
+4. Connectez-vous en tant que Pradeep Gupta.
+   - Nom d’utilisateur : PradeepG@<<<your lab hoster provided domain>>>
+   - Mot de passe : le mot de passe de l’onglet Ressources
+5. Vérifiez que Microsoft Forms s’ouvre et que vous ne recevez aucun message d’avertissement.
+6. Fermez la fenêtre de navigation InPrivate.
 
-#### Tâche 2 - Configurer Azure AD pour utiliser Defender for Cloud Apps
+#### Tâche 2 : configurer votre Microsoft Entra ID pour qu’il fonctionne avec Microsoft Defender pour les applications cloud.
 
-1. À l’adresse [portal.azure.com](portal.azure.com), accédez à Azure Active Directory.
+1. Accédez au [https://entra.microsoft.com](https://entra.microsoft.com), puis à Microsoft Entra ID.
 
-2. Sous **Gérer**, sélectionnez **Sécurité**.
+2. Sous **Identité**, sélectionnez **Protection**.
 
-3. Sous **Sécurité**, sélectionnez **Accès conditionnel**.
+3. Sélectionnez **Accès conditionnel**.
 
-4. Sélectionnez la liste déroulante **+ Nouvelle stratégie**, puis **Créer une stratégie**.
+4. Sélectionnez **+ Créer une nouvelle stratégie**.
 
-5. Nommez la stratégie, par exemple **Surveiller Pradeep à l’aide de Forms**.
+5. Entrez un nom de stratégie, tel que **Surveiller Pradeep à l’aide de Forms**.
 
-6. Sous **Utilisateurs ou identités de charge de travail**, sélectionnez **Utilisateurs spécifiques inclus**, puis **Sélectionner Utilisateurs et groupes** et marquez les **Utilisateurs et groupes**.
+6. Sous l’onglet **Affectations**, sélectionnez **Aucun utilisateur ou groupe**, **Utilisateurs spécifiques inclus**, **Sélectionner des utilisateurs et des groupes**, cochez **0 Utilisateurs et groupes**.
 
-7. Choisissez le compte **Pradeep Gupta** en tant que locataire labo, puis cliquez sur **Sélectionner**.
+7. Choisissez le compte **Pradeep Gupta** pour le locataire de labo, puis choisissez **Sélectionner**.
 
-8. Sous **Applications ou actions cloud**, sélectionnez **Aucune application cloud, action ni contexte d’authentification sélectionnés**.
+8. Sous **Ressources cibles**, sélectionnez **Aucune ressource cible sélectionnée**.
 
-9. Cliquez sur **Sélectionner des applications**, choisissez **Microsoft Forms**, puis cliquez sur **Sélectionner**. 
+9. Sélectionnez **Sélectionner des applications**, choisissez **Microsoft Forms**, puis **Sélectionner**. 
 
-10. Sous **Contrôles d’accès**, sélectionnez **Session** et ** 0 contrôle sélectionné**.
+10. Sous **Contrôles d’accès** sélectionnez **Session**, puis **Aucun contrôle sélectionné**.
 
-11. Sélectionnez la zone **Utiliser le contrôle d’application par accès conditionnel**, laissez la valeur par défaut **Moniteur uniquement**, puis sélectionnez **Sélectionner**.
+11. Sélectionnez la zone **Utiliser le contrôle** d’application d’accès conditionnel, laissez la valeur par défaut **Moniteur uniquement**, puis sélectionnez **Sélectionner**.
 
-12. Sous **Activer la stratégie**, sélectionnez **Activé**, puis **Créer**.
+12. Sous **Activer la stratégie**, sélectionnez **Activé**, puis sélectionnez **Créer**.
 
-#### Tâche 3 - Se connecter à Forms et vérifier que l’accès conditionnel est en cours de surveillance
+#### Tâche 3 : se connecter à Forms et vérifier que l’accès conditionnel est en cours de surveillance
 
-1. Lancez une nouvelle fenêtre de **navigation privée**.
+1. Ouvrez une nouvelle fenêtre de **navigateur InPrivate**.
 2. Se connecter à [https://forms.microsoft.com](https://forms.microsoft.com).
-3. Sélectionnez l’icône de connexion dans le coin supérieur droit de la page.
-4. Connectez-vous en tant que Pradeep Gupta.
-   - Nom d’utilisateur = PradeepG@<<<your lab hoster provided domain>>>
-   - Mot de passe = le mot de passe de l’onglet Ressources
-5. Vérifiez que Pradeep a accès et que vous recevez lenouveau message suivant :
+3. Cliquez sur le bouton de connexion situé dans le coin supérieur droit de la page.
+4. Connectez-vous en tant que Pradeep Gupta.
+   - Nom d’utilisateur : PradeepG@<<<your lab hoster provided domain>>>
+   - Mot de passe : le mot de passe de l’onglet Ressources
+5. Vérifiez que Pradeep a accès et que vous recevez un nouveau message :
    - Votre entreprise surveille l’utilisation de cette application.
-6. Fermez la fenêtre de navigation privée.
+6. Fermez la fenêtre de navigation InPrivate.
 
-### Exercice 2 - Configurer des alertes dans Microsoft Defender for Cloud Apps
+### Exercice 2 : Configuration des alertes générées dans Microsoft Defender for Cloud Apps
 
-#### Tâche 1 - Accéder à Microsoft Defender for Cloud Apps et créer un contrôle d’application par accès conditionnel
+#### Tâche 1 : se protéger avec le contrôle d’application par accès conditionnel Microsoft Defender for Cloud Apps
 
 L’inscription de votre application établit une relation d’approbation entre votre application et la plateforme d’identités Microsoft. L’approbation est unidirectionnelle : votre application approuve la plateforme d’identités Microsoft, et non le contraire.
 
-1. Connectez-vous à l’adresse [https://security.microsoft.com](https://security.microsoft.com) à l’aide d’un compte Administrateur général.
+1. Connectez-vous à [https://security.microsoft.com](https://security.microsoft.com) en utilisant un compte d’administrateur général.
 
 1. Dans le menu de gauche, faites défiler vers le bas et sélectionnez **Autres ressources**.
 
-1. Dans la fenêtre **Autres ressources**, recherchez et sélectionnez **Ouvrir** sous **Microsoft Defender for Cloud Apps**.  Vous accédez ainsi au portail **Microsoft Defender for Cloud Apps** dans le compte Microsoft 365.
+1. Dans la fenêtre **Autres ressources**, recherchez et sélectionnez **Ouvrir** sous **Microsoft Defender for Cloud Apps**.  Vous accédez ainsi au **Portail Microsoft Defender for Cloud Apps** dans le compte Microsoft 365.
 
-1. Dans le menu du portail **Microsoft Defender for Cloud Apps**, sélectionnez la flèche déroulante vers **Contrôle** et cliquez sur **Stratégies**.
+1. Dans le menu **Microsoft Defender pour for Cloud Apps**, sélectionnez la flèche déroulante pour **Contrôler** et sélectionnez **Stratégies**.
 
-1. Sélectionnez **+ Créer une stratégie**. Sélectionnez **Stratégie d'accès**.
+1. Sélectionnez **+ Créer une stratégie**. Sélectionnez **Stratégie d’accès**.
 
-1. Saisissez un nom pour la stratégie, par exemple **Surveiller l’accès à Microsoft Forms**.
+1. Entrez un nom pour la stratégie, par exemple **Surveiller l’accès à Microsoft Forms**.
 
-1. Laissez le paramètre **Catégorie** défini sur **Contrôle d’accès**.
+1. Vous pouvez le paramètre **Catégorie** défini sur **Contrôle d’accès**.
 
-1. Sous **Activités correspondant à l’ensemble des éléments suivants**, sélectionnez la liste déroulante pour **Conforme à Intune, jonction Azure AD Hybride** et désélectionnez **Jonction Azure AD Hybride**.
+1. Sous **Activités correspondant à tous les éléments suivants**, sélectionnez la liste déroulante pour **Conformité à Intune, Jonction Microsoft Entra Hybride** et désélectionnez **Jonction Microsoft Entra Hybride**.
 
 1. Sélectionnez la liste déroulante pour **Sélectionner des applications**.  Sélectionnez **Microsoft Forms**.
 
-1. Laissez **les actions** en tant que **Test**.
+1. Laissez **Actions** défini sur **Test**.
 
-1. Sous **Alertes**, laissez la case **Créer une alerte...** activée et sélectionnez **Envoyer l’alerte par e-mail**.
+1. Sous **Alertes**, laissez la case **Créer une alerte...** cochée et sélectionnez **Alerte envoyée comme e-mail**.
 
 1. Entrez l’adresse e-mail de l’administrateur du labo, puis sélectionnez **Entrée** sur votre clavier.
 
 1. Sélectionnez **Créer** pour créer la stratégie d’accès.
 
-#### Tâche 2 - Se connecter en tant que Pradeep à Forms pour déclencher l’activité
+#### Tâche 2 : se connecter en tant que Pradeep à Forms pour déclencher l’activité
 
-1. Lancez une nouvelle fenêtre de **navigation privée**.
+1. Ouvrez une nouvelle fenêtre de **navigateur InPrivate**.
 2. Se connecter à [https://forms.microsoft.com](https://forms.microsoft.com).
-3. Sélectionnez l’icône de connexion dans le coin supérieur droit de la page.
-4. Connectez-vous en tant que Pradeep Gupta.
-   - Nom d’utilisateur = PradeepG@<<<your lab hoster provided domain>>>
-   - Mot de passe = le mot de passe de l’onglet Ressources
-5. Vérifiez que Pradeep a accès et que vous recevez lenouveau message suivant :
+3. Cliquez sur le bouton de connexion situé dans le coin supérieur droit de la page.
+4. Connectez-vous en tant que Pradeep Gupta.
+   - Nom d’utilisateur : PradeepG@<<<your lab hoster provided domain>>>
+   - Mot de passe : le mot de passe de l’onglet Ressources
+5. Vérifiez que Pradeep a accès et que vous recevez un nouveau message :
    - Votre entreprise surveille l’utilisation de cette application.
-6. Fermez la fenêtre de navigation privée.
+6. Fermez la fenêtre de navigation InPrivate.
 
-#### Tâche 3 - Examiner l’activité dans Defender for Cloud Apps
+#### Tâche 3 : passer en revue l’activité dans Defender for Cloud Apps
 
-1. Revenez dans le navigateur exécutant Defender for Cloud Apps.
-2. Actualisez-le pour vous assurer qu’il affiche les données les plus récentes.
-3. Sélectionnez **Journal d’activité** dans le menu **Enquêter**.
-4. À l’aide de l’option **App : filtre** choisissez **Microsoft Forms** dans la liste.
-5. Consultez les enregistrements de connexion de Pradeep.
+1. Revenez au navigateur exécutant Defender for Cloud Apps.
+2. Actualisez le navigateur pour vous assurer que les données les plus récentes sont téléchargées.
+3. Sélectionnez **Journal d’activité** dans le menu **Examen**.
+4. À l’aide de **Application : filtrer** sélectionnez **Microsoft Forms** dans la liste.
+5. Notez les enregistrements d’authentification pour Pradeep.

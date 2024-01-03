@@ -1,42 +1,42 @@
 ---
 lab:
-  title: 3 - Attribuer des licences à l’aide de l’appartenance au groupe
+  title: "03\_: Attribution d’une licence à l’aide de l’appartenance au groupe"
   learning path: '01'
   module: Module 01 - Implement an identity management solution
 ---
 
-# Labo 3 - Attribuer des licences à l’aide de l’appartenance au groupe
+# Labo 03 : Attribution d’une licence à l’aide de l’appartenance au groupe
 
 ## Scénario de l’exercice
 
-Votre organisation a décidé d’utiliser des groupes de sécurité dans Azure AD pour gérer les licences. Vous devez configurer un nouveau groupe de sécurité et attribuer une licence à ce groupe, puis vérifier que les licences des membres du groupe ont été mises à jour.
+Votre organisation a décidé d’utiliser des groupes de sécurité dans Microsoft Entra ID, pour gérer les licences. Vous devez configurer un nouveau groupe de sécurité, attribuer une licence à ce groupe et vérifier que les licences membres du groupe ont été mises à jour.
 
 #### Durée estimée : 25 minutes
 
-### Exercice 1 - Créer un groupe de sécurité et ajouter un utilisateur
+### Exercice 1 : Créer un groupe de sécurité et ajouter un utilisateur
 
-#### Tâche 1 - Vérifier si Delia Dennis a accès à Office 365
+#### Tâche 1 : vérifier si Delia Dennis a accès à Office 365
 
-1. Lancez une nouvelle fenêtre de navigation privée.
+1. Lancez une nouvelle fenêtre de navigateur InPrivate.
 2. Se connecter à [https://www.office.com](https://www.office.com).
-3. Sélectionnez Se connecter et se connectez-vous en tant que Delia Dennis.
+3. Sélectionnez Se connecter et connectez-vous en tant que Delia Dennis.
 
    | **Paramètre**| **Valeur**|
    | :--- | :--- |
    | Nom d’utilisateur | DeliaD@`your domain name.com`|
-   | Mot de passe| Entrez le mot de passe de l’administrateur général (disponible dans la section Ressources)|
+   | Mot de passe| Saisissez le mot de passe de l’administrateur général à partir des ressources|
 
-4. Vous devez vous connecter au site web Office.com et recevoir un message indiquant que vous n’avez pas de licence.
+4. Vous devez vous connecter au site web Office.com et voir un message indiquant que vous n’avez pas de licence.
 
-   ![Capture d’écran du site web Office.com montrant Delia Dennis connectée, mais sans application Office disponible, car aucune licence ne lui est attribuée.](./media/delia-no-office-license.png)
+   ![Image d’écran du site web Office.com avec Delia Dennis connecté(e). Aucune application Office n’est disponible, car aucune licence n’est attribuée.](./media/delia-no-office-license.png)
     
 5. Fermez la fenêtre du navigateur.
 
-#### Tâche 2 - Créer un groupe de sécurité dans Azure Active Directory
+#### Tâche 2 : créer un groupe de sécurité dans Microsoft Entra ID
 
-1. Accédez à [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview]( https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview).
+1. Accédez à [https://entra.microsoft.com](https://entra.microsoft.com).
 
-2. Dans le volet de navigation de gauche, sous **Gérer**, sélectionnez **Groupes**.
+2. Dans le volet de navigation de gauche sous **Identité**, sélectionnez **Groupes**, puis **Tous les groupes**.
 3. Sur la page Groupes, dans le menu, sélectionnez **Nouveau groupe**.
 4. Créez un nouveau groupe à l’aide des informations suivantes :
 
@@ -51,50 +51,50 @@ Votre organisation a décidé d’utiliser des groupes de sécurité dans Azure�
 6. Sélectionnez **Delia Dennis** dans la liste des utilisateurs.
 7. Cliquez sur le bouton **Sélectionner**.
 
-   ![Capture d’écran de la page Nouveau groupe, avec le type de groupe, le nom de groupe, les propriétaires et les membres mis en surbrillance.](./media/lp1-mod2-create-group.png)
+   ![Image de l’écran affichant la page Nouveau groupe avec le type et le nom de groupe, les propriétaires et les membres mis en surbrillance.](./media/lp1-mod2-create-group.png)
 
 8. Cliquez sur le bouton **Créer**.
-9. Lorsque vous avez terminé, vérifiez que le groupe nommé **sg-SC300-O365** est affiché dans la liste **Tous les groupes**.
+9. Lorsque vous avez terminé, vérifiez que le groupe **sg-SC300-O365** est affiché dans la liste **Tous les groupes**.
 
-#### Tâche 3 - Attribuer une licence à un groupe
+#### Tâche 3 : affecter une licence à un groupe
 
-1. Dans la liste **Tous les groupes** , sélectionnez **sg-SC300-O365**.
+1. Dans la liste **Tous les groupes**, sélectionnez **sg-SC300-O365**.
 2. Sur la page Marketing, sous **Gérer**, sélectionnez **Licences**.
-3. Dans le menu, sélectionnez **+ Affectations**.
-4. Sur la page des affectations de licence de mise à jour, sous **Sélectionner des licences**, passez en revue la liste des licences disponibles, puis cochez la case correspondant à la licence **Office 365 E3**.
+3. Dans le menu, sélectionnez **Affectations**.
+4. Dans les affectations de licence de mise à jour, sous **Sélectionner des licences**, passez en revue la liste des licences disponibles, puis cochez la case correspondant à **Office 365 E3**.
 
-   **Conseil** : lorsque plusieurs licences sont sélectionnées, vous pouvez utiliser le menu Consulter les options de licence pour sélectionner une licence spécifique et afficher l’option de licence de cette licence.
+   **Conseil :** lorsque plusieurs licences sont sélectionnées, vous pouvez utiliser le menu Consulter les options de licence pour sélectionner une licence spécifique et afficher son option de licence.
 
    ![Image de l’écran affichant les licences sélectionnées et affectées à un groupe. Le menu Consulter la licence est également sélectionné et affiche plusieurs options de sélection.](./media/lp1-mod2-assign-license-group.png)
 
 6. Sélectionnez **Enregistrer**.
 
-#### Tâche 4 - Confirmer la licence Office 365
+#### Tâche 4 : confirmer la licence Office 365
 
-1. Lancez une nouvelle fenêtre de navigation privée.
+1. Lancez une nouvelle fenêtre de navigateur InPrivate.
 2. Se connecter à [https://www.office.com](https://www.office.com).
-3. Sélectionnez Se connecter et se connectez-vous en tant que Delia Dennis.
+3. Sélectionnez Se connecter et connectez-vous en tant que Delia Dennis.
 
    | **Paramètre**| **Valeur**|
    | :--- | :--- |
    | Nom d’utilisateur | DeliaD@`your domain name.com`|
-   | Mot de passe| Entrez le mot de passe de l’administrateur général (disponible dans la section Ressources)|
+   | Mot de passe| Saisissez le mot de passe de l’administrateur général à partir des ressources|
 
-4. Lors de votre connexion au site web Office.com, aucun message concernant la licence ne devrait s’afficher. Toutes les application Office sont disponibles à gauche.
+4. Vous devez vous connecter au site web Office.com et ne voir aucun message concernant la licence. Toutes les application Office sont disponibles à gauche.
 
-   ![Capture d’écran du site web Office.com montrant Delia Dennis connectée et les applications Office disponibles, car une licence lui est attribuée.](./media/delia-office-license.png)
+   ![Image d’écran du site web Office.com avec Delia Dennis connecté(e). Les applications Office sont disponibles, car une licence est attribuée.](./media/delia-office-license.png)
     
 5. Fermez la fenêtre du navigateur. 
 
-### Exercice 2 - Créer un groupe Microsoft 365 dans Azure Active Directory
+### Exercice 2 : Créer un groupe Microsoft 365 dans Microsoft Entra ID
 
-#### Tâche 1 - Créer le groupe
+#### Tâche 1 : créer le groupe
 
-L’un des aspects de votre rôle d’administrateur Azure AD consiste à créer différents types de groupes. Vous devez créer un groupe Microsoft 365 pour le service commercial de votre entreprise.
+Une partie de vos tâches en tant qu’administrateur Microsoft Entra consiste à créer différents types de groupes. Vous devez créer un groupe Microsoft 365 pour le service commercial de votre organisation.
 
-1. Accédez à [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview]( https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview).
+1. Accédez à [https://entra.microsoft.com]( https://entra.microsoft.com).
 
-2. Dans le volet de navigation de gauche, sous **Gérer**, sélectionnez **Groupes**.
+2. Dans le volet de navigation de gauche sous **Identité**, sélectionnez **Groupes**, puis **Tous les groupes**.
 
 3. Sur la page Groupes, dans le menu, sélectionnez **Nouveau groupe**.
 
@@ -106,23 +106,23 @@ L’un des aspects de votre rôle d’administrateur Azure AD consiste à crée
    | Nom du groupe| Northwest Sales|
    | Type d’appartenance| Attribué|
    | Propriétaires| *Affecter votre propre compte d’administrateur en tant que propriétaire du groupe*|
-   | Membres| **Alex Wilber** et **Bianca Pisani**|
+   | Membres| **Alex Wilber** et **Bianca Pisani**|
 
-   ![Capture d’écran de la page Nouveau groupe, avec le type de groupe, le nom de groupe, les propriétaires et les membres mis en surbrillance.](./media/lp1-mod2-create-o365-group.png)
+   ![Image de l’écran affichant la page Nouveau groupe avec le type et le nom de groupe, les propriétaires et les membres mis en surbrillance.](./media/lp1-mod2-create-o365-group.png)
 
 5. Lorsque vous avez terminé, vérifiez que le groupe **Northwest Sales** est affiché dans la liste **Tous les groupes**.
 
-### Exercice 3 - Créer un groupe dynamique avec tous les utilisateurs en tant que membres
+### Exercice 3 : Créer un groupe dynamique comprenant tous les utilisateurs en tant que membres
 
-#### Tâche 1 - Créer le groupe dynamique
+#### Tâche 1 : créer le groupe dynamique
 
-À mesure que votre entreprise se développe, la gestion manuelle des groupes devient chronophage. Depuis la normalisation du répertoire, vous pouvez désormais tirer parti des groupes dynamiques. Vous devez créer un groupe dynamique pour vous assurer que vous êtes prêt à créer un groupe dynamique en production.
+À mesure que votre entreprise se développe, la gestion manuelle des groupes devient de plus en plus longue. Depuis la normalisation du répertoire, vous pouvez désormais tirer parti des groupes dynamiques. Vous devez créer un groupe dynamique pour vous assurer que vous êtes prêt(e) à créer un groupe dynamique en production.
 
-1. Connectez-vous à l’adresse [https://portal.azure.com](https://portal.azure.com) en utilisant un compte attribué au rôle d'administrateur général ou d’administrateur d’utilisateurs dans le locataire.
+1. Connectez-vous au [https://entra.microsoft.com](https://entra.microsoft.com) en utilisant un compte attribué au rôle d’administrateur général ou d’administrateur d’utilisateurs dans le locataire.
 
-2. Sélectionnez **Azure Active Directory**.
+2. Sélectionnez **Identité**.
 
-3. Sous **Gérer**, sélectionnez **Groupes**, puis **Nouveau groupe**.
+3. Sous **Groupes**, sélectionnez **Tous les groupes**, puis **Nouveau groupe**.
 
 4. Sur la page Nouveau groupe, sous **Type de groupe**, sélectionnez **Sécurité**.
 
@@ -130,7 +130,7 @@ L’un des aspects de votre rôle d’administrateur Azure AD consiste à crée
 
 6. Sélectionnez le menu **Type d’appartenance**, puis sélectionnez **Utilisateur dynamique**.
 
-7. Sélectionnez un **propriétaire** pour le groupe.
+7. Sélectionnez un **Propriétaire** pour le groupe.
 
 7. Sous **Membres dynamiques**, sélectionnez **Ajouter une requête dynamique**.
 
@@ -142,35 +142,35 @@ L’un des aspects de votre rôle d’administrateur Azure AD consiste à crée
    user.objectid -ne null
    ```
 
-   **Avertissement** : l’expression `user.objectid` est sensible à la casse.
+   **Avertissement** : la `user.objectid` est sensible à la casse.
 
 10. Sélectionnez **OK**. La règle s’affiche dans la zone « Syntaxe de la règle ».
 
-   ![Capture d’écran affichant la page des règles d’appartenance au groupe dynamique, avec la syntaxe de règle mise en surbrillance.](./media/lp1-mod3-dynamic-group-membership-rule.png)
+   ![Capture d’écran affichant la page des règles d’appartenance au groupe dynamique avec la syntaxe de règle mise en surbrillance.](./media/lp1-mod3-dynamic-group-membership-rule.png)
 
 11. Sélectionnez **Enregistrer**. Le nouveau groupe dynamique inclut désormais les utilisateurs invités B2B, ainsi que les utilisateurs membres.
 
 12. Sur la page « Nouveau groupe », sélectionnez **Créer** pour créer le groupe.
 
-#### Tâche 2 - Vérifier que les membres ont été ajoutés
+#### Tâche 2 : vérifier que les membres ont été ajoutés
 
-**Remarque** : l’ajout des membres au groupe dynamique peut prendre jusqu’à 15 minutes.
+**Remarque** : la propagation de l’appartenance au groupe dynamique peut prendre jusqu’à 15 minutes.
 
-1. Sélectionnez la **Page d’accueil**`Azure Active Directory`.
-2. Lancez **Azure Active Directory**.
-3. Dans le menu **Gérer**, sélectionnez **Groupes**.
-4. Dans la zone de filtre, saisissez **SC300** pour afficher votre groupe nouvellement créé.
+1. Sélectionnez sur la **page d’accueil ** `Microsoft Entra admin center`.
+2. Ouvrez **Identité**.
+3. Dans le menu **Groupes**, sélectionnez **Tous les groupes**.
+4. Dans la zone de filtre, tapez **SC300** et votre groupe nouvellement créé sera répertorié.
 5. Sélectionnez **SC300-myDynamicGroup** pour ouvrir le groupe.
-6. Notez qu’il indique qu’il contient plus de 30 **Membres directs*.
-7. Dans le menu **Gérer**, sélectionnez **Membres**.
-8. Passez en revue les membres.
+6. Notez qu’il indique qu’il contient plus de 30 *membres directs**.
+7. Dans la section **Gérer**, sélectionnez **Membres**.
+8. Révisez les membres.
 
-#### Tâche 3 - Faire des tests avec d’autres règles
+#### Tâche 3 : expérimenter avec d’autres règles
 
-1. Essayez de créer un groupe contenant uniquement des utilisateurs **Invités** :
+1. Essayez de créer un groupe comprenant uniquement **les utilisateurs invités** :
 
-   - (user.objectid -ne null) et (user.userType -eq "Guest")
+   - (user.objectid -ne null) et (user.userType -eq « Guest »)
 
-2. Essayez de créer un groupe avec uniquement des **Membres** des utilisateurs Azure AD.
+2. Essayez de créer un groupe comprenant uniquement les **Membres** des utilisateurs de Microsoft Entra.
 
    - (user.objectid -ne null) et (user.userType -eq "Member")

@@ -1,32 +1,32 @@
 ---
 lab:
-  title: "14\_- Activer les stratégies de connexion à risque et de risque utilisateur"
+  title: "14\_: Activer des stratégies de connexion et de risque utilisateur"
   learning path: '02'
   module: Module 02 - Implement an Authentication and Access Management Solution
 ---
 
-# Labo 14 - Activer les stratégies de connexion à risque et de risque utilisateur
+# Labo 14 : Activer des stratégies de connexion et de risque utilisateur
 
 ## Scénario de l’exercice
 
-Comme couche de sécurité supplémentaire, vous devez activer et configurer les stratégies de connexion à risque et de risque utilisateur de votre organisation Azure AD.
+Afin de bénéficier d’une couche de sécurité supplémentaire, activez et configurez les stratégies de connexion et de risque utilisateur de votre organisation Microsoft Entra.
 
 #### Durée estimée : 10 minutes
 
 
-### Exercice 1 - Activer la stratégie de risque utilisateur
+### Exercice 1 : Activer la stratégie de risque utilisateur
 
-#### Tâche 1 - Configurer la stratégie
+#### Tâche 1 : configurer la stratégie
 
-1. Connectez-vous au [https://portal.azure.com]( https://portal.azure.com) à l’aide d’un compte d’administrateur général.
+1. Connectez-vous à [https://entra.microsoft.com]( https://entra.microsoft.com) en utilisant un compte d’administrateur général.
 
-2. Ouvrez le menu du portail et sélectionnez  **Azure Active Directory**.
+2. Ouvrez le menu du portail, puis sélectionnez  **Microsoft Entra ID**.
 
-3. Sur la page Azure Active Directory, sous **Gérer**, sélectionnez **Sécurité**.
+3. Dans le menu de gauche **Identité**, sélectionnez **Protection**.
 
-4. Sur la page Sécurité, dans le volet de navigation de gauche, sélectionnez **Identity Protection**.
+4. Sur la page Sécurité, dans le volet de navigation de gauche, sélectionnez **Protection de l’identité**.
 
-5. Sur la page Identity Protection, dans le volet de navigation de gauche, sélectionnez **Stratégie de risque utilisateur**.
+5. Dans le panneau Protection de l’identité, dans le volet de navigation de gauche, sélectionnez **Stratégie d’utilisateur à risque**.
 
     ![Image de l’écran affichant la page Stratégie d’utilisateur à risque et le chemin de navigation en surbrillance](./media/lp2-mod4-browse-to-identity-protection.png)
 
@@ -44,19 +44,19 @@ Comme couche de sécurité supplémentaire, vous devez activer et configurer les
 
 12. Dans le volet Accès, passez en revue les options disponibles.
 
-    **Conseil** : la recommandation de Microsoft consiste à autoriser l’accès et à exiger la modification du mot de passe.
+    **Conseil** : Microsoft recommande d’autoriser l’accès et à d’exiger la modification du mot de passe.
 
 13. Cochez la case **Nécessite une modification du mot de passe**, puis sélectionnez **Terminer**.
 
-14. Sous **Appliquer la stratégie**, sélectionnez **Activé**, puis **Enregistrer**.
+14. Sous **Application de la stratégie**, sélectionnez **Activer**, puis **Enregistrer**.
 
-#### Tâche 2 - Activer la stratégie de connexion à risque
+#### Tâche 2 : activer la stratégie de connexion à risque
 
-1. Sur la page Identity Protection, dans le volet de navigation de gauche, sélectionnez **Stratégie de connexion à risque**.
+1. Sur la page Protection de l’identité, dans le volet de navigation de gauche, sélectionnez **Stratégie d’utilisateur à risque**.
 
 2. Comme pour la stratégie d’utilisateur à risque, la stratégie de connexion à risque peut être assignée aux utilisateurs et aux groupes et vous permet d’exclure des utilisateurs de la stratégie.
 
-3. Sous **Risque de connexion**, sélectionnez **Faible et supérieur**.
+3. Sous **Risque de connexion**, sélectionnez **Moyen et supérieur**.
 
 4. Dans le volet Risque de connexion, sélectionnez **Élevé**, puis sélectionnez **Terminé**.
 
@@ -64,4 +64,4 @@ Comme couche de sécurité supplémentaire, vous devez activer et configurer les
 
 6. Activez la case à cocher **Exiger l’authentification multifacteur**, puis sélectionnez **Terminé**.
 
-7. Sous **Appliquer la stratégie**, sélectionnez **Activé**, puis **Enregistrer**.
+7. Sous **Application de la stratégie**, sélectionnez **Activer**, puis **Enregistrer**.

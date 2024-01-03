@@ -1,32 +1,32 @@
 ---
 lab:
-  title: 6 - Ajouter un fournisseur d’identités fédérées
+  title: "06\_: Ajouter un fournisseur d’identité fédéré"
   learning path: '01'
   module: Module 01 - Implement an identity management solution
 ---
 
-# Labo 6 - Ajouter un fournisseur d’identités fédérées
+# Labo 06 : Ajouter un fournisseur d’identité fédéré
 
 ## Scénario de l’exercice
 
-Votre entreprise travaille avec de nombreux fournisseurs et, à l’occasion, vous devez ajouter des comptes de fournisseurs à votre annuaire en tant qu’invité et leur permettre d’utiliser leur compte Google pour se connecter.
+Votre entreprise travaille avec de nombreux fournisseurs et, à l’occasion, vous devez ajouter des comptes de fournisseurs à votre répertoire en tant qu’invités et leur permettre d’utiliser leur compte Google pour se connecter.
 
 #### Durée estimée : 25 minutes
 
-### Exercice 1 - Configurer des fournisseurs d’identité
+### Exercice 1 : Configurer des fournisseurs d’identité
 
-#### Tâche 1 - Configurer Google en tant que fournisseur d’identité
+#### Tâche 1 : configurer Google en tant que fournisseur d’identité
 
-**Remarque importante** : pour cet exercice, vous aurez besoin d’un compte Gmail de Google. Créez un **compte Google**, puis suivez les étapes de l’exercice.  Veillez à noter l’adresse e-mail et le mot de passe, vous en aurez besoin plus loin dans le labo.
+**Remarque importante** : pour cet exercice, vous aurez besoin d’un compte Gmail sur Google. Créez un **compte Google**, puis suivez les étapes de l’exercice.  Veillez à noter l’adresse e-mail et le mot de passe, ces informations sont nécessaires pour effectuer le labo.
 
 1. Accédez aux API Google à l’adresse https://console.developers.google.com et connectez-vous avec votre compte Google. Nous vous recommandons d’utiliser un compte Google d’équipe partagé.
 
 2. Acceptez les conditions d’utilisation du service si vous y êtes invité.
 
-**Créez un projet :**
+**Créer un projet :**
 3. En haut de la page, sélectionnez le menu de projet pour ouvrir la page Sélectionner un projet. Choisissez **Nouveau projet**.  Laissez les valeurs par défaut des champs restants.
 
-4. Sur la page Nouveau projet, attribuez un nom au projet (par exemple **MyB2BApp**), puis cliquez sur **Créer**.
+4. Sur la page Nouveau projet, attribuez un nom au projet (par exemple **MyB2BApp**), puis sélectionnez **Créer**.
 
 5. Ouvrez le nouveau projet en sélectionnant le lien dans la zone de message Notifications ou en utilisant le menu de projet en haut de la page.
 
@@ -34,11 +34,11 @@ Votre entreprise travaille avec de nombreux fournisseurs et, à l’occasion, vo
 
 7. Sous Type d’utilisateur, sélectionnez **Externe**, puis **Créer**.
 
-8. Sur l’**Écran de consentement OAuth**, sous Informations sur l’application, entrez un nom d’application, par exemple **Azure AD**.
+8. Sur l’**écran de consentement OAuth**, sous Informations sur l’application, entrez un nom d’application, comme **Microsoft Entra ID**.
 
-9. Sous E-mail de support de l’utilisateur, sélectionnez une adresse e-mail. Il doit s’agir de l’adresse e-mail utilisée pour vous connecter à Google.
+9. Sous E-mail de support de l’utilisateur, sélectionnez une adresse e-mail. Cela doit inclure l’adresse e-mail que vous avez utilisée pour vous connecter à Google.
 
-10. Sous Domaines autorisés, sélectionnez **+ Ajouter un domaine**, puis ajoutez le domaine microsoftonline.com.
+10. Sous Domaines autorisés, sélectionnez **Ajouter un domaine**, puis ajoutez le domaine microsoftonline.com.
 
    ```
    microsoftonline.com
@@ -50,94 +50,94 @@ Votre entreprise travaille avec de nombreux fournisseurs et, à l’occasion, vo
 
 13. Dans le menu de gauche, sélectionnez **Informations d’identification**.
 
-14. Sélectionnez **+ Créer des informations d’identification**, puis **ID client OAuth**.
+14. Sélectionnez **+ Créer des informations d’identification**, puis **ID client OAuth**.
 
-15. Dans le menu Type d’application, sélectionnez Application web. Donnez à l’application un nom approprié, par exemple Azure AD B2B. Sous **URI de redirection autorisés**, ajoutez les URI suivants :
+15. Dans le menu Type d’application, sélectionnez Application web. donnez à l'application un nom qui convient, comme Microsoft Entra B2B. Sous **URI de redirection autorisés**, ajoutez les URI suivants :
 
    ```
       https://login.microsoftonline.com
    ```
-      https://login.microsoftonline.com/te/**ID de locataire**/oauth2/authresp    (où <tenant ID> est votre ID de locataire)
+      https://login.microsoftonline.com/te/**ID de locataire**/oauth2/authresp (où <tenant ID> se trouve votre ID de locataire)
    ```
       https://login.microsoftonline.com/te/**tenant name**.onmicrosoft.com/oauth2/authresp
        (where <tenant name> is your tenant name)
    ```
 
-16. Sélectionnez **Créer**. Copiez vos **ID client** et **Clé secrète client**. Vous les utiliserez lorsque vous ajouterez le fournisseur d’identité dans le portail Azure.
+16. Sélectionnez **Créer**. Copiez vos **ID client** et **clé secrète client**. Vous les utiliserez lorsque vous ajouterez le fournisseur d’identité dans le portail Azure.
 
-17. Vous pouvez laisser votre projet à un état de publication de test.
+17. Vous pouvez laisser votre projet sur le statut de publication Test.
 
-#### Tâche 2 - Ajouter un utilisateur de test
-18. Dans le menu API et services, sélectionnez **Écran de consentement OAuth**.
+#### Tâche 2 : ajouter un utilisateur de test
+18. Sous API et services, sélectionnez **Écran de consentement OAuth**.
 
-19. Dans la section **Utilisateurs de test* de la page, choisissez **+ Ajouter des utilisateurs**.
+19. Dans la section **Tester les utilisateurs* de la page, choisissez **+ Ajouter des utilisateurs**.
 
-20. Entrez le compte Gmail que vous avez créé (ou celui que vous utilisez) pour ce labo.
+20. Entrez le compte Gmail que vous avez créé (ou utilisé) pour ce labo.
 
-21. Sélectionnez **Enregistrer**.
+21. Cliquez sur **Enregistrer**
 
 
-### Exercice 2 - Configurer Azure pour utiliser un fournisseur d’identité externe
+### Exercice 2 : Configurer Azure pour qu’il fonctionne avec un fournisseur d’identité externe
 
-#### Tâche 1 - Configurer la fédération de Google dans Azure AD
-1. Connectez-vous à l’adresse  [https://portal.azure.com](https://portal.azure.com) en tant qu’administrateur.
+#### Tâche 1 : configurer la fédération Google dans Microsoft Entra ID
+1. Connectez-vous au  [https://entra.microsoft.com](https://entra.microsoft.com)  en tant qu’administrateur.
 
-2. Sélectionnez **</bpt>"> **Azure Active Directory**.
+2. Sélectionnez  **Microsoft Entra ID**.
 
-3. Sous **Gérer**, sélectionnez **Identités externes**.
+3. Sous  **Identité**, sélectionnez  **Identités externes**.
 
-4. Choisissez **Tous les fournisseurs d’identité** dans le menu de gauche.
+4. Sélectionnez **Tous les fournisseurs d’identité** dans le menu de gauche.
 
-5. Microsoft fournit une fédération directe pour **Google** en tant que fournisseur d’identité.Pour commencer la configuration, sélectionnez **+ Google** sur la page **Identités externes | Tous les fournisseurs d’identité**
+5. Microsoft fournit une fédération directe pour **Google** en tant que fournisseur d’identité.° Cette fédération peut être lancée en sélectionnant **+ Google** à partir de la page **Identités externes | Tous les fournisseurs d’identité**.
  
-6. Une fois que vous avez sélectionné + Google, une autre page s’ouvre avec les informations supplémentaires requises pour configurer Google en tant que fournisseur d’identité.  
+6. Après avoir sélectionné + Google, une autre page s’ouvre avec des informations supplémentaires requises pour configurer Google en tant que fournisseur d’identité.  
 
-7. Entrez l’**ID client** et la **Clé secrète client** obtenus précédemment.
+7. Entrez l’**ID client** et la **clé secrète client** obtenus précédemment.
 
 8. Sélectionnez **Enregistrer**.
 
-Google est maintenant configuré en tant que fournisseur d’identité.
+Cette opération termine la configuration de Google en tant que fournisseur d’identité.
 
-#### Tâche 2 - Inviter votre compte d’utilisateur de test
-9. Si vous avez utilisé un compte Gmail existant, n’oubliez pas de supprimer le compte avec **Identités externes | Tous les fournisseurs d’identité**. Vous pouvez également revenir à la Google Developer Console et supprimer le projet que vous avez créé.
+#### Tâche 2 : inviter le compte d’utilisateur test
+9. Si vous avez utilisé un compte Gmail existant, n’oubliez pas de supprimer le compte via **Identités externes | Tous les fournisseurs d’identité**. Vous pouvez également revenir à la console du développeur Google et supprimer le projet que vous avez créé.
 
-10. Ouvrez Azure Active Directory (Azure AD).
+10. Ouvrez Microsoft Entra ID.
 
-11. Accédez à Users.
+11. Accédez à Utilisateurs, puis sélectionnez **Tous les utilisateurs**.
 
 12. Sélectionnez **+ Nouvel utilisateur**.
 
-13. Choisissez **Inviter un utilisateur externe** dans le menu déroulant.
+13. Sélectionnez **Inviter un utilisateur externe** dans le menu déroulant.
 
-14. Entrez les informations du compte Gmail que vous avez configuré en tant qu’utilisateur de test pour l’application Google dans l’exercice 1 de la tâche 2.
+14. Entrez les informations du compte Gmail que vous avez configuré en tant qu’utilisateur test pour l’application Google, dans la tâche 2 de l’exercice 1.
 
-15. Rédigez un message personnel si vous le souhaitez.
+15. Entrez un message personnel de votre choix.
 
 16. Sélectionnez **Inviter**.
 
-#### Tâche 3 - Accepter l’invitation et se connecter
-17. Dans une fenêtre de navigation privée, connectez-vous à votre compte Gmail.
+#### Tâche 3 : accepter l’invitation et se connecter
+17. Utilisez un navigateur InPrivate pour vous connecter à votre compte Gmail.
 
-18. Ouvrez l’**Invitation Microsoft au nom de** dans la boîte de réception.
+18. Ouvrez l’**invitation Microsoft depuis la boîte de réception**.
 
 19. Sélectionnez le lien **Accepter l’invitation** dans le message.
 
 20. Saisissez votre nom d’utilisateur et votre mot de passe comme demandé dans la boîte de dialogue de connexion (le cas échéant).
-   **REMARQUE** : si la fédération fonctionne correctement, cet écran vous permet de vous connecter à l’aide de votre nouveau fournisseur d’identité externe Google.  Accédez à l’écran de connexion pour vous vous connecter avec vos informations d’identification Gmail.  Si la fédération ne fonctionne pas ou n’a pas été configurée, l’utilisateur reçoit un e-mail de VÉRIFICATION DE COMPTE après la connexion, pour confirmer le compte.  Avec la fédération, aucune vérification supplémentaire n’est nécessaire.
+   **REMARQUE** : si la fédération fonctionne correctement, c’est là que vous verrez les premiers résultats de votre nouveau fournisseur d’identité externe Google.  Vous allez accéder à l’écran de connexion et pourrez vous connecter avec vos informations d’identification Gmail.  Si la fédération ne fonctionne pas ou n’a pas été configurée, l’utilisateur recevra un e-mail ACCOUNT VERIFICATION après la connexion, afin de confirmer le compte.  Avec la fédération, aucune vérification supplémentaire n’est nécessaire.
 
-   **REMARQUE** : si vous obtenez une erreur d’accès 500, attendez environ 30 secondes et actualisez la page.  Choisissez RENVOYER.  Cette erreur est un problème de délai uniquement dans l’environnement du labo.
+   **REMARQUE** : si vous obtenez une erreur d’accès 500, attendez environ 30 secondes et actualisez la page.  Sélectionnez RENVOYER.  Cette erreur est un problème de minutage uniquement dans l’environnement de labo.
 
-21. Consultez le message **Autorisations demandées par :** qui s’affiche.  Ce message provient de votre Azure Lab Domain.
+21. Lisez le nouveau message  **Autorisations demandées par :** que vous recevez.  Ce message provient de votre domaine Azure Lab.
 
 22. Choisissez **Accepter**.
 
-23. Une fois la connexion effectuée, vous êtes redirigé vers l’écran Mes applications.
+23. Une fois la connexion terminée, vous recevrez MyApplications.
 
-#### Tâche 4 - Se connecter à Microsoft 365 à l’aide de votre compte Google
-24. Une fois que vous avez terminé la tâche 3 et le processus d’invitation de l’utilisateur externe, vous pouvez vous connecter directement à Microsoft Online.
+#### Tâche 4 : se connecter à Microsoft 365 à l’aide de votre compte Google
+24. Une fois que vous avez terminé le processus d’invitation de l’utilisateur externe de la tâche 3, vous pouvez vous connecter directement à Microsoft Online.
 
 25. Ouvrez un nouvel onglet dans le navigateur que vous avez ouvert.
-   **REMARQUE** : si vous n’avez pas ouvert de fenêtre de navigation privée au cours de la tâche 3, vous devez le faire pour cette étape.
+   **REMARQUE** : si vous n’avez pas ouvert un nouveau navigateur InPrivate durant la tâche 3, vous devez le faire pour cette étape.
 
 26. Entrez l’adresse web suivante :
 
@@ -149,7 +149,7 @@ Google est maintenant configuré en tant que fournisseur d’identité.
  
 28. Sélectionnez **Se connecter à une organisation**.
 
-29. Entrez le **nom de domaine de votre locataire labo** dans la zone, puis sélectionnez **Suivant**.
+29. Saisissez le **Nom de domaine de votre locataire de labo** dans la zone, puis sélectionnez **Suivant**.
 
-30. Entrez l’adresse e-mail **Google** et le mot de passe que vous avez créés.
-À ce stade, vous devriez voir votre compte transmis à Google pour confirmation ; accédez ensuite au portail Microsoft Office.
+30. Saisissez l’adresse e-mail et le mot de passe **Google** que vous avez créés.
+À ce stade, vous devriez voir votre compte transmis à Google pour confirmation. Accédez ensuite au Portail Microsoft Office.
