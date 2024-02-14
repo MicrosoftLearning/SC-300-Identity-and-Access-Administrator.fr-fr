@@ -9,7 +9,7 @@ lab:
 
 **Remarque** : ce labo nécessite un Pass Azure. Consultez le labo 00 pour obtenir des instructions.
 
-## Scénario de l’exercice
+## Scénario du labo
 
 Microsoft Sentinel est la solution SIEM et SOAR native Cloud de Microsoft.  Grâce à la connexion de sources de données à partir de solutions de sécurité Microsoft et tierces, vous avez la possibilité d’exécuter des tâches d’opérations de sécurité.  Dans cet exercice de labo, vous allez créer un espace de travail Microsoft Sentinel dans Azure AD, avec des connecteurs de données, afin d’exécuter des requêtes de repérage à l’aide du langage de requête Kusto (KQL). 
 
@@ -25,7 +25,7 @@ Microsoft Sentinel est la solution SIEM et SOAR native Cloud de Microsoft.  Grâ
 
 1. Sélectionnez **+ Créer**, en haut à gauche de la page.
 
-1. Dans la fenêtre **Ajouter Microsoft Sentinel à un espace de travail**, sélectionnez **Créer un espace de travail**.
+1. Dans la vignette **Ajouter Microsoft Sentinel à un espace de travail**, sélectionnez **+ Créer un espace de travail**.
 
 1. Dans **Groupe de ressources**, sélectionnez **Créer**, puis entrez **Sentinel-RG**.
 
@@ -40,11 +40,11 @@ Microsoft Sentinel est la solution SIEM et SOAR native Cloud de Microsoft.  Grâ
 1. Si l’invite vous le demande, sélectionnez **OK** pour activer l’essai gratuit de Microsoft Sentinel.
 
 #### Tâche 2 : ajouter Azure AD en tant que source de données
-    **Note** - As of 11/1/2023, the data source is still Azure AD (not Microsoft Entra ID)
+    **Note** - As of 2/8/2024, the data source is now Microsoft Entra ID.
 
 1. Dans le menu de **Microsoft Sentinel**, faites défiler jusqu’à **Gestion de contenu**, puis sélectionnez **Hub de contenu**.
 
-1. Utilisez la zone de recherche pour rechercher **Azure** dans la liste des connecteurs, recherchez **Azure Active Directory** et cochez la case.
+1. Utilisez la zone de recherche pour rechercher **Entra** dans la liste des connecteurs, recherchez **Microsoft Entra ID** et cochez la case.
 
 1. À droite, une vignette d’aperçu s’ouvre.  Sélectionnez **Installer**.
 
@@ -64,7 +64,7 @@ Microsoft Sentinel est la solution SIEM et SOAR native Cloud de Microsoft.  Grâ
 
 1. Sélectionnez **Actualiser** sur la vignette **Microsoft Sentinel | Connecteurs de données** et le chiffre 1 s’affichera dans le compte **Connecté**.
 
-   **Remarque** : le connecteur de données Azure AD peut prendre quelques minutes pour afficher le chiffre actuel. 
+   **Remarque** : la prise en compte du connecteur de données Microsoft Entra ID dans le nombre de connecteurs actifs peut prendre quelques minutes. 
 
 #### Tâche 3 : exécuter une requête Kusto sur l’activité utilisateur
 
