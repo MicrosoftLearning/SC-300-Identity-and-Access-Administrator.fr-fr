@@ -7,7 +7,7 @@ lab:
 
 # Labo 13 : Implémenter et tester une stratégie d’accès conditionnel
 
-## Scénario de l’exercice
+## Scénario du labo
 
 Votre organisation doit pouvoir limiter l’accès utilisateur à ses applications internes. Vous devez déployer une stratégie d’accès conditionnel Microsoft Entra.
 
@@ -15,9 +15,9 @@ Votre organisation doit pouvoir limiter l’accès utilisateur à ses applicatio
 
 #### Durée estimée : 30 minutes
 
-### Exercice 1 : Définir une stratégie d’accès conditionnel pour empêcher DebraB d’accéder à Yammer
+### Exercice 1 : Définir une stratégie d’accès conditionnel pour empêcher DebraB d’accéder à Sway
 
-#### Tâche 1 : confirmer que DebraB a accès à Yammer
+#### Tâche 1 : Vérifier que DebraB a accès à Sway
 
 
 1. Lancez une nouvelle fenêtre de navigateur InPrivate.
@@ -91,7 +91,7 @@ Vous devez tester vos stratégies d’accès conditionnel pour vous assurer qu�
 
 3. Si vous êtes connecté(e), fermez l’onglet, attendez 1 minute, puis réessayez.
     
-   **Remarque** : si vous êtes connecté(e) automatiquement à Sway en tant que DebraB, vous devez vous déconnecter manuellement. Vos informations d’identification/l’accès ont été mis en cache.  Une fois que vous vous déconnectez et que vous vous connectez, votre session Yammer doit vous refuser l’accès.
+   **Remarque** : si vous êtes connecté automatiquement à Sway en tant que DebraB, vous devrez vous déconnecter manuellement.  Vos informations d’identification/votre accès ont été mis en cache.  Après vous être déconnecter, puis connecter, votre session Sway doit refuser l’accès.
 
 4. Fermez l’onglet et revenez à la page Accès conditionnel.
 
