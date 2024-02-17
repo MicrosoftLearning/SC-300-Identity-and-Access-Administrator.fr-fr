@@ -9,7 +9,7 @@ lab:
 
 **Remarque** : ce labo nécessite un Pass Azure. Consultez le labo 00 pour obtenir des instructions.
 
-## Scénario de l’exercice
+## Scénario du labo
 
 L’entreprise a décidé qu’Azure Active Directory devait être utilisé pour se connecter aux machines virtuelles pour l’accès à distance.  Ce labo explique comment cela peut être configuré pour les machines virtuelles Windows et Linux.
 
@@ -91,11 +91,11 @@ L’entreprise a décidé qu’Azure Active Directory devait être utilisé pour
 1. **Quittez** la session RDP à la machine virtuelle
 
 
-#### Tâche 4 : modifier le fichier RDP pour prendre en charge la connexion à Azure AD
+#### Tâche 4 – Modifier votre fichier RDP pour prendre en charge la connexion Microsoft Entra ID
 
 1. Ouvrez le dossier **Téléchargements** dans le Gestionnaire de fichiers.
 
-1. **Effectuez une copie** du fichier RDP et ajoutez **-AzureAD** à la fin du nom de fichier.
+1. **Faites une copie** du fichier RDP et ajoutez **-EntraID** à la fin du nom du fichier.
 
 1. Modifiez la nouvelle version du fichier RDP que vous venez de copier à l’aide de Bloc-notes Windows. Ajoutez les deux lignes de texte suivantes au bas du fichier :
      ```
@@ -105,11 +105,11 @@ L’entreprise a décidé qu’Azure Active Directory devait être utilisé pour
  
  1. **Enregistrez** le fichier RDP.  Vous devez maintenant avoir deux versions du fichier :
       - <<virtual machine name>> RDP
-      - <<virtual machine name>>-AzureAD.RDP
+      - <<virtual machine name>>-EntraID.RDP
 
-#### Tâche 5 : se connecter au Centre de données Windows Server 2022 à l’aide de la connexion Azure AD
+#### Tâche 5 – Se connecter à la machine virtuelle Windows en utilisant une connexion Microsoft Entra ID
 
-1. Ouvrez **<<virtual machine name>>-AzureAD.RDP
+1. Ouvrez le fichier **<<virtual machine name>>-EntraID.RDP
 
 1. Sélectionnez l’icône **Se connecter** lorsque la boîte de dialogue s’ouvre.
 
@@ -119,7 +119,7 @@ L’entreprise a décidé qu’Azure Active Directory devait être utilisé pour
 
 1. La session Bureau à distance doit s’ouvrir et afficher l’écran de connexion à Windows Server.  **Autre utilisateur** avec un bouton OK doit s’afficher.
 
-1. Sélectionnez **OK**.
+1. Cliquez sur **OK**.
 
 1. Dans la boîte de dialogue de connexion, saisissez les informations suivantes :
    - Nom d’utilisateur : **AzureAD\JoniS@<<your lab domainname>>
@@ -129,19 +129,17 @@ L’entreprise a décidé qu’Azure Active Directory devait être utilisé pour
 
 1. Windows Server doit confirmer la connexion et s’ouvrir au tableau de bord Gestionnaire de serveur normal.
 
-#### Tâche 6 : test facultatif pour explorer la connexion Azure AD
+#### Tâche 6 – Test facultatif pour explorer la connexion Microsoft Entra ID
 
 1. Vérifiez que JoniS était le seul utilisateur ajouté au groupe Administrateurs.
 
-1. Dans le tableau de bord Gestionnaire de serveur, sélectionnez le menu **Outils** en haut à gauche.
-
-1. Lancez l’outil **Gestion des ordinateurs**.
+1. Cliquez avec le bouton droit sur le bouton DÉMARRER, puis sélectionnez **Gestion de l’ordinateur** dans le menu contextuel.
 
 1. Ouvrez **utilisateurs et groupes locaux**, puis accédez à **Groupes, Administrateurs**.
 
 1. Vous devriez voir **Azure\JoniSherman…** dans la liste.
 
-1. Vérifiez si d’autres membres Azure AD peuvent se connecter.
+1. Vérifiez si d’autres membres Microsoft Entra ID peuvent se connecter.
 
 1. Quittez la session Bureau à distance.
 
@@ -159,7 +157,9 @@ L’entreprise a décidé qu’Azure Active Directory devait être utilisé pour
 
 1. Sélectionnez **+ Créer une ressource**.
 
-1. Sélectionnez **Créer** sous **Ubuntu Server 18.04 LTS** dans la vue Populaire.
+1. Recherchez **Ubuntu**.
+
+1. Sous **Ubuntu Server 22.04 LTS**, sélectionnez **Créer**. Vous pouvez utiliser d’autres serveurs Linux pour ce labo de test.
 
 1. Sur l’onglet **Gestion**, cochez la case pour activer **Connexion avec Azure Active Directory (préversion)**.
 
