@@ -12,7 +12,7 @@ Si un locataire vous est fourni dans le cadre d’une formation dispensée par u
 
 # Labo 01 : gérer les rôles utilisateur
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Votre entreprise a récemment embauché un nouvel employé qui effectuera des tâches en tant qu’administrateur d’application. Vous devez créer un nouvel utilisateur et attribuer le rôle approprié.
 
@@ -110,13 +110,13 @@ En utilisant Microsoft Entra ID, vous pouvez désigner des administrateurs limit
 
    **Remarque - Ce rôle a désormais la possibilité d’ajouter des applications au locataire. Nous allons expérimenter davantage cette fonctionnalité dans les laboratoires ultérieurs.**
 
-7. Déconnectez-vous de l’instance Chris Green du portail Azure et fermez le navigateur.
+7. Déconnectez-vous de l’instance Chris Green du portail et fermez le navigateur.
 
 ### Exercice 3 - Supprimer une attribution de rôle
 
 #### Tâche 1 - Supprimer l’administrateur de l’application de Chris Green
 
-Cette tâche utilise une autre méthode pour supprimer le rôle affecté ; elle utilise l’option **Rôles et administrateurs** dans Azure AD.
+Cette tâche va utiliser une autre méthode pour supprimer le rôle attribué. Elle va utiliser l’option **Rôles et administrateurs** dans Microsoft Entra ID.
 
 1. Si vous n’êtes pas déjà connecté en tant que Global Admin, lancez le Centre d’administration Microsoft Entra et connectez-vous maintenant.
 2. Dans la zone de recherche, saisissez **Rôles**, puis lancez les rôles et l’administration de Microsoft Entra ID.
@@ -164,11 +164,11 @@ Une fois que les utilisateurs ont été créés, vous serez invité à indiquer 
 
 #### Tâche 2 - Ajout en bloc d’utilisateurs à l’aide de PowerShell
 
-1. Ouvrez PowerShell ISE en tant qu’administrateur.  Pour ce faire, recherchez PowerShell dans Windows et choisissez Exécuter en tant qu’administrateur. 
+1. Ouvrez PowerShell en tant qu’administrateur.Pour ce faire, recherchez PowerShell dans Windows et choisissez Exécuter en tant qu’administrateur. 
 
-**Remarque** - Vous devez disposer de PowerShell version 7.2 ou ultérieure pour que ce labo fonctionne.  Lorsque PowerShell s’ouvre, vous obtenez une version en haut de l’écran, si vous exécutez une version antérieure, suivez les instructions à l’écran pour accéder à https://aka.ms/PowerShell-Release?tag=7.3.9. Faites défiler jusqu’à la section ressources et sélectionnez powershell-7.3.1-win-x64.msi. Une fois le téléchargement terminé, sélectionnez Ouvrir le fichier. Installez à l’aide de toutes les valeurs par défaut.
+**Remarque** : vous devez disposer de PowerShell version 7.2 ou ultérieure pour que ce labo fonctionne.  Lorsque PowerShell s’ouvre, vous obtenez une version en haut de l’écran. Si vous l’exécutez et que vous avez une version antérieure, suivez les instructions à l’écran pour accéder à https://aka.ms/PowerShell-Release?tag=7.3.9. Faites défiler jusqu’à la section Ressources et sélectionnez powershell-7.3.1-win-x64.msi. Une fois le téléchargement terminé, sélectionnez Ouvrir le fichier. Procédez à l’installation en utilisant toutes les valeurs par défaut.
 
-2. Vous devez installer le module Microsoft.Graph PowerShell si vous ne l’avez pas déjà utilisé.  Exécutez les deux commandes suivantes, puis confirmez l’opération lorsque vous y êtes invité en appuyant sur Y :
+2. Vous devez installer le module PowerShell Microsoft.Graph si vous ne l’avez pas déjà utilisé.  Exécutez la commande suivante, puis confirmez l’opération lorsque vous y êtes invité(e) :
 
     ```
     Install-Module Microsoft.Graph
@@ -185,7 +185,7 @@ Une fois que les utilisateurs ont été créés, vous serez invité à indiquer 
     ```
     Connect-MgGraph -Scopes "User.ReadWrite.All"
     ``` 
-    Le navigateur Edge s’ouvre et vous êtes invité à vous connecter.  Utilisez le compte MOD Administrator pour vous connecter.  Acceptez la demande d’autorisations ; fermez ensuite la fenêtre du navigateur.
+    Le navigateur Edge s’ouvre et vous êtes invité(e) à vous connecter.  Utilisez le compte Administrateur MOD pour vous connecter.  Acceptez la demande d’autorisations ; fermez ensuite la fenêtre du navigateur.
 
 5. Pour vérifier que vous êtes connecté et pour voir les utilisateurs existants, exécutez :  
 
@@ -209,7 +209,7 @@ Une fois que les utilisateurs ont été créés, vous serez invité à indiquer 
         -DisplayName "New PW User" `
         -GivenName "New" -Surname "User" `
         -MailNickname "newuser" `
-        -UsageLocation "USA" `
+        -UsageLocation "US" `
         -UserPrincipalName "newuser@<labtenantname.com>" `
         -PasswordProfile $PWProfile -AccountEnabled `
         -Department "Research" -JobTitle "Trainer"
