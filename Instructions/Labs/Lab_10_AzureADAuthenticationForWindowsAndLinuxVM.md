@@ -1,6 +1,6 @@
 ---
 lab:
-  title: "10\_: Authentification Azure\_AD pour machines virtuelles Windows et Linux"
+  title: '10 : authentification Microsoft Entra ID pour des machines virtuelles Windows et Linux'
   learning path: '02'
   module: Module 02 - Implement an Authentication and Access Management Solution
 ---
@@ -9,15 +9,15 @@ lab:
 
 **Remarque** : ce labo nécessite un Pass Azure. Consultez le labo 00 pour obtenir des instructions.
 
-## Scénario du labo
+## Scénario de labo
 
-L’entreprise a décidé qu’Azure Active Directory devait être utilisé pour se connecter aux machines virtuelles pour l’accès à distance.  Ce labo explique comment cela peut être configuré pour les machines virtuelles Windows et Linux.
+La société a décidé que Microsoft Entra ID doit être utilisé pour l’accès à distance afin de se connecter aux machines virtuelles.  Ce labo explique comment cela peut être configuré pour les machines virtuelles Windows et Linux.
 
 #### Durée estimée : 30 minutes
 
-### Exercice 1 : Connexion aux machines virtuelles Windows dans Azure avec Azure AD
+### Exercice 1 : connexion à des machines virtuelles Windows dans Azure avec Microsoft Entra ID
 
-#### Tâche 1 : créer une machine virtuelle Windows avec la connexion Azure AD activée
+#### Tâche 1 : créer une machine virtuelle Windows avec une connexion Microsoft Entra ID activée
 
 1. Accéder : [https://portal.azure.com](https://portal.azure.com)
 
@@ -30,17 +30,15 @@ L’entreprise a décidé qu’Azure Active Directory devait être utilisé pour
 1. Depuis l’onglet Informations de base, vous devrez créer un nom d’utilisateur et un mot de passe Administrateur pour la machine virtuelle.
    - Utilisez un nom d’utilisateur que vous devrez mémoriser et un mot de passe sécurisé.
 
-1. Sous l’onglet **Gestion**, cochez la case à côté de **Se connecter avec Azure AD** sous la section Azure AD.
+1. Sous l’onglet **Gestion**, cochez la case **Connexion avec Microsoft Entra ID** sous la section de Microsoft Entra ID.
 
-    REMARQUE : depuis le 11/01/2023, cette interface utilisateur n’a pas été mise à jour pour afficher l’ID Microsoft Entra. Elle fait toujours référence à Azure AD.
-
-    REMARQUE 2 : vous remarquerez que la case de l’**identité managée affectée par le système** sous la section Identité est automatiquement cochée et grisée. Cette action doit se produire automatiquement une fois que vous avez activé la connexion avec Azure AD.
+        NOTE: You will notice that the **System assigned managed identity** under the Identity section is automatically checked and turned grey. This action should happen automatically once you enable Login with Microsoft Entra ID.
 
 1. Parcourez le reste de l’expérience de création d’une machine virtuelle. 
 
 1. Sélectionnez Créer.
 
-#### Tâche 2 : connexion Azure AD pour les machines virtuelles Azure existantes
+#### Tâche 2 : connexion Microsoft Entra ID pour des machines virtuelles Azure existantes
 
 1. Accédez à **Machines Virtuelles** dans le [https://portal.azure.com](https://portal.azure.com).
 
@@ -57,7 +55,7 @@ L’entreprise a décidé qu’Azure Active Directory devait être utilisé pour
 
 1. Sélectionnez **Vérifier + Affecter** pour terminer le processus.
 
-#### Tâche 3 : mettre à jour la machine virtuelle du serveur pour prendre en charge la connexion à Azure AD
+#### Tâche 3 : mettre à jour la machine virtuelle de serveur pour prendre en charge la connexion Microsoft Entra ID
 
 1. Sélectionnez l’élément de menu **Connect**.
 
@@ -89,7 +87,6 @@ L’entreprise a décidé qu’Azure Active Directory devait être utilisé pour
 1. Sélectionnez **Apply** (Appliquer), puis **OK**.
 
 1. **Quittez** la session RDP à la machine virtuelle
-
 
 #### Tâche 4 – Modifier votre fichier RDP pour prendre en charge la connexion Microsoft Entra ID
 

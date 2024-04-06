@@ -7,7 +7,7 @@ lab:
 
 # Labo 02 : Utiliser les propriétés du locataire
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Vous devez identifier et mettre à jour les différentes propriétés associées à votre locataire.
 
@@ -77,13 +77,13 @@ Les abonnements Azure ont une relation d’approbation avec Microsoft Entra ID
 
 ### Exercice 3 : Configuration de vos informations de confidentialité
 
-#### Tâche 1 : ajouter vos informations de confidentialité sur Azure AD, y compris l’URL du contact global de confidentialité et la déclaration de confidentialité
+#### Tâche 1 : ajout de vos informations de confidentialité sur Microsoft Entra ID, notamment le contact international chargé de la confidentialité et l’URL de déclaration de confidentialité
 
 Microsoft vous recommande vivement d’ajouter votre contact international chargé de la confidentialité et la déclaration de confidentialité de votre organisation, pour que vos employés internes et invités externes puissent consulter vos stratégies. Étant donné que les déclarations de confidentialité sont particulièrement créées et adaptées à chaque entreprise, nous vous recommandons vivement de contacter un conseil juridique à des fins d’assistance.
 
    **REMARQUE** : pour plus d’informations sur l’affichage ou la suppression de données personnelles, consultez https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure[](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure). Pour plus d’informations sur le RGPD, consultez [https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
-Vous ajoutez les informations de confidentialité de votre organisation dans la zone  **Propriétés**  d’Azure AD. Accéder à la zone Propriétés et ajouter vos informations de confidentialité :
+Vous ajoutez les informations de confidentialité de votre organisation dans la zone  **Propriétés**  de Microsoft Entra ID. Accéder à la zone Propriétés et ajouter vos informations de confidentialité :
 
 1. Dans le menu **Identité**, sélectionnez **Vue d’ensemble**, puis **Propriétés**.
 

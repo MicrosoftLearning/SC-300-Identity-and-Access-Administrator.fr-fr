@@ -7,9 +7,9 @@ lab:
 
 # Labo 28 : Surveiller et gérer la posture de sécurité avec le score d’identité sécurisée
 
-## Scénario de l’exercice
+## Scénario de labo
 
-Microsoft Entra Identity Protection fournit une détection et une correction automatisées des risques basés sur l’identité ainsi que des données dans le portail pour examiner les risques potentiels. Microsoft Entra Identity Protection fournit également un score de sécurité des identités pour surveiller et améliorer votre posture de sécurité des identités.  De la même manière que Microsoft 365 Defender et Microsoft Defender pour le cloud, le score d’identité sécurisée fournit des actions d’amélioration et des recommandations qui peuvent améliorer votre posture de sécurité globale pour l’identité dans Microsoft Entra ID.  Ce labo va vous permettre d’explorer cette fonctionnalité. 
+Microsoft Entra Identity Protection fournit une détection et une correction automatisées des risques basés sur l’identité ainsi que des données dans le portail pour examiner les risques potentiels. Protection des ID Microsoft Entra fournit également un score d’identité sécurisée pour surveiller et améliorer votre posture des identités.  De la même manière que Microsoft Defender XDR et Microsoft Defender pour le cloud, le score d’identité sécurisée offre des suggestions et des actions d’amélioration qui peuvent améliorer votre posture de sécurité globale pour les identités dans Microsoft Entra ID.  Ce labo va vous permettre d’explorer cette fonctionnalité. 
 
 #### Durée estimée : 15 minutes
 
@@ -27,7 +27,7 @@ Microsoft Entra Identity Protection fournit une détection et une correction aut
 
 5. Faites défiler vers le bas pour afficher les **actions d’amélioration**.
 
-6. Contrairement aux actions d’amélioration dans Microsoft Defender pour le cloud et Microsoft 365 Defender, ces actions d’amélioration sont spécifiques à l’identité.  Cet outil fournit une liste plus ciblée d’actions potentielles pour votre gestion de la posture de sécurité.  Toutes les actions d’amélioration lancées à partir de cette liste agissent également sur votre posture globale de sécurité des locataires. 
+6. Contrairement aux actions d’amélioration dans Microsoft Defender pour le cloud et Microsoft Defender XDR, ces actions d’amélioration sont spécifiques aux identités.  Cet outil fournit une liste plus ciblée d’actions potentielles pour votre gestion de la posture de sécurité.  Toutes les actions d’amélioration lancées à partir de cette liste agissent également sur votre posture globale de sécurité des locataires. 
 
 #### Tâche 2 : exécuter une action d’amélioration
 
