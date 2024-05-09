@@ -7,7 +7,7 @@ lab:
 
 # Labo 03 : Attribution d’une licence à l’aide de l’appartenance au groupe
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Votre organisation a décidé d’utiliser des groupes de sécurité dans Microsoft Entra ID, pour gérer les licences. Vous devez configurer un nouveau groupe de sécurité, attribuer une licence à ce groupe et vérifier que les licences membres du groupe ont été mises à jour.
 
@@ -86,7 +86,7 @@ Votre organisation a décidé d’utiliser des groupes de sécurité dans Micros
     
 5. Fermez la fenêtre du navigateur. 
 
-### Exercice 2 : Créer un groupe Microsoft 365 dans Microsoft Entra ID
+### Exercice 2 – Créer un groupe Microsoft 365 dans Microsoft Entra ID
 
 #### Tâche 1 : créer le groupe
 
@@ -144,7 +144,7 @@ Une partie de vos tâches en tant qu’administrateur Microsoft Entra consiste �
 
    **Avertissement** : la `user.objectid` est sensible à la casse.
 
-10. Sélectionnez **OK**. La règle s’affiche dans la zone « Syntaxe de la règle ».
+10. Cliquez sur **OK**. La règle s’affiche dans la zone « Syntaxe de la règle ».
 
    ![Capture d’écran affichant la page des règles d’appartenance au groupe dynamique avec la syntaxe de règle mise en surbrillance.](./media/lp1-mod3-dynamic-group-membership-rule.png)
 
