@@ -77,11 +77,3 @@ Microsoft Sentinel est la solution SIEM et SOAR native Cloud de Microsoft.  Grâ
 1. Sélectionnez **Exécuter**. 
 
 1. Cela fournit la liste des ID d’utilisateur sur Microsoft Entra ID.  Étant donné que nous venons de créer l’espace de travail, vous ne voyez peut-être pas les résultats.  Notez le format de la requête.
-
-1. Sous **Gestion des menaces**, dans le menu, sélectionnez **Repérage**. 
-
-1. Faites défiler vers le bas pour rechercher **Emplacement de connexion anormal de la requête par compte d’utilisateur et authentification de l’application**.  Cette requête sur la connexion à Microsoft Entra considère toutes les connexions utilisateur pour chaque application Microsoft Entra et sélectionne le profil d’emplacement le plus anormal pour un utilisateur au sein d’une application individuelle. L’intention est de rechercher la compromission du compte d’utilisateur, éventuellement via un vecteur d’application spécifique. 
-
-1. Sélectionnez **Exécuter** pour voir les résultats de la requête.
-
-1. Cela peut ne pas fournir de résultats avec le nouvel espace de travail, mais vous avez maintenant vu comment les requêtes peuvent être exécutées pour collecter des informations ou pour rechercher des menaces potentielles.
