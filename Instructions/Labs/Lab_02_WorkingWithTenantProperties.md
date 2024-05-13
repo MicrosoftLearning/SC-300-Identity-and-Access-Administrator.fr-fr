@@ -19,7 +19,9 @@ Vous devez identifier et mettre à jour les différentes propriétés associées
 
 1. Accédez au [https://entra.microsoft.com](https://entra.microsoft.com) et connectez-vous à l’aide d’un compte d’administrateur général pour le répertoire.
 
-1. Dans le menu **Identité**, ouvrez les **Paramètres** et sélectionnez **Noms de domaine**.
+1. Dans le menu **Identité**, utilisez l’option **Afficher plus* en bas.
+
+1.  Ouvrez le menu **Paramètres**, sélectionnez **Noms de domaine**.
 
 1. Sélectionnez **+ Ajouter un domaine personnalisé**.
 
@@ -28,6 +30,8 @@ Vous devez identifier et mettre à jour les différentes propriétés associées
     ```
     sales.labtenant.onmicrosoft.com
     ```
+
+1. **Remarque** : vous serez invité(e) à ouvrir le Centre d’administration Microsoft 365 pour effectuer cette action.
 
 1. Sélectionnez **Ajouter un domaine** pour ajouter le sous-domaine.
 

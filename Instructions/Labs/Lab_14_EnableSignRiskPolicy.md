@@ -7,7 +7,7 @@ lab:
 
 # Labo 14 : Activer des stratégies de connexion et de risque utilisateur
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Afin de bénéficier d’une couche de sécurité supplémentaire, activez et configurez les stratégies de connexion et de risque utilisateur de votre organisation Microsoft Entra.
 
@@ -22,7 +22,7 @@ Afin de bénéficier d’une couche de sécurité supplémentaire, activez et co
 
 2. Ouvrez le menu du portail, puis sélectionnez  **Microsoft Entra ID**.
 
-3. Dans le menu de gauche **Identité**, sélectionnez **Protection**.
+3. Dans le menu, sous **Identité**, sélectionnez **Protection**.
 
 4. Sur la page Sécurité, dans le volet de navigation de gauche, sélectionnez **Protection de l’identité**.
 
