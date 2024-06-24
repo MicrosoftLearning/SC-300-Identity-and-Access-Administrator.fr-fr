@@ -146,7 +146,7 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
 
 1. Vous devez remarquer que ces utilisateurs n’ont pas accès.
 
-### Exercice 2 : Connexion aux machines virtuelles Linux dans Azure avec Azure AD
+### Exercice 2 facultatif : Connexion à des machines virtuelles Linux dans Azure avec Microsoft Entra ID
 
 #### Tâche 1 : créer une machine virtuelle Linux avec une identité managée affectée par le système
 
@@ -158,13 +158,13 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
 
 1. Sous **Ubuntu Server 22.04 LTS**, sélectionnez **Créer**. Vous pouvez utiliser d’autres serveurs Linux pour ce labo de test.
 
-1. Sur l’onglet **Gestion**, cochez la case pour activer **Connexion avec Azure Active Directory (préversion)**.
+1. Sous l’onglet **Gestion**, cochez la case pour activer la **Connexion avec Microsoft Entra ID**.
 
 1. Vérifiez que l’option **Identité managée affectée par le système** est cochée.
 
 1. Parcourez le reste de l’expérience de création d’une machine virtuelle. Dans cette préversion, vous devrez créer un compte administrateur avec un nom d’utilisateur et un mot de passe ou une clé publique SSH.
 
-#### Tâche 2 : connexion Azure AD pour les machines virtuelles Azure existantes
+#### Tâche 2 : connexion Microsoft Entra ID pour des machines virtuelles Azure existantes
 
 1. Accédez à **Machines Virtuelles** dans le [https://portal.azure.com](https://portal.azure.com).
 
