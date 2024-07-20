@@ -7,9 +7,9 @@ lab:
 
 # Labo 23 - Ajouter un rapport d’acceptation des conditions d’utilisation 
 
-## Scénario de l’exercice
+## Scénario de labo
 
-Les stratégies de conditions d’utilisation d’Azure AD offrent aux organisations une méthode simple pour présenter des informations aux utilisateurs finaux. Cette présentation permet de garantir que les utilisateurs voient les clauses d’exclusion de responsabilité nécessaires au respect des conditions légales ou de conformité. Cet article vous montre comment démarrer avec les stratégies de conditions d’utilisation.
+Les stratégies de Conditions d’utilisation de Microsoft Entra offrent aux organisations une méthode simple pour présenter des informations aux utilisateurs finaux. Cette présentation permet de garantir que les utilisateurs voient les clauses d’exclusion de responsabilité nécessaires au respect des conditions légales ou de conformité. Cet article vous montre comment démarrer avec les stratégies de conditions d’utilisation.
 
 Vous devez créer et appliquer une stratégie de conditions d’utilisation pour votre organisation.
 
@@ -21,11 +21,11 @@ Vous devez créer et appliquer une stratégie de conditions d’utilisation pour
 
 Après avoir finalisé le document relatif à vos conditions d’utilisation, effectuez les étapes suivantes pour les ajouter.
 
-1. Connectez-vous à l’adresse [https://portal.azure.com](https://portal.azure.com) à l’aide d’un compte Administrateur général.
+1. Connectez-vous à l’adresse [https://entra.microsoft.com](https://entra.microsoft.com) à l’aide d’un compte Administrateur général.
 
-2. Ouvrez **Azure Active Directory** et sélectionnez  **Gouvernance des identités**.
+2. Ouvrez et sélectionnez  **Gouvernance des identités** dans le menu de navigation de gauche.
 
-3. Dans le menu de navigation de gauche, sous **Conditions d’utilisation**, sélectionnez **Conditions d’utilisation**.
+3. Dans le menu, sous **Gestion des droits d’utilisation**, sélectionnez **Conditions d’utilisation**.
 
 4. Dans la page Conditions d’utilisation, dans le menu supérieur, sélectionnez **+ Nouvelles conditions**
 
@@ -33,31 +33,31 @@ Après avoir finalisé le document relatif à vos conditions d’utilisation, ef
 
 5. Dans la zone **Nom**, entrez **Conditions d’utilisation du test**.
 
-6. Ce sont les conditions d’utilisation à utiliser dans le portail Microsoft Azure.
+    **Remarque** : ce sont les conditions d’utilisation à utiliser dans le portail Azure.
 
-7. Dans la zone **Nom d’affichage**, entrez **Conditions d’utilisation de contoso**.
-
-8. Il s’agit du titre que les utilisateurs voient quand ils se connectent.
-
-9. Sélectionnez la **case du document Conditions d'utilisation**, recherchez votre PDF de conditions d'utilisation finalisé et sélectionnez-le.
+6. Sélectionnez la **case du document Conditions d'utilisation**, recherchez votre PDF de conditions d'utilisation finalisé et sélectionnez-le.
 
    **Fichier de conditions d’utilisation fourni** : accédez au référentiel GitHub AllFiles/Labs/Lab26 pour obtenir un exemple de document PDF de conditions d’utilisation à utiliser dans ce labo.
 
-10. Sélectionnez **Anglais** comme langue de votre document Conditions d’utilisation.
+7. Dans la zone **Nom d’affichage**, entrez **Conditions d’utilisation de contoso**.
+
+    **Remarque** : il s’agit du titre que les utilisateurs voient quand ils se connectent.
+
+8. Sélectionnez **Anglais** comme langue de votre document Conditions d’utilisation.
 
    **Remarque** : l’option de langue vous permet de charger plusieurs conditions d’utilisation, chacune dans une langue différente. La version des conditions d’utilisation affichée pour l’utilisateur final dépend des préférences de son navigateur.
 
-11. Pour demander aux utilisateurs finaux d’afficher les conditions d’utilisation avant de les accepter, définissez **Demander aux utilisateurs d’étendre les conditions d’utilisation** sur **Activé**.
+9. Pour demander aux utilisateurs finaux d’afficher les conditions d’utilisation avant de les accepter, définissez **Demander aux utilisateurs d’étendre les conditions d’utilisation** sur **Activé**.
 
-12. Pour demander aux utilisateurs finaux d’accepter vos conditions d’utilisation sur chaque appareil à partir duquel l’accès leur est octroyé, définissez **Demander le consentement des utilisateurs sur chaque appareil** sur **Désactivé**. Les utilisateurs peuvent être amenés à installer des applications supplémentaires si cette option est activée.
+10. Pour demander aux utilisateurs finaux d’accepter vos conditions d’utilisation sur chaque appareil à partir duquel l’accès leur est octroyé, définissez **Demander le consentement des utilisateurs sur chaque appareil** sur **Désactivé**. Les utilisateurs peuvent être amenés à installer des applications supplémentaires si cette option est activée.
 
-    **Avertissement** : le consentement sur chaque appareil nécessite que les utilisateurs inscrivent chaque appareil auprès d’Azure AD avant d’obtenir l’accès. Il est recommandé de définir ce paramètre sur Activé. Toutefois, pour les besoins de ce labo, nous le laisserons sur Désactivé.
+    **Avertissement** : les utilisateurs devront enregistrer chaque appareil avec Microsoft Entra ID avant de pouvoir obtenir le consentement sur chaque appareil. Il est recommandé de définir ce paramètre sur Activé. Toutefois, pour les besoins de ce labo, nous le laisserons sur Désactivé.
 
-13. Si vous voulez faire expirer les consentements pour les conditions d’utilisation selon une planification, définissez **Faire expirer les consentements** sur **Activé**. Si la valeur Activé est définie, deux paramètres de planification supplémentaires sont affichés.
+11. Si vous voulez faire expirer les consentements pour les conditions d’utilisation selon une planification, définissez **Faire expirer les consentements** sur **Activé**. Si la valeur Activé est définie, deux paramètres de planification supplémentaires sont affichés.
 
     ![Paramètres Faire expirer les consentements pour définir la date de début, la fréquence et la durée](./media/lp4-mod1-new-terms-of-use-create.png)
 
-14. Utilisez les paramètres **Expiration commençant le** et **Fréquence** pour spécifier la planification régissant l’expiration des conditions d’utilisation. Le tableau suivant présente deux exemples de paramètres et leur résultat :
+12. Utilisez les paramètres **Expiration commençant le** et **Fréquence** pour spécifier la planification régissant l’expiration des conditions d’utilisation. Le tableau suivant présente deux exemples de paramètres et leur résultat :
 
     | Expiration commençant le | Fréquence | Résultat |
     |---|---|---|
@@ -71,7 +71,7 @@ Après avoir finalisé le document relatif à vos conditions d’utilisation, ef
     | Alice | 1 jan | 1 fév | 1 mar | 1 avr|
     | Bob | 15 jan | 1 fév | 1 mar| 1 avr |
 
-15. Utilisez le paramètre **Durée avant nouvelle acceptation requise (jours)** pour spécifier le nombre de jours au bout duquel l’utilisateur doit réaccepter les conditions d’utilisation. Les utilisateurs peuvent ainsi suivre leur propre calendrier. Par exemple, si vous définissez une durée de **30** jours, voici comment les expirations peuvent se produire pour deux utilisateurs :
+13. Utilisez le paramètre **Durée avant nouvelle acceptation requise (jours)** pour spécifier le nombre de jours au bout duquel l’utilisateur doit réaccepter les conditions d’utilisation. Les utilisateurs peuvent ainsi suivre leur propre calendrier. Par exemple, si vous définissez une durée de **30** jours, voici comment les expirations peuvent se produire pour deux utilisateurs :
 
     | Utilisateur | Date d’acceptation initiale | Première date d’expiration | Deuxième date d’expiration | Troisième date d’expiration |
     |---|---|---|---|---|
@@ -80,7 +80,7 @@ Après avoir finalisé le document relatif à vos conditions d’utilisation, ef
 
     **Remarque** : il est possible d’utiliser les paramètres Faire expirer les consentements et Durée avant nouvelle acceptation requise (jours) ensemble, mais généralement, vous utilisez l’un ou l’autre.
 
-16. Sous **Accès conditionnel**, sélectionnez **Stratégie personnalisée**.
+14. Sous **Accès conditionnel**, sélectionnez **Stratégie personnalisée**.
 
     | Template | Description |
     |---|---|
@@ -93,35 +93,35 @@ Après avoir finalisé le document relatif à vos conditions d’utilisation, ef
 
     Les stratégies d’accès conditionnel personnalisées permettent de définir des conditions d’utilisation plus précises, jusqu’au niveau d’une application cloud ou d’un groupe d’utilisateurs. Pour plus d’informations, consultez [https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/require-tou](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/require-tou).
 
-17. Lorsque vous avez terminé, sélectionnez **Créer**.
+15. Lorsque vous avez terminé, sélectionnez **Créer**.
 
     ![Image de l’écran affichant la page des Nouvelles conditions d’utilisation avec les options configurées mises en surbrillance](./media/lp4-mod1-new-terms-of-use-create.png)
 
-18. Une fois les conditions d’utilisation créées, vous êtes automatiquement redirigé vers la page de Stratégie d’accès conditionnel. Dans la page, dans la zone **Nom** , entrez **Appliquer les conditions d’utilisation**.
+16. Une fois les conditions d’utilisation créées, vous êtes automatiquement redirigé vers la page de Stratégie d’accès conditionnel. Dans la page, dans la zone **Nom** , entrez **Appliquer les conditions d’utilisation**.
 
-19. Sous **Affectations**, sélectionnez **Utilisateurs ou identités de charge de travail**.
+17. Sous **Affectations**, sélectionnez **Identités des utilisateurs**.
 
-20. Dans l’onglet inclure, activez la case à cocher **Utilisateurs et groupes**.
+18. Dans l’onglet inclure, activez la case à cocher **Utilisateurs et groupes**.
 
-21. Dans le volet Sélectionner, sélectionnez **Adele Vance** comme compte à utiliser pour tester la stratégie des conditions d’utilisation.
+19. Dans le volet Sélectionner, sélectionnez **Adele Vance** comme compte à utiliser pour tester la stratégie des conditions d’utilisation.
 
    **Avertissement** : si vous choisissez votre compte d’administrateur, comme toutes les stratégies d’accès conditionnel, vérifiez que vous disposez d’un autre compte disposant d’autorisations suffisantes pour modifier la stratégie d’accès conditionnel. Cela permet de s’assurer que votre compte administrateur ne sera pas verrouillé si la stratégie d’accès conditionnel entraîne un résultat indésirable.
 
-22. Sélectionnez **Applications ou actions cloud**.
+20. Sélectionnez **Ressources cibles.**
 
-23. Sélectionnez **Toutes les applications Cloud**.
+21. Sélectionnez **Toutes les applications Cloud**.
 
-24. Sous **Contrôles d’accès**, sélectionnez **Accorder**.
+22. Sous **Contrôles d’accès**, sélectionnez **Accorder**.
 
-25. Dans le volet accorder, sélectionnez **Test des conditions d’utilisation**, puis sélectionnez **Sélectionner**.
+23. Dans le volet accorder, sélectionnez **Test des conditions d’utilisation**, puis sélectionnez **Sélectionner**.
 
-26. Sous **Activer une stratégie**, sélectionnez **Activé**.
+24. Sous **Activer une stratégie**, sélectionnez **Activé**.
 
-27. Lorsque vous avez terminé, sélectionnez **Créer**.
+25. Lorsque vous avez terminé, sélectionnez **Créer**.
 
     ![Image de l’écran affichant la stratégie d’accès conditionnel avec les options de configuration mises en surbrillance](./media/lp4-mod1-terms-of-use-ca-policy.png)
 
-28. Si vous avez choisi d’utiliser votre propre compte, vous pouvez actualiser votre navigateur. Vous êtes invité à vous connecter à nouveau. Quand vous vous connectez, vous devez accepter les conditions d’utilisation.
+26. Si vous avez choisi d’utiliser votre propre compte, vous pouvez actualiser votre navigateur. Vous êtes invité à vous connecter à nouveau. Quand vous vous connectez, vous devez accepter les conditions d’utilisation.
 
 #### Tâche 2 - Se connecter en tant qu’Adele
 
@@ -139,9 +139,9 @@ Après avoir finalisé le document relatif à vos conditions d’utilisation, ef
 6. Consultez les conditions d’utilisation.
 7. Vous pouvez choisir **Accepter** ou **Refuser**.
 
-    >**Remarque** : si vous choisissez **Refuser**, lors de votre prochaine connexion en tant qu’AdeleV, vous devrez à nouveau afficher et accepter les conditions d’utilisation.
+    **Remarque** : si vous choisissez **Refuser**, lors de votre prochaine connexion en tant qu’AdeleV, vous devrez à nouveau afficher et accepter les conditions d’utilisation.
 
-    >**Remarque** : les conditions d’utilisation peuvent prendre quelques minutes pour s’afficher. Vous pouvez également vous déconnecter et vous reconnecter au portail.
+    **Remarque** : les conditions d’utilisation peuvent prendre quelques minutes pour s’afficher. Vous pouvez également vous déconnecter et vous reconnecter au portail.
  
 #### Tâche 3 - Afficher le rapport des utilisateurs ayant accepté et refusé les conditions d’utilisation
 
@@ -195,13 +195,14 @@ Vous pouvez consulter et vérifier les conditions d’utilisation qu’ils ont a
 
 Vous pouvez modifier certains détails des conditions d’utilisation, mais il n’est pas possible de modifier un document existant. La procédure suivante explique comment modifier les détails.
 
-1. Connectez-vous à  [https://portal.azure.com](https://portal.azure.com) en tant qu’administrateur global.
+1. Connectez-vous à  [https://entra.microsoft.com](https://entra.microsoft.com) en tant qu’administrateur global.
 
-2. Ouvrez Azure Active Directory et sélectionnez  **Gouvernance des identités**.
+2. Ouvrez l’élément Microsoft Entra ID et sélectionnez **Gouvernance des identités** dans le menu.
 
-3. Dans le menu de navigation de gauche, sous **Conditions d’utilisation**, sélectionnez **Conditions d’utilisation**.
+3. Dans le menu de navigation de gauche, sous **Gestion des droits d’utilisation**, sélectionnez **Conditions d’utilisation**.
 
 4. Sélectionnez les conditions d’utilisation à modifier.
+ - Remarque : vous devez cliquer sur l’espace ouvert, et non directement sur le nom des conditions d’utilisation.
 
 5. Dans le menu du haut, sélectionnez **Modifier**.
 
@@ -242,4 +243,3 @@ Vous avez peut-être besoin, à l’occasion, de mettre à jour le document sur 
 6. Une fois que vous avez téléchargé votre nouveau pdf et décidé de sa nouvelle acceptation, sélectionnez **Ajouter**.
 
 7. La version la plus récente apparaît alors dans la colonne Document.
-

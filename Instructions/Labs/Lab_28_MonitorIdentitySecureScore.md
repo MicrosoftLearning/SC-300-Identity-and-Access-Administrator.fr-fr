@@ -35,16 +35,30 @@ Microsoft Entra Identity Protection fournit une détection et une correction aut
 
 2. Dans la vignette qui s’ouvre, faites défiler vers le bas et sélectionnez **Démarrer**.
 
-3. Un nouvel onglet s’ouvre pour **Identity Protection | Stratégie de connexion à risque**.
+3. Un nouvel onglet s’ouvre pour **l’accès conditionnel**.
+ **Remarque :** par défaut, le bouton « Démarrer » s’ouvre dans le Portail Azure. Vous pouvez utiliser le portail ou revenir au Centre d’administration Entra. Chacune de ces deux options fonctionnera.
 
-4. Sélectionnez **Tous les utilisateurs** sous **Affectations**.
+4. Sélectionnez **+ Nouvelle stratégie**.
 
-5. Sous **Connexion à risque**, sélectionnez **Moyen et supérieur**.
+5. Donnez un nom à votre stratégie. Nous recommandons aux organisations de créer une norme explicite pour les noms de leurs stratégies.
 
-6. Sous **Contrôles** - , sélectionnez **Autoriser****Exiger une authentification multifacteur**.
+6. Sous Affectations, sélectionnez Utilisateurs ou identités de charge de travail.
 
-7. **Activez** **Application de la stratégie** (si ce n’est pas déjà fait), puis sélectionnez **Enregistrer**.
+7. Sous Inclure, sélectionnez Tous les utilisateurs.
 
-8. Vous avez créé une stratégie de connexion à risque qui doit maintenant augmenter votre score d’identité sécurisée.  Cela prendra jusqu’à 24 heures pour que votre score d’identité sécurisée soit affecté.
+8. Sous Exclure, sélectionnez Utilisateurs et groupes, puis choisissez les comptes qui doivent conserver la possibilité d’utiliser l’authentification héritée. Microsoft vous recommande d’exclure au moins un compte pour que vous ne soyez pas verrouillé.
 
-9. Passez en revue les autres actions d’amélioration et les étapes à suivre pour les créer et les activer.
+9. Sous Ressources cibles > Applications cloud > Inclure, sélectionnez Toutes les applications cloud.
+
+10. Sous Conditions > Applications clientes, définissez Configurer sur Oui.
+ - Cochez uniquement les cases Clients Exchange ActiveSync et Autres clients.
+
+11. Cliquez sur Terminé.
+
+12. Sous Contrôles d’accès > Accorder, sélectionnez Bloquer l’accès.
+
+13. Sélectionnez Sélectionner.
+
+14. Confirmez vos paramètres et définissez Activer la stratégie sur Rapport seul.
+
+15. Sélectionnez Créer pour créer votre stratégie.

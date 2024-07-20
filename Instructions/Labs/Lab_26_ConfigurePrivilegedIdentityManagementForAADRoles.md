@@ -7,11 +7,13 @@ lab:
 
 # Labo 26 : Configuration de Privileged Identity Management pour les rôles Microsoft Entra
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Un administrateur de rôle privilégié peut personnaliser Privileged Identity Management (PIM) dans son organisation Microsoft Entra, y compris modifier l’expérience d’un utilisateur qui active une attribution de rôle éligible. Vous devez vous familiariser avec la configuration de PIM.
 
 #### Durée estimée : 30 minutes
+
+REMARQUE : des modifications sont en cours pour exiger l’authentification multifacteur (MFA) dans les environnements de labo.  Lorsque vous changez d’utilisateur pour terminer ce labo, il se peut que vous soyez invité à configurer l’authentification multifacteur.
 
 ### Exercice 1 : Configurer les paramètres du rôle Microsoft Entra
 
