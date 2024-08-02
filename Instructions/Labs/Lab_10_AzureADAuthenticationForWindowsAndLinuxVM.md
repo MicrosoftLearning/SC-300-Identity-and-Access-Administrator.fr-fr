@@ -119,7 +119,7 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
 1. Cliquez sur **OK**.
 
 1. Dans la boîte de dialogue de connexion, saisissez les informations suivantes :
-   - Nom d’utilisateur : **AzureAD\JoniS@<<your lab domainname>>
+   - Nom d’utilisateur = **AzureAD\JoniS@ votre nom de domaine**
    - Mot de passe : entrez le mot de passe d’administrateur communiqué par votre fournisseur d’hébergement de labo.
 
    REMARQUE : JoniS est l’utilisateur que nous avons autorisé à se connecter en tant qu’administrateur pendant la tâche 1.
