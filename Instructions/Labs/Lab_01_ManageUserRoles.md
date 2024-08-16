@@ -262,7 +262,7 @@ Il peut arriver qu’un compte soit supprimé, puis qu’il doive être récupé
 
 #### Tâche 1 - Rechercher votre utilisateur sans licence dans Azure Active Directory
 
-Certains comptes d'utilisateurs de votre organisation ne recevront pas tous les produits disponibles dans la licence qui leur a été attribuée ou auront besoin de mises à jour ou d'ajouts à la licence qui leur a été attribuée. Vous devez vous assurer que vous êtes en mesure de mettre à jour l’attribution de licence d’un compte d’utilisateur dans Azure AD.
+Certains comptes d'utilisateurs de votre organisation ne recevront pas tous les produits disponibles dans la licence qui leur a été attribuée ou auront besoin de mises à jour ou d'ajouts à la licence qui leur a été attribuée. Vous devez vous assurer que vous êtes en mesure de mettre à jour l’attribution de licence d’un compte d’utilisateur dans Microsoft Entra ID.
 
 1. Accédez à [https://entra.microsoft.com]( https://entra.microsoft.com).
 
