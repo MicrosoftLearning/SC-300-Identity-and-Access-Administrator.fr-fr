@@ -63,7 +63,7 @@ Vous devez identifier et mettre à jour les différentes propriétés associées
 
     **IMPORTANT** : lorsque le locataire est créé, c’est à ce moment que le pays ou la région sont spécifiés. Ce paramètre ne peut pas être modifié ultérieurement.
 
-3. Sur la page **Propriétés**, sous **Propriétés du locataire**, recherchez l’**Emplacement** et passez en revue les informations.
+3. Sur la page **Propriétés**, sous **Propriétés du locataire**, recherchez ** Emplacement des données ** et passez en revue les informations.
 
     ![Capture d’écran affichant la page Propriétés Azure Active Directory avec les paramètres Pays ou région et Emplacement mis en surbrillance](./media/azure-active-directory-properties-country-location.png)
 

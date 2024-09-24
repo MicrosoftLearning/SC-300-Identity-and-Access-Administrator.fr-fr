@@ -7,7 +7,7 @@ lab:
 
 # 18 : Microsoft Defender for Cloud Apps : stratégies d’accès et de session
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Microsoft Defender for Cloud Apps nous permet de créer des stratégies d’accès conditionnel supplémentaires spécifiques aux applications cloud que nous surveillons.  La création de ces stratégies peut être effectuée à partir du menu Contrôle dans le portail Microsoft Defender for Cloud Apps.
 
@@ -61,7 +61,7 @@ Microsoft Defender for Cloud Apps nous permet de créer des stratégies d’acc�
    - Nom d’utilisateur : PradeepG@<<<your lab hoster provided domain>>>
    - Mot de passe : le mot de passe de l’onglet Ressources
 5. Vérifiez que Pradeep a accès et que vous recevez un nouveau message :
-   - Votre entreprise surveille l’utilisation de cette application.
+   - L’accès à Microsoft Forms est surveillé.
 6. Fermez la fenêtre de navigation InPrivate.
 
 ### Exercice 2 : Configuration des alertes générées dans Microsoft Defender for Cloud Apps
@@ -72,11 +72,9 @@ L’inscription de votre application établit une relation d’approbation entre
 
 1. Connectez-vous à [https://security.microsoft.com](https://security.microsoft.com) en utilisant un compte d’administrateur général.
 
-1. Dans le menu de gauche, faites défiler vers le bas et sélectionnez **Autres ressources**.
+1. Dans le menu de gauche, faites défiler et sélectionnez **Stratégies** dans la section **Applications cloud** du menu de gauche.
 
-1. Dans la fenêtre **Autres ressources**, recherchez et sélectionnez **Ouvrir** sous **Microsoft Defender for Cloud Apps**.  Vous accédez ainsi au **Portail Microsoft Defender for Cloud Apps** dans le compte Microsoft 365.
-
-1. Dans le menu **Microsoft Defender pour for Cloud Apps**, sélectionnez la flèche déroulante pour **Contrôler** et sélectionnez **Stratégies**.
+1. Dans le menu **Stratégies**, recherchez et sélectionnez **Gestion des stratégies**.
 
 1. Sélectionnez **+ Créer une stratégie**. Sélectionnez **Stratégie d’accès**.
 
@@ -90,7 +88,7 @@ L’inscription de votre application établit une relation d’approbation entre
 
 1. Laissez **Actions** défini sur **Test**.
 
-1. Sous **Alertes**, laissez la case **Créer une alerte...** cochée et sélectionnez **Alerte envoyée comme e-mail**.
+1. Sous **Alertes**, laissez la case **Créer une alerte...** activée et sélectionnez **Envoyer l’alerte par e-mail**.
 
 1. Entrez l’adresse e-mail de l’administrateur du labo, puis sélectionnez **Entrée** sur votre clavier.
 
@@ -105,7 +103,7 @@ L’inscription de votre application établit une relation d’approbation entre
    - Nom d’utilisateur : PradeepG@<<<your lab hoster provided domain>>>
    - Mot de passe : le mot de passe de l’onglet Ressources
 5. Vérifiez que Pradeep a accès et que vous recevez un nouveau message :
-   - Votre entreprise surveille l’utilisation de cette application.
+   - L’accès à Microsoft Forms est surveillé.
 6. Fermez la fenêtre de navigation InPrivate.
 
 #### Tâche 3 : passer en revue l’activité dans Defender for Cloud Apps
