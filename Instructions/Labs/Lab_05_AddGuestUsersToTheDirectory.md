@@ -7,7 +7,7 @@ lab:
 
 # Labo 05 : Ajouter des utilisateurs invités à l’annuaire
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Votre entreprise travaille avec de nombreux fournisseurs et, à l’occasion, vous devez ajouter des comptes de fournisseurs à votre répertoire en tant qu’invités.
 
@@ -88,7 +88,7 @@ Un partenariat récent a été établi avec une autre société. Pour l’instan
 
 #### Tâche 2 : inviter des utilisateurs avec PowerShell
 
-1. Ouvrez PowerShell ISE en tant qu’administrateur.Pour ce faire, recherchez PowerShell dans Windows et choisissez Exécuter en tant qu’administrateur. 
+1. Ouvrez PowerShell en tant qu’administrateur.Pour ce faire, recherchez PowerShell dans Windows et choisissez Exécuter en tant qu’administrateur. 
 
 **Remarque** : vous devez disposer de PowerShell version 7.2 ou ultérieure pour que ce labo fonctionne.  Lorsque PowerShell s’ouvre, vous obtenez une version en haut de l’écran. Si vous l’exécutez et que vous avez une version antérieure, suivez les instructions à l’écran pour accéder à https://aka.ms/PowerShell-Release?tag=7.3.9. Faites défiler jusqu’à la section Ressources et sélectionnez powershell-7.3.1-win-x64.msi. Une fois le téléchargement terminé, sélectionnez Ouvrir le fichier. Procédez à l’installation en utilisant toutes les valeurs par défaut.
 
@@ -122,7 +122,7 @@ Un partenariat récent a été établi avec une autre société. Pour l’instan
     }
     ```
 
-6. Utilisez la commande MgInvitation pour inviter l’utilisateur externe :
+6. Envoyez la commande MgInvitation pour inviter l’utilisateur externe :
 
     ```
     New-MgInvitation -BodyParameter $params

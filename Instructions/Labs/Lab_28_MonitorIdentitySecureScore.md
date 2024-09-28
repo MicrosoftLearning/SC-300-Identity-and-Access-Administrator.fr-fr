@@ -31,7 +31,7 @@ Microsoft Entra Identity Protection fournit une détection et une correction aut
 
 #### Tâche 2 : exécuter une action d’amélioration
 
-1. Pour améliorer une zone de la posture de sécurité des identités, sélectionnez **Protéger tous les utilisateurs avec une stratégie de connexion à risque**.
+1. Pour améliorer un domaine de la posture de sécurité des identités, sélectionnez **Activer les stratégies de risque de connexion à Microsoft Entra ID Identity Protection**.
 
 2. Dans la vignette qui s’ouvre, faites défiler vers le bas et sélectionnez **Démarrer**.
 
