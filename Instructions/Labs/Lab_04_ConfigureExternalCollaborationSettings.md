@@ -7,7 +7,7 @@ lab:
 
 # Labo 04 : Configurer les paramètres de collaboration externe
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Vous devez activer les paramètres de collaboration externe pour votre organisation afin de permettre l’accès aux invités approuvés.
 
@@ -41,9 +41,9 @@ Vous devez activer les paramètres de collaboration externe pour votre organisat
 9. Sous  **Accès utilisateur invité**, passez en revue les niveaux d’accès disponibles, puis sélectionnez **L’accès des utilisateurs invités est limité aux propriétés et aux membres de leurs propres objets de répertoire (le plus restrictif)**.
 
     **REMARQUE**
-    - Les utilisateurs invités ont le même accès que les membres (le plus inclusif) : Cette option donne aux invités le même accès aux ressources Microsoft Entra et aux données d’annuaire que les utilisateurs membres.
+    - Les utilisateurs invités ont le même accès que les membres (le plus inclusif) : cette option donne aux invités le même accès aux ressources Microsoft Entra et aux données d’annuaire que les utilisateurs membres.
     - Les utilisateurs invités ont un accès limité aux propriétés et aux appartenances des objets d’annuaire : Ce paramètre empêche les invités d’effectuer certaines tâches d’annuaire, telles que l’énumération d’utilisateurs, de groupes ou d’autres ressources de répertoire. Les invités peuvent voir l’appartenance de tous les groupes non masqués.
-    - L’accès utilisateur invité est limité aux propriétés et aux appartenances de ses propres objets d’annuaire (le plus restrictif) : Avec ce paramètre, les invités ne peuvent accéder qu’à leurs propres profils. Les invités ne sont pas autorisés à voir les profils, groupes ou appartenances à des groupes d’autres utilisateurs.
+    - L’accès utilisateur invité est limité aux propriétés et aux abonnements de ses propres objets d’annuaire (le plus restrictif) : avec ce paramètre, les invités ne peuvent accéder qu’à leurs propres profils. Les invités ne sont pas autorisés à voir les profils, groupes ou appartenances à des groupes d’autres utilisateurs.
 
     ![Capture d’écran affichant les options de restriction d’accès des utilisateurs invités](./media/lp1-mod3-guest-user-access-restrictions.png)
 

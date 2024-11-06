@@ -7,7 +7,7 @@ lab:
 
 # Labo 22 : Créer et gérer un catalogue de ressources dans la gestion des droits d’utilisation Microsoft Entra
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Un catalogue est un conteneur de ressources et de packages d’accès. Vous créez un catalogue lorsque vous souhaitez regrouper des ressources et packages d’accès liés. La personne qui crée le catalogue en devient le premier propriétaire. Un propriétaire de catalogue peut ajouter d’autres propriétaires de catalogue. Vous devez créer et configurer un catalogue dans votre organisation.
 
@@ -65,7 +65,7 @@ Pour inclure des ressources dans un package d’accès, les ressources doivent e
 
    | Type de ressource | Valeur |
    | :------------- | :---------- |
-   |  **Groupes et équipes** | Retail |
+   |  **Groupes et équipes** | Commerce |
    |  **Applications** | Box |
    |  **Applications** | Salesforce |
    |  **Sites SharePoint** | SharePoint d’entreprise <<<sélectionnez à partir de la liste de vos sites SharePoint disponibles |
@@ -106,7 +106,7 @@ Vous pouvez modifier le nom et la description d’un catalogue. Les utilisateurs
 
     ![Image de l’écran affichant les propriétés en cours d’activation.](./media/lp4-mod1-edit-marketing-catalog.png)
 
-4. Sélectionnez **Enregistrer**.
+4. Cliquez sur **Enregistrer**.
 
 #### Tâche 5 : créer des révisions d’accès pour les utilisateurs invités
 
@@ -120,7 +120,7 @@ Vous pouvez modifier le nom et la description d’un catalogue. Les utilisateurs
 
 1. Sous **Sélectionner l’étendue utilisateur**, sélectionnez **Utilisateurs invités uniquement**.
 
-1. Sélectionnez **Suivant : Révision**.
+1. Sélectionnez **Suivant : Révisions**.
 
 1. La vignette suivante est l’emplacement où vous configurez les personnes qui passent en revue et approuvent l’accès, la fréquence à laquelle l’accès sera examiné et l’expiration de l’accès.
 

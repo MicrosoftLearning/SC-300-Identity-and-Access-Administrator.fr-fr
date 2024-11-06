@@ -7,7 +7,7 @@ lab:
 
 # Labo 08 : Activer l’authentification multifacteur.
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Pour améliorer la sécurité dans votre organisation, vous avez été dirigé(e) vers l’activation de l’authentification multifacteur pour l’ID Microsoft Entra.
 
@@ -77,7 +77,7 @@ Nous allons maintenant examiner comment configurer des règles de stratégie d�
 
 9. Vérifiez que l’option **Exiger tous les contrôles sélectionnés** est sélectionnée.
 
-10. Cliquez sur **Sélectionner**.
+10. Sélectionnez **Sélectionner**.
 
 11. Définissez **Activer la stratégie** sur **Activé**.
 

@@ -7,7 +7,7 @@ lab:
 
 # Labo 20 : Implémenter la gestion des accès pour les applications
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Votre organisation exige que seuls des utilisateurs ou des groupes spécifiques aient accès aux applications d’entreprise. Affecte un utilisateur spécifique à une application.
 

@@ -7,7 +7,7 @@ lab:
 
 # Labo 06 : Ajouter un fournisseur d’identité fédéré
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Votre entreprise travaille avec de nombreux fournisseurs et, à l’occasion, vous devez ajouter des comptes de fournisseurs à votre répertoire en tant qu’invités et leur permettre d’utiliser leur compte Google pour se connecter.
 
@@ -94,14 +94,14 @@ Votre entreprise travaille avec de nombreux fournisseurs et, à l’occasion, vo
 
 7. Entrez l’**ID client** et la **clé secrète client** obtenus précédemment.
 
-8. Sélectionnez **Enregistrer**.
+8. Cliquez sur **Enregistrer**.
 
 Cette opération termine la configuration de Google en tant que fournisseur d’identité.
 
 #### Tâche 2 : inviter le compte d’utilisateur test
 9. Si vous avez utilisé un compte Gmail existant, n’oubliez pas de supprimer le compte via **Identités externes | Tous les fournisseurs d’identité**. Vous pouvez également revenir à la console du développeur Google et supprimer le projet que vous avez créé.
 
-10. Ouvrez Microsoft Entra ID.
+10. Ouvrez Microsoft Entra ID.
 
 11. Accédez à Utilisateurs, puis sélectionnez **Tous les utilisateurs**.
 

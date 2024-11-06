@@ -48,9 +48,9 @@ Pour ajouter et modifier des URI de redirection pour vos applications inscrites,
 
     ![Capture d’écran du volet Configuration de la plateforme dans le portail Azure](./media/configure-platforms.png)
 
-    | Plate-forme| Paramètres de configuration|
+    | Plateforme| Paramètres de configuration|
     | :--- | :--- |
-    | web| Saisissez un  **URI de redirection**  pour votre application, qui est l’emplacement où la plateforme d’identités Microsoft redirige le client d’un utilisateur et envoie des jetons de sécurité après authentification. Sélectionnez cette plateforme pour les applications web standard qui s’exécutent sur un serveur.|
+    | Web| Saisissez un  **URI de redirection**  pour votre application, qui est l’emplacement où la plateforme d’identités Microsoft redirige le client d’un utilisateur et envoie des jetons de sécurité après authentification. Sélectionnez cette plateforme pour les applications web standard qui s’exécutent sur un serveur.|
     | Application monopage| Saisissez un  **URI de redirection**  pour votre application, qui est l’emplacement où la plateforme d’identités Microsoft redirige le client d’un utilisateur et envoie des jetons de sécurité après authentification. Sélectionnez cette plateforme si vous générez une application web côté client dans JavaScript ou avec un framework comme Angular, Vue.js, React.js ou Blazor WebAssembly.|
     | iOS/macOS| Entrez l’ **ID de bundle** de l’application, qui se trouve dans Xcode dans  *Info.plist*  ou Paramètres de build. Un URI de redirection est automatiquement généré quand vous spécifiez un ID de bundle.|
     | Android| Entrez le  **Nom du package** de l’application, que vous trouverez dans le fichier AndroidManifest.xml. Générez et saisissez ensuite le  **code de hachage signature**. Un URI de redirection est automatiquement généré quand vous spécifiez ces paramètres.|
@@ -96,7 +96,7 @@ Le code d’une application cliente demande l’autorisation d’effectuer des o
 
 Tout d’abord, effectuez les étapes suivantes pour créer un exemple d’étendue nommé « Employees.Read.All » :
 
-1. Connectez-vous au centre d’administration Microsoft Entra.
+1. Connectez-vous au Centre d’administration Microsoft Entra.
 
 2. Si vous avez accès à plusieurs locataires, utilisez le filtre  **Répertoire + abonnement**  dans le menu du haut pour sélectionner le locataire contenant l’inscription de votre application cliente.
 
@@ -108,7 +108,7 @@ Tout d’abord, effectuez les étapes suivantes pour créer un exemple d’éten
 
 5. Vous êtes invité(e) à définir un  **URI d’ID d’application** si vous n’en avez pas encore configuré un. L’URI d’ID d’application, qui doit être globalement unique, fait office de préfixe pour les étendues que vous référencerez dans le code de votre API. Vous pouvez utiliser la valeur par défaut fournie, qui se présente sous la forme api://\<application-client-id\>, ou spécifier un URI plus lisible comme  `https://contoso.com/api`.
 
-6. Cliquez sur **Enregistrer et continuer**.
+6. Sélectionnez **Enregistrer et continuer**.
 
 6. Spécifiez ensuite les attributs de l’étendue dans le volet  **Ajouter une étendue**. Pour cette procédure pas à pas, vous pouvez utiliser les exemples de valeurs ou spécifier les vôtres.
 

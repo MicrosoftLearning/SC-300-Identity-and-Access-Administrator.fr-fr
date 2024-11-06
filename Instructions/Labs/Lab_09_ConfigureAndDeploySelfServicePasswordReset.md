@@ -6,7 +6,7 @@ lab:
 ---
 
 # Labo 09 : Configurer et déployer la réinitialisation de mot de passe en libre-service
-## Scénario de l’exercice
+## Scénario de labo
 
 L’entreprise a décidé d’autonomiser les employés et d’activer la réinitialisation de mot de passe en libre-service. Vous devez configurer ce paramètre dans votre organisation.
 

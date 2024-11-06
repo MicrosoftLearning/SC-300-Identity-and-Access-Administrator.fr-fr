@@ -7,7 +7,7 @@ lab:
 
 # Labo 21 : Accorder le consentement administrateur à une application au niveau du locataire
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Pour les applications développées par votre organisation ou inscrites directement dans votre locataire Microsoft Entra, vous pouvez accorder le consentement administrateur au niveau locataire à partir de « Inscriptions d'applications » dans le Portail Azure.
 
