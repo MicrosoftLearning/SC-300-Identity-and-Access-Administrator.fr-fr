@@ -7,7 +7,7 @@ lab:
 
 # Labo 00 - Configuration de l’environnement de labo
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Vous devez créer un abonnement Azure et demander une licence Azure AD P2 pour pouvoir effectuer les labos à venir.
 

@@ -7,7 +7,7 @@ lab:
 
 # Labo 25 : Créer des révisions d’accès pour utilisateurs internes et externes  
 
-## Scénario de l’exercice
+## Scénario de labo
 
 L’accès privilégié de l’utilisateur doit être régulièrement examiné de manière similaire.° Étant donné qu’il s’agit d’affectations d’accès élevés, l’examen de ces affectations doit être effectué de façon cohérente, comme indiqué par l’entreprise.° Les affectations privilégiées inutilisées et inutiles doivent être supprimées.° La suppression automatisée doit également être configurée pour les utilisateurs qui ne travaillent plus avec l’entreprise ou qui ont changé de service au sein de l’entreprise.
 

@@ -7,7 +7,7 @@ lab:
 
 # Labo 12 : Gérer les valeurs de verrouillage intelligent Microsoft Entra
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Vous devez configurer les paramètres supplémentaires de protection de mot de passe pour votre organisation.
 
@@ -35,7 +35,7 @@ En fonction des exigences de votre organisation, vous pouvez personnaliser les v
 
 7. En regard de **Mode**, sélectionnez **Appliqué**.
 
-8. Enregistrez vos modifications.
+8. Enregistrez les changements apportés.
 
     **REMARQUE** : lorsque le seuil de verrouillage intelligent est déclenché, le message suivant s’affiche en cas de verrouillage du compte :
     - Votre compte est temporairement verrouillé pour éviter toute utilisation non autorisée. Réessayez plus tard. Si le problème persiste, contactez votre administrateur.

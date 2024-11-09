@@ -7,7 +7,7 @@ lab:
 
 # Labo 24 : Gérez le cycle de vie des utilisateurs externes dans les paramètres Gouvernance des identités Microsoft Entra.  
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Vous pouvez sélectionner ce qui se passe lorsqu’un utilisateur externe, qui a été invité à accéder à votre annuaire par le biais d’une demande de package d’accès en cours d’approbation, ne dispose plus d’attributions de package d’accès. Cela peut se produire si l’utilisateur abandonne toutes les attributions de package d’accès, ou si l’attribution de son dernier package d’accès arrive à expiration. Par défaut, lorsqu’un utilisateur externe n’a plus d’attributions de package d’accès, il ne peut pas se connecter à votre annuaire. Au bout de 30 jours, son compte d’utilisateur invité est supprimé de votre annuaire.
 

@@ -18,7 +18,7 @@ lab:
 
 **Remarque 2** : ce labo est à caractère facultatif.  La réalisation de ce labo dure au moins 1 heure et nécessite que vous suiviez avec précision les étapes indiquées.  N’hésitez pas à programmer ces étapes, puisque le temps vous le permet.  Si votre entreprise a déjà effectué sa configuration hybride ou si vous n’envisagez pas d’utiliser Microsoft Entra Connect, passez ce labo.
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Votre entreprise dispose de services de domaine Active Directory en local.  Elle souhaite continuer à utiliser Active Directory local comme solution de gestion des identités et des accès, mais elle requiert également la possibilité pour les utilisateurs d’accéder aux applications cloud avec le même nom d’utilisateur et le même mot de passe.
 

@@ -9,7 +9,7 @@ lab:
 
 **Remarque** : ce labo nécessite un Pass Azure. Consultez le labo 00 pour obtenir des instructions.
 
-## Scénario de l’exercice
+## Scénario du labo
 
 Lorsque vous utilisez des identités managées pour les ressources Azure, votre code peut obtenir des jetons d’accès pour s’authentifier auprès des ressources qui prennent en charge l’authentification Microsoft Entra.Toutefois, tous les services Azure ne prennent pas en charge l’authentification Microsoft Entra. Pour utiliser des identités managées pour les ressources Azure avec ces services, stockez les informations d’identification des services dans Azure Key Vault, puis utilisez des identités managées afin d’accéder à Key Vault pour récupérer les informations d’identification.
 
@@ -55,7 +55,7 @@ Lorsque vous utilisez des identités managées pour les ressources Azure, votre 
  - Sur la page **Configuration d’accès**, sélectionnez le bouton radio **Stratégie d’accès au coffre**.
 1. Sélectionnez **Revoir + créer**.
 
-1. Sélectionnez **Create** (Créer).
+1. Sélectionnez **Créer**.
 
 
 #### Tâche 3 : créer une clé secrète
@@ -88,7 +88,7 @@ Lorsque vous utilisez des identités managées pour les ressources Azure, votre 
 
 1. Sélectionnez **Ajouter**.
 
-1. Sélectionnez **Enregistrer**.
+1. Cliquez sur **Enregistrer**.
 
 #### Tâche 5 : accéder aux données avec un coffre de clés secret à l’aide de PowerShell
 

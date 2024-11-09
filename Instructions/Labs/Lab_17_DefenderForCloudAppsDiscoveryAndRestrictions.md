@@ -7,7 +7,7 @@ lab:
 
 # Labo 17 : Détection de l’application Defender pour le cloud et gestion des restrictions
 
-## Scénario de l’exercice
+## Scénario de labo
 
 Microsoft Defender for Cloud Apps exploite les journaux du trafic réseau pour identifier les applications auxquelles les utilisateurs accèdent.° Les journaux de trafic provenant de pare-feu locaux fournissent un rapport d’instantané sur les applications les plus courantes et les utilisateurs qui y accèdent.° Le trafic provenant d’appareils gérés sera transmis dans le tableau de bord vue d’ensemble de la détection des applications Microsoft Defender for Cloud Apps
 
