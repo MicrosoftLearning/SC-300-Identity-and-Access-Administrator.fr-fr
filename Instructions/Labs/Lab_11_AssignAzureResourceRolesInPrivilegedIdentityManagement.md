@@ -7,6 +7,8 @@ lab:
 
 # Labo 11 : Attribuer des rôles de ressources Azure dans Privileged Identity Management
 
+### Type de connexion = Connexion à la ressource Azure
+
 **Remarque** : ce labo nécessite un Pass Azure. Consultez le labo 00 pour obtenir des instructions.
 
 ## Scénario du labo
@@ -21,7 +23,6 @@ Microsoft Entra Privileged Identity Management (PIM) peut gérer les rôles de r
 
 Vous devez rendre un utilisateur éligible pour un rôle de ressource Azure.
 
-
 #### Durée estimée : 10 minutes
 
 ### Exercice 1 : PIM avec des ressources Azure
@@ -34,11 +35,9 @@ Vous devez rendre un utilisateur éligible pour un rôle de ressource Azure.
 
 3. Sur la page Privileged Identity Management du volet de navigation de gauche, sélectionnez **Ressources Azure**.
 
-4. Dans le menu supérieur, sélectionnez **Découvrir les ressources**.
+4. Dans la liste déroulante Abonnements, choisissez l’élément Abonnement MOC #####. Ensuite, en bas de l’écran, sélectionnez **Gérer les ressources**.
 
 5. Dans la page Ressources Azure : Détection, sélectionnez votre abonnement.
-
-   ![Image d’écran affichant la page de détection des ressources Azure avec l’abonnement et la ressource de gestion mis en surbrillance](./media/lp4-mod3-pim-azure-resource-management.png)
 
 6. Sur la page **Vue d’ensemble**, passez en revue les informations.
 
@@ -52,7 +51,7 @@ Vous devez rendre un utilisateur éligible pour un rôle de ressource Azure.
 
 10. Sous **Sélectionner des membres**, sélectionnez **Aucun membre sélectionné**.
 
-11. Sélectionnez **Miriam Graham** de votre organisation, à qui le rôle sera attribué.  Sélectionnez ensuite ****.
+11. Dans le volet Sélectionner un membre ou un groupe, recherchez vos rôles d’administrateur **User1-######@LODSPRODMCA.onmicrosoft.com** de votre organisation qui se verront attribuer le rôle.  Sélectionnez ensuite ****.
 
 12. Cliquez sur **Suivant**.
 

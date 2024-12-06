@@ -7,6 +7,8 @@ lab:
 
 # 18 : Microsoft Defender for Cloud Apps : stratégies d’accès et de session
 
+### Type de connexion = Administrateur Microsoft 365
+
 ## Scénario de labo
 
 Microsoft Defender for Cloud Apps nous permet de créer des stratégies d’accès conditionnel supplémentaires spécifiques aux applications cloud que nous surveillons.  La création de ces stratégies peut être effectuée à partir du menu Contrôle dans le portail Microsoft Defender for Cloud Apps.
@@ -61,7 +63,7 @@ Microsoft Defender for Cloud Apps nous permet de créer des stratégies d’acc�
    - Nom d’utilisateur : PradeepG@<<<your lab hoster provided domain>>>
    - Mot de passe : le mot de passe de l’onglet Ressources
 5. Vérifiez que Pradeep a accès et que vous recevez un nouveau message :
-   - L’accès à Microsoft Forms est surveillé.
+   - Votre entreprise surveille l’utilisation de cette application.
 6. Fermez la fenêtre de navigation InPrivate.
 
 ### Exercice 2 : Configuration des alertes générées dans Microsoft Defender for Cloud Apps
@@ -103,7 +105,7 @@ L’inscription de votre application établit une relation d’approbation entre
    - Nom d’utilisateur : PradeepG@<<<your lab hoster provided domain>>>
    - Mot de passe : le mot de passe de l’onglet Ressources
 5. Vérifiez que Pradeep a accès et que vous recevez un nouveau message :
-   - L’accès à Microsoft Forms est surveillé.
+   - Votre entreprise surveille l’utilisation de cette application.
 6. Fermez la fenêtre de navigation InPrivate.
 
 #### Tâche 3 : passer en revue l’activité dans Defender for Cloud Apps

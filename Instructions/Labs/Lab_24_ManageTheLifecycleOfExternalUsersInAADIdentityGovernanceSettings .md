@@ -5,7 +5,9 @@ lab:
   module: Module 04 - Plan and Implement and Identity Governance Strategy
 ---
 
-# Labo 24 : Gérez le cycle de vie des utilisateurs externes dans les paramètres Gouvernance des identités Microsoft Entra.  
+# Labo 24 : Gérez le cycle de vie des utilisateurs externes dans les paramètres Gouvernance des identités Microsoft Entra.
+
+### Type de connexion = Administrateur Microsoft 365
 
 ## Scénario de labo
 

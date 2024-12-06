@@ -7,6 +7,8 @@ lab:
 
 # Labo 04 : Configurer les paramètres de collaboration externe
 
+### Type de connexion = Administrateur Microsoft 365
+
 ## Scénario de labo
 
 Vous devez activer les paramètres de collaboration externe pour votre organisation afin de permettre l’accès aux invités approuvés.
@@ -35,7 +37,7 @@ Vous devez activer les paramètres de collaboration externe pour votre organisat
     
 5. Vérifiez que l’option **Oui** est sélectionnée.
 6. Si nécessaire, sélectionnez **Enregistrer**.
-7. Sinon, sélectionnez `Home > Contoso Marketing >` **Identités externes** pour revenir à l’écran précédent.
+7. Revenez au menu **Identités externes**.
 8. Sélectionnez à présent **Paramètres de collaboration externe** dans le menu de gauche.
 
 9. Sous  **Accès utilisateur invité**, passez en revue les niveaux d’accès disponibles, puis sélectionnez **L’accès des utilisateurs invités est limité aux propriétés et aux membres de leurs propres objets de répertoire (le plus restrictif)**.

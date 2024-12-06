@@ -9,7 +9,7 @@ lab:
 
 
 
-# Ce labo n’est pas disponible actuellement.  En raison d’un changement de licence dans Microsoft Entra ID, le labo n’a pas être lancé.  Nous sommes actuellement en train de résoudre les problèmes et de mettre à jour le labo. Nous devrions le remettre en ligne dans un délai d’une semaine.  Passez au labo suivant.
+# Ce labo fonctionne uniquement dans un environnement non-hôte lab. Si vous souhaitez l’essayer à l’aide d’un compte personnel, cela devrait fonctionner. Vous ne serez pas en mesure d’effectuer les tâches dans le cours.
 
 
 

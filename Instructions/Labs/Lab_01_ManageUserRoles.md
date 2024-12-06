@@ -6,11 +6,22 @@ lab:
 ---
 
 # Locataires WWL - Conditions d’utilisation
-Si un locataire vous est fourni dans le cadre d’une formation dispensée par un instructeur, notez qu’il est mis à votre disposition dans le seul but de prendre en charge les labos pratiques de la formation. Vous ne devez ni partager ni utiliser les locataires en dehors des labos pratiques. Le locataire utilisé dans ce cours est un locataire d’essai. Au terme de la classe, le locataire ne pourra pas faire l’objet d’une prolongation et vous ne pourrez plus l’utiliser ni y accéder. Vous n’êtes pas autorisé à convertir un locataire en abonnement payant. Les locataires obtenus dans le cadre de ce cours sont la propriété de Microsoft Corporation. Nous nous réservons le droit d’y accéder et d’en reprendre possession à tout moment. 
 
+Si un locataire vous est fourni dans le cadre d’une formation dispensée par un instructeur, notez qu’il est mis à votre disposition dans le seul but de prendre en charge les labos interactifs de la formation. Vous ne devez ni partager ni utiliser les locataires en dehors des labos interactifs. Le locataire utilisé dans ce cours est un locataire d’essai. Au terme de la classe, le locataire ne pourra pas faire l’objet d’une prolongation et vous ne pourrez plus l’utiliser ni y accéder. Vous n’êtes pas autorisé à convertir un locataire en abonnement payant. Les locataires obtenus dans le cadre de ce cours sont la propriété de Microsoft Corporation. Nous nous réservons le droit d’y accéder et d’en reprendre possession à tout moment.
+
+# Deux options de connexion différentes
+
+Ce labo dispose de deux options de connexion différentes, utilisées pour différentes parties du labo. Un style de connexion est destiné aux labos qui nécessitent des ressources Azure, l’autre est destiné aux labos qui n’ont besoin que de ressources Microsoft Entra et Microsoft 365. Types de connexion :
+
+  - Connexions basées sur les ressources Azure
+  - Connexion client Microsoft 365 + E5
+
+Vous serez informé de la connexion à utiliser dans chacun des labos.
 
 
 # Labo 01 : gérer les rôles utilisateur
+
+### Type de connexion = Administrateur Microsoft 365
 
 ## Scénario de labo
 
@@ -22,9 +33,10 @@ Votre entreprise a récemment embauché un nouvel employé qui effectuera des t�
 
 #### Tâche 1 - Ajouter un nouvel utilisateur
 
-1. Connectez-vous à l’adresse  [https://entra.microsoft.com](https://entra.microsoft.com) en tant qu'administrateur général
+1. Connectez-vous à la plateforme  [https://entra.microsoft.com](https://entra.microsoft.com) en tant qu’administrateur global.
+ - Utilisez le compte d’**administrateur Microsoft 365**.
 
-2. Sélectionnez **Identité** dans le menu de gauche.
+2. Dans le menu de gauche, sélectionnez **Identité**.
 
 3. Dans le menu de navigation de gauche, sous **Utilisateurs**, sélectionnez **Tous les utilisateurs**, puis sélectionnez **+ Nouvel utilisateur** et **Créer nouvel utilisateur**.
 
@@ -61,13 +73,13 @@ Votre entreprise a récemment embauché un nouvel employé qui effectuera des t�
     | Nouveau mot de passe| Saisissez un mot de passe unique et sécurisé |
     | Confirmer le mot de passe| Saisissez à nouveau un mot de passe unique et sécurisé |
 
-4. Si vous voyez une **boîte de dialogue de visite guidée**, sélectionnez le bouton **Peut-être plus tard**.
+4. Recherchez et sélectionnez **Applications d'entreprise** dans la boîte de dialogue de recherche en haut de l’écran.
 
-5. Recherchez et sélectionnez **Applications d'entreprise** dans la boîte de dialogue de recherche en haut de l’écran.
-7. Sélectionnez **+ Nouvelle application**. Notez que **+ Créer votre propre application** n’est pas disponible.
+5. Sélectionnez **+ Nouvelle application**. Notez que **+ Créer votre propre application** n’est pas disponible.
 
-9. Essayez de sélectionner certains des autres paramètres tels que **Proxy d'application**, **Paramètres utilisateur** et d’autres pour voir que **Chris Green** n’a pas de droits.
-10. Sélectionnez le nom de **ChrisG** dans le coin supérieur droit et déconnectez-vous.
+6. Essayez de sélectionner certains des autres paramètres tels que **Proxy d’application**, **Paramètres utilisateur** et d’autres pour voir que **Chris Green** n’a pas de droits.
+
+7. Sélectionnez le nom de **ChrisG** dans le coin supérieur droit et déconnectez-vous.
 
 
 ### Exercice 2 - Attribuer le rôle d’administrateur d’application et créer une application
@@ -280,20 +292,34 @@ Certains comptes d'utilisateurs de votre organisation ne recevront pas tous les 
 
 7. Vérifiez que Raul a « Aucune attribution de licence trouvée ».
 
-8. Revenez à **Tous les utilisateurs** dans le volet de navigation gauche, sous **Identité**, sélectionnez **Utilisateurs**
+#### Tâche 2 : ajouter une licence Windows à Raul
 
-9. Dans la page Utilisateurs, sélectionnez **Raul Razo**.
+Vous devez ajouter et supprimer des licences via le Centre d’administration Microsoft 365. Il s’agit d’un changement relativement nouveau.
 
-10. Dans le volet de navigation gauche, sélectionnez **Licences**.
+1. Ouvrez un nouvel onglet dans votre navigateur.
 
-11. Sélectionnez le bouton **+ Affectations**. 
+2. Connectez-vous au Centre d’administration Microsoft 365 à l’adresse http://admin.microsoft.com.
 
-12. Dans la page Mettre à jour les attributions de licences, sélectionnez la zone case activée pour une licence **Windows 10/11 Entreprise E3**.
+3. Connectez-vous en tant que compte d’administrateur si vous y êtes invité.
 
-    ![Image de l’écran affichant la page Mettre à jour les attributions de licence et les options de licence mises en surbrillance](./media/lp1-mod2-assign-user-license-options.png)
+4. Dans le menu de gauche, sélectionnez **Facturation**, puis **Licences**.
 
-13. Quand vous avez terminé, sélectionnez **Enregistrer**.
+5. Sélectionnez la licence **Windows 10/11 Entreprise E3** dans la liste.
 
-14. En haut de l’écran, sélectionnez **Accueil**, puis **Contoso**, sélectionnez **Utilisateur**, puis **Raul Razo**.
+6. Choisissez l’élément **+ Ajouter une licence**.
 
-15. Remarquez qu’aucune licence n’a été attribuée.
+7. Recherchez **Raul Razo** dans la liste.
+
+8. Une fois que vous avez ajouté Raul, sélectionnez **Attribuer**.
+
+9. Revenez à l’onglet du navigateur où le **Centre d’administration Microsoft Entra** est ouvert.
+
+10. Revenez à **Tous les utilisateurs** dans le volet de navigation gauche, sous **Identité**, sélectionnez **Utilisateurs**
+
+11. Dans la page Utilisateurs, sélectionnez **Raul Razo**.
+
+12. Dans le volet de navigation gauche, sélectionnez **Licences**.
+
+13. Remarquez qu’aucune licence n’a été attribuée.
+
+14. Vous pouvez quitter l’écran des licences.

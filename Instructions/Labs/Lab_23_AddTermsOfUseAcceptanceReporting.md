@@ -5,7 +5,9 @@ lab:
   module: Module 04 - Plan and Implement and Identity Governance Strategy
 ---
 
-# Labo 23 - Ajouter un rapport d’acceptation des conditions d’utilisation 
+# Labo 23 - Ajouter un rapport d’acceptation des conditions d’utilisation
+
+### Type de connexion = Administrateur Microsoft 365
 
 ## Scénario de labo
 
@@ -82,26 +84,30 @@ Après avoir finalisé le document relatif à vos conditions d’utilisation, ef
 
 14. Sous **Accès conditionnel**, sélectionnez **Stratégie personnalisée**.
 
-    | Template | Description |
-    |---|---|
-    | **Accès aux applications cloud pour tous les invités** | Une stratégie d’accès conditionnel est créée pour tous les utilisateurs invités et toutes les applications cloud. Cette stratégie impacte le portail Azure. Une fois la stratégie créée, il peut vous être demandé de vous déconnecter et de vous connecter. | 
-    |**Accès aux applications cloud pour tous les utilisateurs** | Une stratégie d’accès conditionnel est créée pour tous les utilisateurs et toutes les applications cloud. Cette stratégie impacte le portail Azure. Une fois la stratégie créée, il vous est demandé de vous déconnecter et de vous connecter. |
-    | **Stratégie personnalisée** | Sélectionnez les utilisateurs, groupes et applications auxquels ces conditions d’utilisation seront appliquées. |
-    | **Créer la stratégie d’accès conditionnel plus tard** | Ces conditions d’utilisation apparaîtront dans la liste de contrôle d’autorisation lors de la création d’une stratégie d’accès conditionnel. |
+ - Choix possibles et quand les utiliser :
 
-    **IMPORTANT** : les contrôles de stratégie d’accès conditionnel (y compris les conditions d’utilisation) ne peuvent pas être appliqués sur les comptes de service. Nous vous recommandons d’exclure tous les comptes de service de la stratégie d’accès conditionnel.
+  | Template | Description |
+  |---|---|
+  | **Accès aux applications cloud pour tous les invités** | Une stratégie d’accès conditionnel est créée pour tous les utilisateurs invités et toutes les applications cloud. Cette stratégie impacte le portail Azure. Une fois la stratégie créée, il peut vous être demandé de vous déconnecter et de vous connecter. | 
+  |**Accès aux applications cloud pour tous les utilisateurs** | Une stratégie d’accès conditionnel est créée pour tous les utilisateurs et toutes les applications cloud. Cette stratégie impacte le portail Azure. Une fois la stratégie créée, il vous est demandé de vous déconnecter et de vous connecter. |
+  | **Stratégie personnalisée** | Sélectionnez les utilisateurs, groupes et applications auxquels ces conditions d’utilisation seront appliquées. |
+  | **Créer la stratégie d’accès conditionnel plus tard** | Ces conditions d’utilisation apparaîtront dans la liste de contrôle d’autorisation lors de la création d’une stratégie d’accès conditionnel. |
 
-    Les stratégies d’accès conditionnel personnalisées permettent de définir des conditions d’utilisation plus précises, jusqu’au niveau d’une application cloud ou d’un groupe d’utilisateurs. Pour plus d’informations, consultez [https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/require-tou](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/require-tou).
+  **IMPORTANT** : les contrôles de stratégie d’accès conditionnel (y compris les conditions d’utilisation) ne peuvent pas être appliqués sur les comptes de service. Nous vous recommandons d’exclure tous les comptes de service de la stratégie d’accès conditionnel.
+
+  Les stratégies d’accès conditionnel personnalisées permettent de définir des conditions d’utilisation plus précises, jusqu’au niveau d’une application cloud ou d’un groupe d’utilisateurs. Pour plus d’informations, consultez [https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/require-tou](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/require-tou).
 
 15. Lorsque vous avez terminé, sélectionnez **Créer**.
 
     ![Image de l’écran affichant la page des Nouvelles conditions d’utilisation avec les options configurées mises en surbrillance](./media/lp4-mod1-new-terms-of-use-create.png)
 
+#### Tâche 1 (suite) : créer la stratégie d’accès conditionnel
+
 16. Une fois les conditions d’utilisation créées, vous êtes automatiquement redirigé vers la page de Stratégie d’accès conditionnel. Dans la page, dans la zone **Nom** , entrez **Appliquer les conditions d’utilisation**.
 
 17. Sous **Affectations**, sélectionnez **Identités des utilisateurs**.
 
-18. Dans l’onglet inclure, activez la case à cocher **Utilisateurs et groupes**.
+18. Dans l’onglet Inclure, cochez les cases **Sélectionner des utilisateurs et des groupes** et **Utilisateurs et des groupes**.
 
 19. Dans le volet Sélectionner, sélectionnez **Adele Vance** comme compte à utiliser pour tester la stratégie des conditions d’utilisation.
 
@@ -113,7 +119,7 @@ Après avoir finalisé le document relatif à vos conditions d’utilisation, ef
 
 22. Sous **Contrôles d’accès**, sélectionnez **Accorder**.
 
-23. Dans le volet accorder, sélectionnez **Test des conditions d’utilisation**, puis sélectionnez **Sélectionner**.
+23. Dans le volet Accorder, sélectionnez **Conditions d’utilisation de Contoso**, puis **Sélectionner**.
 
 24. Sous **Activer une stratégie**, sélectionnez **Activé**.
 
@@ -132,7 +138,7 @@ Après avoir finalisé le document relatif à vos conditions d’utilisation, ef
 
     | Setting | Valeur à entrer |
     | :--- | :--- |
-    | Nom d’utilisateur | **AdeleV@**`<<your domain name>>.onmicrosoft.com` |
+    | User Name | **AdeleV@**`<<your domain name>>.onmicrosoft.com` |
     | Mot de passe | Entrez le mot de passe de l’administrateur du locataire (consultez l’onglet Ressources du laboratoire pour récupérer le mot de passe d’administrateur du locataire) |
 
 5. Validez la connexion d’Adele avec la méthode d’authentification MFA.

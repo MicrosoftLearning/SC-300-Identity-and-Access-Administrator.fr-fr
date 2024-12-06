@@ -5,7 +5,9 @@ lab:
   module: Module 04 - Plan and Implement and Identity Governance Strategy
 ---
 
-# Labo 25 : Créer des révisions d’accès pour utilisateurs internes et externes  
+# Labo 25 : Créer des révisions d’accès pour utilisateurs internes et externes
+
+### Type de connexion = Administrateur Microsoft 365
 
 ## Scénario de labo
 
@@ -33,11 +35,11 @@ L’accès privilégié de l’utilisateur doit être régulièrement examiné d
 
 8. L’étape suivante consiste à déterminer les réviseurs.Ces réviseurs peuvent être eux-mêmes membres pour effectuer une auto-révision ou être attribués aux superviseurs si l’accès à un service entier est examiné. Vous pouvez également définir l’action lorsqu’un réviseur ne répond pas pour supprimer automatiquement cet accès privilégié du membre.
 
-9. Choisissez une option de périodicité pour le réviseur et la révision.  Sélectionnez ensuite **Paramètres**.
+9. Choisissez un réviseur **Alex Wilber** et révisez l’option de périodicité **Annuellement**.  Ensuite, sélectionnez **Suivant : paramètres**.
 
 10. Les paramètres avancés vous permettent d’ajouter un message à la révision.
 
-11. Basculez vers l’onglet **Révision + Créer** pour finaliser la révision d’accès.
+11. Basculez vers l’onglet **Suivant : examiner et créer** pour finaliser la révision d’accès.
 
 12. Nommez la révision d’accès ** Révision d’accès SC300**.
 

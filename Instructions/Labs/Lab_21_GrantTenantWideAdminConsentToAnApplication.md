@@ -7,6 +7,8 @@ lab:
 
 # Labo 21 : Accorder le consentement administrateur à une application au niveau du locataire
 
+### Type de connexion = Administrateur Microsoft 365
+
 ## Scénario de labo
 
 Pour les applications développées par votre organisation ou inscrites directement dans votre locataire Microsoft Entra, vous pouvez accorder le consentement administrateur au niveau locataire à partir de « Inscriptions d'applications » dans le Portail Azure.
@@ -43,16 +45,20 @@ Le rôle Administrateur général est requis afin de donner le consentement admi
 
 Vous pouvez accorder le consentement administrateur au niveau locataire via Applications d’entreprise si l’application a déjà été approvisionnée dans votre locataire.
 
-1. Dans le centre d’administration Microsoft Entra, accédez à **Identité > Applications > Applications d’entreprise > Application de démonstration**.
+1. Dans le centre d’administration Microsoft Entra, accédez à **Identité** et **Applications**.
 
-2. Sur la page **Application de démonstration**, dans le volet de navigation gauche, sous **Sécurité,** sélectionnez **Autorisations.**
+2. Dans le menu, ouvrez **Applications d’entreprise**.
 
-3. Sous **Autorisations**, sélectionnez **Accorder le consentement de l’administrateur**.
+3. Dans la liste des applications d’entreprise, sélectionnez l’**application de démonstration** que nous avons inscrite précédemment.
+
+4. Sur la page **Application de démonstration**, dans le volet de navigation gauche, sous **Sécurité,** sélectionnez **Autorisations.**
+
+5. Sous **Autorisations**, sélectionnez **Accorder le consentement de l’administrateur**.
 
     ![Capture d’écran affichant la page d’autorisation de Demo app avec le consentement d’administrateur pour Contoso mis en surbrillance](./media/lp3-mod3-grant-admin-consent-in-enterprise-app.png)
 
    **Attention**, l’octroi du consentement administrateur au niveau du locataire via des inscriptions d’applications révoque toutes les autorisations accordées précédemment à l’ensemble du locataire. Les autorisations précédemment accordées par les utilisateurs en leur nom propre ne seront pas concernées.
 
-4. Lorsque vous y êtes invité, connectez-vous à l’aide de votre compte d’administrateur général.
+6. Lorsque vous y êtes invité, connectez-vous à l’aide de votre compte d’administrateur général.
 
-5. Dans la boîte de dialogue **Autorisations demandées**, passez en revue les informations, puis sélectionnez **Accepter**.
+7. Dans la boîte de dialogue **Autorisations demandées**, passez en revue les informations, puis sélectionnez **Accepter**.

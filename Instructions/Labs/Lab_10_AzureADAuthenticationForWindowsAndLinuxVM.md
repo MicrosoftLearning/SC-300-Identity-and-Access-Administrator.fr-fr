@@ -7,7 +7,7 @@ lab:
 
 # Labo 10 : Authentification Microsoft Entra pour machines virtuelles Windows et Linux
 
-**Remarque** : ce labo nécessite un Pass Azure. Consultez le labo 00 pour obtenir des instructions.
+### Type de connexion = Connexion à la ressource Azure
 
 ## Scénario de labo
 
@@ -28,9 +28,10 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
 1. Dans la zone **Windows 11**, sélectionnez **Créer v** et choisissez **Windows 11 Entreprise, version 22H2** dans le menu qui s’ouvre.
 
 1. Créez la machine virtuelle à l’aide des valeurs suivantes sous l’onglet **Informations de base** :
+
   | Champ | Valeur à utiliser |
   | :-- | :-- |
-  | Abonnement | Pass Azure - Sponsorship |
+  | Abonnement | Accepter la valeur par défaut |
   | Groupe de ressources | Créer une nouvelle - rgEntraLogin |
   | Nom de la machine virtuelle | vmEntraLogin |
   | Région | *default* |
@@ -43,13 +44,13 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
 
 1. Vous n’aurez pas besoin de modifier quoi que ce soit sous les onglets **Disques** ou **Mise en réseau**, mais vous pouvez passer en revue les valeurs.
 
-1. Sous l’onglet **Gestion**, activez la case **Se connecter avec Microsoft Entra ID** sous la section Microsoft Entra ID.
+1. Sous l’onglet **Gestion**, cochez la case **Connexion avec Microsoft Entra ID** sous la section de Microsoft Entra ID.
 
         NOTE: You will notice that the **System assigned managed identity** under the Identity section is automatically checked and turned grey. This action should happen automatically once you enable Login with Microsoft Entra ID.
 
-1. Sélectionnez **Vérifier + créer**
+1. Parcourez le reste de l’expérience de création d’une machine virtuelle. 
 
-1. Une fois que vous avez sélectionné **Créer**.
+1. Sélectionnez **Examiner et créer**, puis sélectionnez **Créer**.
 
 #### Tâche 2 : connexion Microsoft Entra ID pour des machines virtuelles Azure existantes
 
@@ -62,15 +63,15 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
 1. Sélectionnez **+ Ajouter **, puis **Ajouter une attribution de rôle** pour ouvrir la page Ajouter une attribution de rôle.
 
 1. Configurez les paramètres suivants :
-    - **Type d’affectation** : rôles de fonction de poste
-    - **Rôle** : connexion de l’administrateur aux machines virtuelles
-    - **Membres** : choisissez un utilisateur, un groupe ou un principal de service.  Utilisez ensuite **+ Sélectionner des membres** pour ajouter **Joni Sherman** en tant qu’utilisateur spécifique pour la machine virtuelle.
+  - **Rôle de fonction de tâche**
+  - **Rôle** : connexion de l’administrateur aux machines virtuelles
+  - **Membres** : choisissez un utilisateur, un groupe ou un principal de service.  Utilisez ensuite **+ Sélectionner des membres** pour ajouter **Joni Sherman** en tant qu’utilisateur spécifique pour la machine virtuelle.
 
-1. Sélectionnez **Vérifier + Affecter** pour terminer le processus.
+1. Sélectionnez **Examiner et attribuer** pour terminer le processus.
 
-#### Tâche 3 : mettre à jour la machine virtuelle de serveur pour prendre en charge la connexion Microsoft Entra ID
+#### Tâche 3 : mettre à jour la machine virtuelle pour autoriser la connexion Microsoft Entra ID
 
-1. Dans le menu **Connecter**, sélectionnez l’élément **Connecter**.
+1. Sélectionnez l’élément de menu **Connect**.
 
 1. Sous l’onglet **RDP**, sélectionnez **Télécharger le fichier RDP**.  Si vous y êtes invité(e), choisissez l’option **Conserver** pour le fichier.  Il sera enregistré dans votre dossier Téléchargements.
 
@@ -80,7 +81,7 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
 
 1. Choisissez de vous connecter en tant qu’autre utilisateur.
 
-1. Utilisez le nom d’utilisateur et le mot de passe d’administrateur que vous créez lors de la configuration de la machine virtuelle.
+1. Utilisez le nom d’utilisateur d’administrateur (vmEntraAdmin) et le mot de passe que vous avez créés lors de la configuration de la machine virtuelle.
    - Si vous y êtes invité(e), autorisez l’accès à la machine virtuelle ou à la session RDP.
 
 1. Attendez que la machine virtuelle s’ouvre et que tous les logiciels se chargent.
@@ -92,8 +93,6 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
 1. Sélectionnez **Système et sécurité** dans la liste des paramètres.
 
 1. Dans le paramètre **Système**, sélectionnez l’option **Autoriser l’accès à distance**.
-
-  REMARQUE : vous n’avez pas besoin d’ouvrir le sous-menu Système. L’option est disponible sous l’en-tête Système.
 
 1. En bas de la boîte de dialogue qui s’ouvre, vous verrez une section **Bureau à distance**.
 
@@ -109,7 +108,7 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
 
 1. **Faites une copie** du fichier RDP et ajoutez **-EntraID** à la fin du nom du fichier.
 
-1. Modifiez la nouvelle version du fichier RDP que vous venez de copier à l’aide de Bloc-notes Windows. Ajoutez les deux lignes de texte suivantes au bas du fichier :
+1. Modifiez la nouvelle version du fichier RDP que vous venez de copier à l’aide de **Bloc-notes**. Ajoutez les deux lignes de texte suivantes au bas du fichier :
      ```
         enablecredsspsupport:i:0
         authentication level:i:2
@@ -139,7 +138,7 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
 
    REMARQUE : JoniS est l’utilisateur que nous avons autorisé à se connecter en tant qu’administrateur pendant la tâche 1.
 
-1. Windows doit confirmer la connexion et ouvrir l’écran normal.
+1. Windows Server doit confirmer la connexion et s’ouvrir au tableau de bord Gestionnaire de serveur normal.
 
 #### Tâche 6 – Test facultatif pour explorer la connexion Microsoft Entra ID
 
@@ -155,9 +154,9 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
 
 1. Quittez la session Bureau à distance.
 
-1. Lancez à nouveau le fichier **<<server name>>-EntraID.RDP**.
+1. Lancez à nouveau le fichier **<<server name>>-AzureAD.RDP**.
 
-1. Essayez de vous connecter sous le nom d’autres utilisateurs de Microsoft Entra comme AdeleV ou AlexW ou DiegoS.
+1. Essayez de vous connecter en tant qu’autres membres Azure AD comme AdeleV ou AlexW ou DiegoS.
 
 1. Vous devez remarquer que ces utilisateurs n’ont pas accès.
 

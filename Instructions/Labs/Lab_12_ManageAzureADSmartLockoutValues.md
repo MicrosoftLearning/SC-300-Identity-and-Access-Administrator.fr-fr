@@ -7,6 +7,8 @@ lab:
 
 # Labo 12 : Gérer les valeurs de verrouillage intelligent Microsoft Entra
 
+### Type de connexion = Administrateur Microsoft 365
+
 ## Scénario de labo
 
 Vous devez configurer les paramètres supplémentaires de protection de mot de passe pour votre organisation.

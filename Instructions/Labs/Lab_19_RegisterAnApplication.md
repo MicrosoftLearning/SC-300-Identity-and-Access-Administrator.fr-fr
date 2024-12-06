@@ -7,6 +7,8 @@ lab:
 
 # Labo 19 : Inscrire une application
 
+### Type de connexion = Administrateur Microsoft 365
+
 #### Durée estimée : 30 minutes
 
 ### Exercice 1 : Inscrire une application
@@ -27,8 +29,9 @@ L’inscription de votre application établit une relation d’approbation entre
 
     ![Capture d’écran affichant la page Inscrire une application avec les paramètres Nom et Valeur par défaut mis en surbrillance](./media/lp3-mod3-register-an-application.png)
 
-6. Une fois terminé, vous serez redirigé vers la page **Application de démonstration**.
+6. Sélectionnez le bouton **S’inscrire**.
 
+7. Une fois terminé, vous serez redirigé vers la page **Application de démonstration**.
 
 #### Tâche 2 : configurer les paramètres de plateforme
 
@@ -56,7 +59,11 @@ Pour ajouter et modifier des URI de redirection pour vos applications inscrites,
     | Android| Entrez le  **Nom du package** de l’application, que vous trouverez dans le fichier AndroidManifest.xml. Générez et saisissez ensuite le  **code de hachage signature**. Un URI de redirection est automatiquement généré quand vous spécifiez ces paramètres.|
     | Applications de bureau et mobiles| Sélectionnez l’un des  **URI de redirection suggérés**  ou spécifiez un  **URI de redirection personnalisé**. Pour les applications de bureau, nous recommandons [https://login.microsoftonline.com/common/oauth2/nativeclient](https://login.microsoftonline.com/common/oauth2/nativeclient). Sélectionnez cette plateforme pour les applications mobiles qui n’utilisent pas la dernière bibliothèque d’authentification Microsoft (MSAL) ou qui n’utilisent pas de répartiteur. Sélectionnez également cette plateforme pour les applications de bureau.|
 
-5. Sélectionnez  **Configurer**  pour effectuer la configuration de la plateforme.
+5. Sélectionnez **Web** comme plateforme.
+
+6. Entrez `https://localhost` pour l’URI de redirection.
+
+7. Sélectionnez  **Configurer**  pour effectuer la configuration de la plateforme.
 
 #### Tâche 3 : ajouter des informations d’identification, un certificat et une clé secrète client
 
@@ -75,20 +82,16 @@ Vous pouvez ajouter des certificats et des secrets clients (une chaîne) en tant
 
 2. Sélectionnez  **Certificats et secrets**, puis  **+ Nouvelle clé secrète client**.
 
-3. Ajoutez une description pour votre clé secrète client.
+3. Ajoutez une description pour votre clé secrète client et la durée.
 
-4. Sélectionnez une durée.
+ - Description = Secret lab SC300
+ - Durée = 90 jours (3 mois)
 
-5. Sélectionnez **Ajouter**.
+4. Sélectionnez **Ajouter**.
 
-6. **Enregistrez la valeur du secret dans le Bloc-notes** , en vue d’une utilisation dans le code de votre application cliente. La page Certificat et Clés secrètes affiche la nouvelle valeur secrète. Il est important que vous copiiez cette valeur, car elle n’est affichée qu’une seule fois. Si vous actualisez la page et que vous y êtes revenez, elle s’affiche uniquement sous forme de valeur masquée.
+5. **Enregistrez la valeur du secret dans le Bloc-notes** , en vue d’une utilisation dans le code de votre application cliente. La page Certificat et Clés secrètes affiche la nouvelle valeur secrète. Il est important que vous copiiez cette valeur, car elle n’est affichée qu’une seule fois. Si vous actualisez la page et que vous y êtes revenez, elle s’affiche uniquement sous forme de valeur masquée.
 
-7. Ignorez les sections  **Ajouter un URI de redirection**  et  **Configurer les paramètres de plateforme** . Vous n’avez pas besoin de configurer un URI de redirection pour une API web, car aucun utilisateur n’est connecté de manière interactive.
-
-8. Ignorez la section  **Ajouter des informations d’identification**  pour le moment. Votre API a besoin de ses propres informations d’identification uniquement si elle accède à une API en aval. Ce scénario n’est pas abordé dans cet article.
-
-Une fois votre API web inscrite, vous êtes prêt à ajouter les étendues que le code de votre API peut utiliser pour fournir une autorisation précise aux consommateurs de cette dernière.
-
+Une fois votre application web inscrite, vous êtes prêt à ajouter les étendues que le code de votre API peut utiliser pour fournir une autorisation précise aux consommateurs de cette dernière.
 
 #### Étape 5 : ajouter une étendue
 
@@ -96,30 +99,28 @@ Le code d’une application cliente demande l’autorisation d’effectuer des o
 
 Tout d’abord, effectuez les étapes suivantes pour créer un exemple d’étendue nommé « Employees.Read.All » :
 
-1. Connectez-vous au Centre d’administration Microsoft Entra.
+1. Sélectionnez  **Identité**, puis **Applications**  et enfin  **Inscriptions d’application**, puis sélectionnez l’inscription de votre application d’API.
 
-2. Si vous avez accès à plusieurs locataires, utilisez le filtre  **Répertoire + abonnement**  dans le menu du haut pour sélectionner le locataire contenant l’inscription de votre application cliente.
-
-3. Sélectionnez  **Identité**, puis **Applications**  et sélectionnez l’ **inscription d’application**, avant d’accéder à l’inscription de vos applications d’API.
-
-4. Sélectionnez  **Exposer une API**, puis  **+ Ajouter une étendue**.
+2. Sélectionnez  **Exposer une API**, puis  **+ Ajouter une étendue**.
 
     ![Volet Exposer une API d’une inscription d’application dans le portail Azure](./media/portal-02-expose-api.png)
 
-5. Vous êtes invité(e) à définir un  **URI d’ID d’application** si vous n’en avez pas encore configuré un. L’URI d’ID d’application, qui doit être globalement unique, fait office de préfixe pour les étendues que vous référencerez dans le code de votre API. Vous pouvez utiliser la valeur par défaut fournie, qui se présente sous la forme api://\<application-client-id\>, ou spécifier un URI plus lisible comme  `https://contoso.com/api`.
+3. Vous êtes invité à définir un  **URI d’ID d’application**. Définissez la valeur sur **api://DemoAppAPI**.
 
-6. Sélectionnez **Enregistrer et continuer**.
+  - Remarque : l’URI d’ID d’application, qui doit être globalement unique, fait office de préfixe pour les étendues que vous référencerez dans le code de votre API. Vous pouvez utiliser la valeur par défaut fournie, qui se présente sous la forme api://<application-client-id\>, ou spécifier un URI plus lisible comme  `https://contoso.com/api`.
 
-6. Spécifiez ensuite les attributs de l’étendue dans le volet  **Ajouter une étendue**. Pour cette procédure pas à pas, vous pouvez utiliser les exemples de valeurs ou spécifier les vôtres.
+4. Sélectionnez **Enregistrer et continuer**.
 
-    | Champ| Description| Exemple|
+5. Spécifiez ensuite les attributs de l’étendue dans le volet  **Ajouter une étendue**. Pour cette procédure pas à pas, utilisez les valeurs de la 3ème colonne : **Valeur**.
+
+    | Champ| Description| active |
     | :--- | :--- | :--- |
-    | Nom de l’étendue| Nom de votre étendue. Une convention d’affectation de noms d’étendue courante est resource.operation.constraint.| Employees.Read.All|
+    | Nom de l'étendue| Nom de votre étendue. Une convention d’affectation de noms d’étendue courante est resource.operation.constraint.| Employees.Read.All|
     | Qui peut donner son consentement| Indique si cette étendue peut être consentie par des utilisateurs ou si le consentement d’un administrateur est nécessaire. Sélectionnez administrateurs uniquement pour des autorisations à privilèges élevés.| Administrateurs et utilisateurs|
     | Nom d’affichage du consentement administrateur| Courte description de l’objectif de l’étendue que seuls les administrateurs verront.| Accès en lecture seule aux enregistrements des employés|
     | Description du consentement de l'administrateur| Description plus détaillée de l’autorisation accordée par l’étendue que seuls les administrateurs verront.| Autorisez l’application à avoir un accès en lecture seule à toutes les données de l’employé.|
-    | Nom d’affichage du consentement de l’utilisateur| Courte description de l’objectif de l’étendue. Affichée aux utilisateurs uniquement si vous définissez Qui peut donner son consentement sur Administrateurs et utilisateurs.| Accès en lecture seule à vos enregistrements sur les employés|
-    | Description du consentement de l’utilisateur| Description plus détaillée de l’autorisation accordée par l’étendue. Affichée aux utilisateurs uniquement si vous définissez Qui peut donner son consentement sur Administrateurs et utilisateurs.| Autorisez l’application à avoir un accès en lecture seule à vos données sur l’employé.|
+    | Nom d'affichage du consentement de l'utilisateur| Courte description de l’objectif de l’étendue. Affichée aux utilisateurs uniquement si vous définissez Qui peut donner son consentement sur Administrateurs et utilisateurs.| Accès en lecture seule à vos enregistrements sur les employés|
+    | Description du consentement de l'utilisateur| Description plus détaillée de l’autorisation accordée par l’étendue. Affichée aux utilisateurs uniquement si vous définissez Qui peut donner son consentement sur Administrateurs et utilisateurs.| Autorisez l’application à avoir un accès en lecture seule à vos données sur l’employé.|
 
 7. Définissez le  **Statut**  sur  **Activé**, puis sélectionnez  **Ajouter une étendue**.
 
@@ -143,22 +144,23 @@ Ajoutez ensuite un autre exemple d’étendue nommé « Employees.Write.All »
     | :--- | :--- |
     | Nom de l’étendue| Employees.Write.All|
     | Qui peut donner son consentement| Administrateurs uniquement|
-    | Nom d’affichage du consentement administrateur| Accès en écriture aux enregistrements des employés|
-    | Description du consentement de l’administrateur| Autorisez l’application à avoir un accès en écriture à toutes les données de l’employé.|
-    | Nom d’affichage du consentement de l’utilisateur| Aucune (laisser vide)|
+    | Nom d'affichage du consentement administrateur| Accès en écriture aux enregistrements des employés|
+    | Description du consentement de l'administrateur| Autorisez l’application à avoir un accès en écriture à toutes les données de l’employé.|
+    | Nom d'affichage du consentement de l'utilisateur| Aucune (laisser vide)|
     | Description du consentement de l’utilisateur| Aucune (laisser vide)|
 
-    >**Remarque** : si vous avez correctement ajouté les deux exemples d’étendues décrits dans les sections précédentes, ils apparaissent dans le volet  **Exposer une API**  de l’inscription d’application de votre API web, semblable à cette image :
+2. Assurez-vous que l’état est défini sur **Activé**, puis sélectionnez **Ajouter une étendue**.
 
-    ![Capture d’écran du volet Exposer une API montrant deux étendues exposées.](./media/portal-03-scopes-list.png)
+  - **Remarque** : si vous avez correctement ajouté les deux exemples d’étendues décrits dans les sections précédentes, ils apparaissent dans le volet  **Exposer une API**  de l’inscription d’application de votre API web, semblable à cette image :
 
-    Comme indiqué dans l’image, la chaîne complète d’une étendue est la concaténation de l’ **URI d’ID d’application**  de votre API web et du  **Nom de l’étendue**.
+  ![Capture d’écran du volet Exposer une API montrant deux étendues exposées.](./media/portal-03-scopes-list.png)
 
-        **Note**: For example, if your web API's application ID URI is `https://contoso.com/api` and the scope name is Employees.Read.All, the full scope is: `https://contoso.com/api/Employees.Read.All`
+  Comme indiqué dans l’image, la chaîne complète d’une étendue est la concaténation de l’ **URI d’ID d’application**  de votre API web et du  **Nom de l’étendue**.
 
+  **Remarque** : par exemple, si l’URI d’ID d’application de votre API web est `https://contoso.com/api` et si le nom de l’étendue est Employees.Read.All, l’étendue complète est : `https://contoso.com/api/Employees.Read.All`
 
-        **Note**: Next, you will configure a client app's registration with access to your web API and the scopes you defined by following the steps above.
-    Une fois qu’une inscription d’application cliente est autorisée à accéder à votre API web, la plateforme d’identités Microsoft peut émettre un jeton d’accès OAuth 2.0 pour le client. Quand le client appelle l’API web, il présente un jeton d’accès dont la revendication d’étendue (scp) est définie sur les autorisations que vous avez spécifiées dans l’inscription d’application du client. Vous pouvez exposer des étendues supplémentaires ultérieurement si nécessaire. Considérez que votre API web peut exposer plusieurs étendues associées à plusieurs opérations. Votre ressource peut contrôler l’accès à l’API web lors de l’exécution, en évaluant la ou les revendications de l’étendue (scp) dans le jeton d’accès OAuth 2.0 qu’elle reçoit.
+  **Remarque** : ensuite, vous allez configurer l’inscription d’une application cliente avec un accès à votre API web et les étendues que vous avez définies en suivant les étapes ci-dessus.
+  Une fois qu’une inscription d’application cliente est autorisée à accéder à votre API web, la plateforme d’identités Microsoft peut émettre un jeton d’accès OAuth 2.0 pour le client. Quand le client appelle l’API web, il présente un jeton d’accès dont la revendication d’étendue (scp) est définie sur les autorisations que vous avez spécifiées dans l’inscription d’application du client. Vous pouvez exposer des étendues supplémentaires ultérieurement si nécessaire. Considérez que votre API web peut exposer plusieurs étendues associées à plusieurs opérations. Votre ressource peut contrôler l’accès à l’API web lors de l’exécution, en évaluant la ou les revendications de l’étendue (scp) dans le jeton d’accès OAuth 2.0 qu’elle reçoit.
 
 
 ### Exercice 2 : Créer un rôle personnalisé pour gérer l’inscription d’application
@@ -171,7 +173,7 @@ Vous devez créer un rôle personnalisé pour la gestion des applications. Ce no
 
 2. Ouvrez le menu du portail, puis sélectionnez  **Microsoft Entra ID**.
 
-3. Dans le menu de gauche **Identité**, sélectionnez **Rôles et administrateurs**.
+3. Dans le menu de gauche, sous **Identité**, sélectionnez **Rôles et administrateurs**.
 
 4. Sélectionnez ensuite l’**élément Rôles et administrateurs**, puis **+ Nouveau rôle personnalisé**.
 
@@ -196,5 +198,7 @@ Vous devez créer un rôle personnalisé pour la gestion des applications. Ce no
 
     **Pourquoi choisir les deux** : pour que l’application approvisionne ces deux éléments constituent les autorisations minimales nécessaires pour activer et appliquer l’authentification unique pour l’application ou le principal de service en cours de création et être en mesure d’affecter l’application entrée à un ensemble d’utilisateurs ou de groupes.  D’autres autorisations peuvent également être accordées.  Vous pouvez obtenir une liste complète des autorisations disponibles à l’adresse `https://docs.microsoft.com/azure/active-directory/roles/custom-enterprise-app-permissions`.
 
-10. Passez en revue les modifications, puis sélectionnez **Créer**.
+10. Cliquez sur **Suivant**.
+
+11. Passez en revue les modifications, puis sélectionnez **Créer**.
 

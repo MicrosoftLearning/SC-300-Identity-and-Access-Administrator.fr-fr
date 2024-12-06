@@ -7,6 +7,8 @@ lab:
 
 # Labo 02 : Utiliser les propriétés du locataire
 
+### Type de connexion = Administrateur Microsoft 365
+
 ## Scénario de labo
 
 Vous devez identifier et mettre à jour les différentes propriétés associées à votre locataire.
@@ -17,9 +19,11 @@ Vous devez identifier et mettre à jour les différentes propriétés associées
 
 #### Tâche 1 : créer un sous-domaine personnalisé
 
+Vous utiliseriez Microsoft Entra ID pour créer un domaine que vous avez acheté.  Si vous souhaitez créer un sous-domaine pour diviser votre domaine .onmicrosoft.com existant, vous devez utiliser la centre d’administration Microsoft 365.
+
 1. Accédez au [https://entra.microsoft.com](https://entra.microsoft.com) et connectez-vous à l’aide d’un compte d’administrateur général pour le répertoire.
 
-1. Dans le menu **Identité**, utilisez l’option **Afficher plus* en bas.
+1. Dans le menu **Identité**, utilisez l’option **Afficher plus** en bas.
 
 1.  Ouvrez le menu **Paramètres**, sélectionnez **Noms de domaine**.
 
@@ -28,13 +32,18 @@ Vous devez identifier et mettre à jour les différentes propriétés associées
 1. Dans le champ **Nom de domaine personnalisé**, créez un sous-domaine personnalisé pour le locataire de labo en plaçant **ventes** devant le nom de domaine **onmicrosoft.com**.  Le format ressemble à ce qui suit :
 
     ```
-    sales.labtenant.onmicrosoft.com
+    mydomain.com
     ```
 
 1. **Remarque** : vous serez invité(e) à ouvrir le Centre d’administration Microsoft 365 pour effectuer cette action.
 
 1. Sélectionnez **Ajouter un domaine** pour ajouter le sous-domaine.
 
+1. Entrez le nom `sales.tenantname.onmicrosoft.com` du sous-domaine dans la boîte de dialogue.
+
+1. Sélectionnez le bouton **Utiliser ce domaine** en bas de l’écran.
+
+1. Sélectionnez le bouton **Fermer** lorsque l’écran suivant s’ouvre.  Dans le cadre de ce labo, nous ne configurerons pas le DNS.
 
 ### Exercice 2 : Modification du nom d’affichage du locataire
 
@@ -63,7 +72,7 @@ Vous devez identifier et mettre à jour les différentes propriétés associées
 
     **IMPORTANT** : lorsque le locataire est créé, c’est à ce moment que le pays ou la région sont spécifiés. Ce paramètre ne peut pas être modifié ultérieurement.
 
-3. Sur la page **Propriétés**, sous **Propriétés du locataire**, recherchez ** Emplacement des données ** et passez en revue les informations.
+3. Sur la page **Propriétés**, sous **Propriétés du locataire**, recherchez l’**Emplacement** et passez en revue les informations.
 
     ![Capture d’écran affichant la page Propriétés Azure Active Directory avec les paramètres Pays ou région et Emplacement mis en surbrillance](./media/azure-active-directory-properties-country-location.png)
 

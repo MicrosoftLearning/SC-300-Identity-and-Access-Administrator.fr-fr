@@ -7,9 +7,9 @@ lab:
 
 # Labo 16 : Utiliser Azure Key Vault pour les identités managées
 
-**Remarque** : ce labo nécessite un Pass Azure. Consultez le labo 00 pour obtenir des instructions.
+### Type de connexion = Connexion à la ressource Azure
 
-## Scénario du labo
+## Scénario de labo
 
 Lorsque vous utilisez des identités managées pour les ressources Azure, votre code peut obtenir des jetons d’accès pour s’authentifier auprès des ressources qui prennent en charge l’authentification Microsoft Entra.Toutefois, tous les services Azure ne prennent pas en charge l’authentification Microsoft Entra. Pour utiliser des identités managées pour les ressources Azure avec ces services, stockez les informations d’identification des services dans Azure Key Vault, puis utilisez des identités managées afin d’accéder à Key Vault pour récupérer les informations d’identification.
 
@@ -17,29 +17,11 @@ Lorsque vous utilisez des identités managées pour les ressources Azure, votre 
 
 ### Exercice 1 : Utiliser Azure Key Vault pour gérer les identités de la machine virtuelle
 
-#### Tâche 1 : créer une machine virtuelle Windows
-
-1. Accéder : [https://portal.azure.com](https://portal.azure.com)
-
-1. Sélectionnez **+ Créer une ressource**.
-
-1. Saisissez **Windows 11** dans la barre de recherche de la Place de marché.
-
-1. Sélectionnez **Windows 11** et, dans la liste déroulante du plan, choisissez **Windows 11 Enterprise, version 21H2**. Choisissez ensuite **Créer**.
-
-1. Depuis l’onglet Informations de base, vous devrez créer un nom d’utilisateur et un mot de passe Administrateur pour la machine virtuelle.
-
-1. Sous l’onglet **Gestion**, cochez la case **Activer l’identité managée affectée par le système**.
-
-1. Parcourez le reste de l’expérience de création d’une machine virtuelle. 
-
-1. Sélectionnez Créer.
-
-#### Tâche 2 : créer un coffre de clés
+#### Tâche 1 : créer un coffre de clés
 
 1. Connectez-vous à [https://portal.azure.com]( https://portal.azure.com) en utilisant un compte d’administrateur général.
 
-1. En haut de la barre de navigation de gauche, sélectionnez Créer une ressource.
+1. En haut de la barre de navigation de gauche, sélectionnez **+ Créer une ressource**.
 
 1. Dans la zone Rechercher dans la Place de marché, tapez **Key Vault**.  
 
@@ -50,19 +32,42 @@ Lorsque vous utilisez des identités managées pour les ressources Azure, votre 
 1. Fournissez toutes les informations requises. Veillez à choisir l’abonnement que vous utilisez pour ce labo.
     **Remarque** : le nom du coffre de clés doit être unique. Recherchez une case verte à droite du champ.
 
- - **Groupe de ressources** - sc300KeyVaultrg
+ - **Groupe de ressources** - rgSC300KeyVault
  - **Nom du coffre de clés** - *anyuniquevalue*
  - Sur la page **Configuration d’accès**, sélectionnez le bouton radio **Stratégie d’accès au coffre**.
 1. Sélectionnez **Revoir + créer**.
 
 1. Sélectionnez **Créer**.
 
+#### Tâche 2 : créer une machine virtuelle Windows
+
+1. Sélectionnez **+ Créer une ressource**.
+
+1. Saisissez **Windows 11** dans la barre de recherche de la Place de marché.
+
+1. Sélectionnez **Windows 11** et, dans la liste déroulante du plan, choisissez **Windows 11 Entreprise, version 22H2**. Choisissez ensuite **Créer**.
+
+  | Champ | Valeurs |
+  | :--   | :--    |
+  | Nom de la machine virtuelle | vmKeyVault |
+  | Options de disponibilité | Aucune redondance de l’infrastructure requise |
+  | Nom de l’utilisateur administrateur | adminKeyVault |
+  | Mot de passe | Définissez un mot de passe sécurisé dont vous pouvez vous souvenir. |
+  | Gestion des licences | Confirmez que vous disposez d’une licence éligible. |
+
+1. Utilisez le bouton **Suivant** pour accéder à l’onglet **Gestion**.
+
+1. Sous l’onglet **Gestion**, cochez la case en regard de **Activer l’identité managée affectée par le système**.
+
+1. Parcourez le reste de l’expérience de création d’une machine virtuelle. 
+
+1. Sélectionnez **Examiner et créer**, puis sélectionnez **Créer**.
 
 #### Tâche 3 : créer une clé secrète
 
 1. Accédez au coffre de clés que vous venez de créer.
 
-1. Sélectionnez **Secrets**.
+1. Ouvrez **Objets** dans le menu de gauche, puis sélectionnez **Secrets**.
 
 1. Sélectionnez **+ Générer/importer**.
 
@@ -82,15 +87,19 @@ Lorsque vous utilisez des identités managées pour les ressources Azure, votre 
 
 1. Sélectionnez **+ Créer**.
 
-1. Dans la section Ajouter une stratégie d’accès sous Configurer à partir du modèle (facultatif), choisissez Gestion des secrets dans le menu déroulant.
+1. Dans la section Ajouter une stratégie d’accès sous Configurer à partir du modèle (facultatif), choisissez **Gestion des secrets** dans le menu déroulant.
 
-1. Pour **Sélectionner un principal**, choisissez **Aucun sélectionné** pour ouvrir la liste des entités de sécurité à sélectionner. Dans le champ de recherche, entrez le nom de la machine virtuelle que vous avez créée lors de la tâche 2.  Sélectionnez la machine virtuelle dans la liste des résultats, puis choisissez Sélectionner.
+1. Utilisez le bouton Suivant pour accéder à l’onglet **Principal**.
 
-1. Sélectionnez **Ajouter**.
+1. Dans le champ de recherche, entrez le nom de la machine virtuelle que vous avez créée lors de la tâche 2 **vmKeyVault**.  Sélectionnez la machine virtuelle dans la liste des résultats, puis choisissez Sélectionner.
 
-1. Cliquez sur **Enregistrer**.
+1. Utilisez le bouton Suivant pour accéder à l’onglet **Examiner et créer**.
+
+1. Sélectionnez **Créer**.
 
 #### Tâche 5 : accéder aux données avec un coffre de clés secret à l’aide de PowerShell
+
+1. Accédez à **vmKeyVault** et utilisez RDP pour vous connecter à votre machine virtuelle en tant qu’**adminKeyVault**.
 
 1. Sur la machine virtuelle du labo, ouvrez PowerShell.  
 
@@ -107,6 +116,9 @@ Lorsque vous utilisez des identités managées pour les ressources Azure, votre 
     ```
 
 1. Utilisez la commande Invoke-WebRequest de PowerShell pour récupérer la clé secrète que vous avez créée précédemment dans Key Vault et transmettre le jeton d’accès vers l’en-tête d’autorisation.  Vous avez besoin de l’URL de votre Key Vault qui se trouve dans la section Bases de la page Vue d’ensemble de Key Vault.  Rappel : l’URI pour Key Vault se trouve sous l’onglet Vue d’ensemble.
+
+  - URI Key Vault : obtenir à partir de la page Vue d’ensemble des coffres de clés dans le portail Azure
+  - Nom secret : obtenir à partir de la page Objets - Secrets dans le coffre de clés
 
     ```
     Invoke-RestMethod -Uri https://<your-key-vault-URI>/secrets/<secret-name>?api-version=2016-10-01 -Method GET -Headers @{Authorization="Bearer $KeyVaultToken"}
