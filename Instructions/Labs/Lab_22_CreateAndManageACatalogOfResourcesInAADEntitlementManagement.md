@@ -7,6 +7,8 @@ lab:
 
 # Labo 22 : Créer et gérer un catalogue de ressources dans la gestion des droits d’utilisation Microsoft Entra
 
+### Type de connexion = Administrateur Microsoft 365
+
 ## Scénario de labo
 
 Un catalogue est un conteneur de ressources et de packages d’accès. Vous créez un catalogue lorsque vous souhaitez regrouper des ressources et packages d’accès liés. La personne qui crée le catalogue en devient le premier propriétaire. Un propriétaire de catalogue peut ajouter d’autres propriétaires de catalogue. Vous devez créer et configurer un catalogue dans votre organisation.
@@ -39,15 +41,15 @@ Un catalogue est un conteneur de ressources et de packages d’accès. Vous cré
 
 6. Dans la zone **Description**, entrez **Pour les utilisateurs du service marketing**. Les utilisateurs verront ces informations dans les détails d’un package d’accès.
 
-7. Sous **Activé, sélectionnez Non**.
+7. Sous **Activé**, sélectionnez **Oui**.
 
-- - **Activé pour les utilisateurs externes** permet aux utilisateurs des répertoires externes sélectionnés d’être en mesure de demander des packages d’accès dans ce catalogue. Aucune modification ne sera apportée à ce paramètre.
+  - Définissez **Activé pour les utilisateurs externes** sur **Non**.  Ce paramètre permet aux utilisateurs des répertoires externes sélectionnés d’être en mesure de demander des packages d’accès dans ce catalogue. Aucune modification ne sera apportée à ce paramètre.
 
 9. Vous pouvez choisir d’activer le catalogue pour une utilisation immédiate ou de désactiver si vous envisagez de le mettre en place ou de le garder indisponible tant que vous n’avez pas l’intention de l’utiliser. Dans le cadre de cet exercice, il n’est pas nécessaire d’activer le catalogue.
 
-    ![Image de l’écran affichant le nouveau panoramique du catalogue avec les options Nom, Description, Activé et Créer mises en surbrillance](./media/lp4-mod1-new-catalog-marketing.png)
+  ![Image de l’écran affichant le nouveau panoramique du catalogue avec les options Nom, Description, Activé et Créer mises en surbrillance](./media/lp4-mod1-new-catalog-marketing.png)
 
-10. Sélectionnez Créer.
+10. Sélectionnez **Créer**.
 
 #### Tâche 2 : ajouter des ressources à un catalogue
 
@@ -65,10 +67,10 @@ Pour inclure des ressources dans un package d’accès, les ressources doivent e
 
    | Type de ressource | Valeur |
    | :------------- | :---------- |
-   |  **Groupes et équipes** | Commerce |
+   |  **Groupes et équipes** | Retail |
    |  **Applications** | Box |
    |  **Applications** | Salesforce |
-   |  **Sites SharePoint** | SharePoint d’entreprise <<<sélectionnez à partir de la liste de vos sites SharePoint disponibles |
+   |  **Sites SharePoint** | Marque : sélectionnez ce site SharePoint à partir de la liste de vos sites disponibles. |
 
 6. Vous n’avez peut-être pas de ressources dans des groupes et des équipes, des applications ou des sites SharePoint. Sélectionnez n’importe quelle catégorie de ressources, puis sélectionnez une ressource dans cette catégorie.
 
@@ -124,13 +126,15 @@ Vous pouvez modifier le nom et la description d’un catalogue. Les utilisateurs
 
 1. La vignette suivante est l’emplacement où vous configurez les personnes qui passent en revue et approuvent l’accès, la fréquence à laquelle l’accès sera examiné et l’expiration de l’accès.
 
-1. Sous **Sélectionner des réviseurs**, sélectionnez **Propriétaires de groupe** comme réviseurs. **Remarque** : les utilisateurs invités ne doivent pas être autorisés à passer en revue leur propre accès en tant que bonne pratique de gouvernance des identités.
+1. Sous **Sélectionner des réviseurs**, sélectionnez **Propriétaires de groupe** comme réviseurs.
+
+  - **Remarque** : les utilisateurs invités ne doivent pas être autorisés à passer en revue leur propre accès en tant que bonne pratique de gouvernance des identités.
 
 1. Entrez une **Durée (en jours)**. La valeur par défaut est 3. Choisissez une **Périodicité de révision** et une **Date de début** pour la révision.
 
 1. Sélectionnez **Suivant : Paramètres** et configurez les paramètres pour la façon dont la révision aura lieu et ce qui se passe lorsque l’utilisateur invité répond ou ne répond pas.  Une bonne pratique consiste à sélectionner **Appliquer automatiquement les résultats à la ressource** et à sélectionner **Supprimer l’accès** si **Les réviseurs ne répondent pas**. 
 
-1. Sélectionnez **Vérifier + créer**, puis **Créer** pour créer une nouvelle **Révision d’accès**.
+1. Sélectionnez **Suivant : examiner et créer**, puis **Créer** pour créer la révision d’accès.
 
 
 #### Tâche 6 : supprimer un catalogue

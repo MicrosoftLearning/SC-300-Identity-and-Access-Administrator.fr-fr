@@ -7,6 +7,8 @@ lab:
 
 # Labo 14 : Activer des stratégies de connexion et de risque utilisateur
 
+### Type de connexion = Administrateur Microsoft 365
+
 ## Scénario de labo
 
 Afin de bénéficier d’une couche de sécurité supplémentaire, activez et configurez les stratégies de connexion et de risque utilisateur de votre organisation Microsoft Entra.
@@ -48,7 +50,7 @@ Afin de bénéficier d’une couche de sécurité supplémentaire, activez et co
 
 13. Cochez la case **Nécessite une modification du mot de passe**, puis sélectionnez **Terminer**.
 
-14. Sous **Application de la stratégie**, sélectionnez **Activer**, puis **Enregistrer**.
+14. Sous **Application de la stratégie**, sélectionnez **Activé**, puis **Enregistrer**.
 
 #### Tâche 2 : activer la stratégie de connexion à risque
 
@@ -64,4 +66,4 @@ Afin de bénéficier d’une couche de sécurité supplémentaire, activez et co
 
 6. Activez la case à cocher **Exiger l’authentification multifacteur**, puis sélectionnez **Terminé**.
 
-7. Sous **Application de la stratégie**, sélectionnez **Activer**, puis **Enregistrer**.
+7. Sous **Application de la stratégie**, sélectionnez **Activé**, puis **Enregistrer**.

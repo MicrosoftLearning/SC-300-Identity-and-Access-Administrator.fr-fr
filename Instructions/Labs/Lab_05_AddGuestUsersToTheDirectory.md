@@ -7,6 +7,8 @@ lab:
 
 # Labo 05 : Ajouter des utilisateurs invités à l’annuaire
 
+### Type de connexion = Administrateur Microsoft 365
+
 ## Scénario de labo
 
 Votre entreprise travaille avec de nombreux fournisseurs et, à l’occasion, vous devez ajouter des comptes de fournisseurs à votre répertoire en tant qu’invités.
@@ -90,7 +92,7 @@ Un partenariat récent a été établi avec une autre société. Pour l’instan
 
 1. Ouvrez PowerShell en tant qu’administrateur.Pour ce faire, recherchez PowerShell dans Windows et choisissez Exécuter en tant qu’administrateur. 
 
-**Remarque** : vous devez disposer de PowerShell version 7.2 ou ultérieure pour que ce labo fonctionne.  Lorsque PowerShell s’ouvre, vous obtenez une version en haut de l’écran. Si vous l’exécutez et que vous avez une version antérieure, suivez les instructions à l’écran pour accéder à https://aka.ms/PowerShell-Release?tag=7.3.9. Faites défiler jusqu’à la section Ressources et sélectionnez powershell-7.3.1-win-x64.msi. Une fois le téléchargement terminé, sélectionnez Ouvrir le fichier. Procédez à l’installation en utilisant toutes les valeurs par défaut.
+**Remarque** : vous devez disposer de PowerShell version 7.2 ou ultérieure pour que ce labo fonctionne.  Lorsque PowerShell s’ouvre, vous obtenez une version en haut de l’écran. Si vous l’exécutez et que vous avez une version antérieure, mettez à jour ou cette partie du labo échouera.
 
 2. Vous devez installer le module PowerShell Microsoft.Graph si vous ne l’avez pas déjà utilisé.  Exécutez la commande suivante, puis confirmez l’opération lorsque vous y êtes invité(e) :
 
@@ -109,7 +111,7 @@ Un partenariat récent a été établi avec une autre société. Pour l’instan
     ```
     Connect-MgGraph -Scopes "User.ReadWrite.All"
     ``` 
-    Le navigateur Edge s’ouvre et vous êtes invité(e) à vous connecter.  Utilisez le compte Administrateur MOD pour vous connecter.  Acceptez la demande d’autorisations. Fermez ensuite la fenêtre du navigateur.
+    Le navigateur Edge s’ouvre et vous êtes invité(e) à vous connecter.  Utilisez le compte Administrateur MOD pour vous connecter.  Cochez la case de consentement, puis acceptez la demande d’autorisations. Fermez ensuite la fenêtre du navigateur.
 
 5. Définissez les valeurs de l’e-mail et redirigez-les pour l’utilisateur externe :
 
@@ -122,7 +124,7 @@ Un partenariat récent a été établi avec une autre société. Pour l’instan
     }
     ```
 
-6. Envoyez la commande MgInvitation pour inviter l’utilisateur externe :
+6. Utilisez la commande MgInvitation pour inviter l’utilisateur externe :
 
     ```
     New-MgInvitation -BodyParameter $params

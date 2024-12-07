@@ -7,9 +7,13 @@ lab:
 
 # Labo 28 : Surveiller et gérer la posture de sécurité avec le score d’identité sécurisée
 
+### Type de connexion = Administrateur Microsoft 365
+
 ## Scénario de labo
 
 Microsoft Entra Identity Protection fournit une détection et une correction automatisées des risques basés sur l’identité ainsi que des données dans le portail pour examiner les risques potentiels. Protection des ID Microsoft Entra fournit également un score d’identité sécurisée pour surveiller et améliorer votre posture des identités.  De la même manière que Microsoft Defender XDR et Microsoft Defender pour le cloud, le score d’identité sécurisée offre des suggestions et des actions d’amélioration qui peuvent améliorer votre posture de sécurité globale pour les identités dans Microsoft Entra ID.  Ce labo va vous permettre d’explorer cette fonctionnalité. 
+
+**Remarque** : étant donné que ce labo s’exécute sur un environnement de locataire nouvellement créé, vous obtiendrez probablement un score d’identité sécurisée de 0,00 %.  Il faut environ 24 heures pour que les données précieuses entrent dans le calcul afin de vous donner un score valide.
 
 #### Durée estimée : 15 minutes
 
@@ -31,34 +35,31 @@ Microsoft Entra Identity Protection fournit une détection et une correction aut
 
 #### Tâche 2 : exécuter une action d’amélioration
 
-1. Pour améliorer un domaine de la posture de sécurité des identités, sélectionnez **Activer les stratégies de risque de connexion à Microsoft Entra ID Identity Protection**.
+1. Pour améliorer un domaine de la posture de sécurité des identités, sélectionnez **Activer la stratégie de connexion à risque Protection Microsoft Entra ID**.
 
 2. Dans la vignette qui s’ouvre, faites défiler vers le bas et sélectionnez **Démarrer**.
 
-3. Un nouvel onglet s’ouvre pour **l’accès conditionnel**.
+3. Un nouvel onglet s’ouvre pour **Identity Protection | Stratégie de connexion à risque**.
  **Remarque :** par défaut, le bouton « Démarrer » s’ouvre dans le Portail Azure. Vous pouvez utiliser le portail ou revenir au Centre d’administration Entra. Chacune de ces deux options fonctionnera.
 
-4. Sélectionnez **+ Nouvelle stratégie**.
-
-5. Donnez un nom à votre stratégie. Nous recommandons aux organisations de créer une norme explicite pour les noms de leurs stratégies.
-
-6. Sous Affectations, sélectionnez Utilisateurs ou identités de charge de travail.
+6. Sous Affectations, texte **Tous les utilisateurs**.
 
 7. Sous Inclure, sélectionnez Tous les utilisateurs.
 
-8. Sous Exclure, sélectionnez Utilisateurs et groupes, puis choisissez les comptes qui doivent conserver la possibilité d’utiliser l’authentification héritée. Microsoft vous recommande d’exclure au moins un compte pour que vous ne soyez pas verrouillé.
+8. Sous Exclure, sélectionnez Utilisateurs et groupes, puis choisissez votre compte **Administrateur MOD**.
 
-9. Sous Ressources cibles > Applications cloud > Inclure, sélectionnez Toutes les applications cloud.
+  - Microsoft vous recommande d’exclure au moins un compte pour que vous ne soyez pas verrouillé.
 
-10. Sous Conditions > Applications clientes, définissez Configurer sur Oui.
- - Cochez uniquement les cases Clients Exchange ActiveSync et Autres clients.
+9. Sous Risque de connexion, sélectionnez le texte qui indique **Faible et supérieur**.
+
+10. Choisissez **Moyen et supérieur**, puis sélectionnez **Terminé**.
+
+10. Dans la section **Contrôles**, choisissez le texte qui indique **Bloquer l’accès**.
+
+11. Sélectionnez **Autoriser l’accès - Exiger l’authentification multifacteur**.
 
 11. Cliquez sur Terminé.
 
-12. Sous Contrôles d’accès > Accorder, sélectionnez Bloquer l’accès.
+14. Confirmez vos paramètres et définissez l’application de la stratégie sur **Activé**.
 
-13. Sélectionnez Sélectionner.
-
-14. Confirmez vos paramètres et définissez Activer la stratégie sur Rapport seul.
-
-15. Sélectionnez Créer pour créer votre stratégie.
+15. Sélectionnez **Enregistrer**.

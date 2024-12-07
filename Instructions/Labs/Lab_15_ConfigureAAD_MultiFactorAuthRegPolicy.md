@@ -7,6 +7,8 @@ lab:
 
 # Labo 15 : Configurer une stratégie d’inscription avec l’authentification multifacteur
 
+### Type de connexion = Administrateur Microsoft 365
+
 ## Scénario de labo
 
 L'authentification multifacteur permet de vérifier l'identité d'une personne en utilisant plus qu'un nom d'utilisateur et un mot de passe. Cette stratégie fournit une deuxième couche de sécurité aux connexions d’utilisateur. Pour que les utilisateurs puissent répondre aux invites d’authentification multifacteur, ils doivent d’abord s’inscrire à l’authentification multifacteur Microsoft Entra. Vous devez configurer la stratégie d’inscription MFA de votre organisation Microsoft Entra pour qu’elle soit affectée à tous les utilisateurs.
@@ -44,13 +46,13 @@ L'authentification multifacteur permet de vérifier l'identité d'une personne e
 
 **Remarque** : Microsoft Entra Identity Protection nécessite l’activation de Microsoft Entra ID Premium P2. 
 
-1. Dans le centre d’administration Microsoft Entra, accédez à **Microsoft Entra Identity Protection** dans la barre de recherche.
+1. Dans le centre d’administration Microsoft Entra, accédez à **Protection Microsoft Entra ID** dans la barre de recherche.
 
 1. Sous **Protection** dans le menu, sélectionnez **Stratégie d’inscription avec l’authentification**.
 
 1. Sous **Affectations**, sélectionnez **Tous les utilisateurs** sous Utilisateurs, puis sélectionnez un utilisateur pour appliquer l’authentification multifacteur.
 
-1. Remplacez la valeur **Désactivé** de l’option **Application de la stratégie** par **Activé**.
+1. Définissez **Application de la stratégie** sur **Activé**.
 
 1. Cliquez sur **Enregistrer**.
 

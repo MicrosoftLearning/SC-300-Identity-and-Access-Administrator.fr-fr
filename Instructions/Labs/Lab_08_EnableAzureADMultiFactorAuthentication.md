@@ -7,9 +7,11 @@ lab:
 
 # Labo 08 : Activer l’authentification multifacteur.
 
+### Type de connexion = Administrateur Microsoft 365
+
 ## Scénario de labo
 
-Pour améliorer la sécurité dans votre organisation, vous avez été dirigé(e) vers l’activation de l’authentification multifacteur pour l’ID Microsoft Entra.
+Pour renforcer la sécurité de votre organisation, vous avez été dirigé vers l’activation de l’authentification multifacteur pour Microsoft Entra ID.
 
 #### Durée estimée : 15 minutes
 
@@ -62,14 +64,15 @@ Nous allons maintenant examiner comment configurer des règles de stratégie d�
 
    - Dans la liste déroulante, vérifiez que **Cloud Apps** est sélectionné.
    - Sous Inclure, marquez **Toutes les Cloud Apps** et souvenez-vous de l’avertissement sur le verrouillage possible de votre accès. 
-   - Sous Inclure, remplacez votre choix par l’élément **Sélectionner les applications**.
+   - Maintenant, dans la section Sélectionner, choisissez l’élément **Aucun**.
    - Dans la boîte de dialogue nouvellement ouverte, choisissez **Office 365**.
       - **Rappel :** dans un labo précédent, nous avons donné à Delia Dennis une licence Office 365 et nous sommes connectés pour s’assurer qu’elle fonctionnait.
    - Choisissez **Sélectionner**.
 
 6. Passez en revue la section Conditions.
 
-   - Sélectionnez **Emplacements** et choisissez **Tous les emplacements**.
+   - Choisissez **Oui** pour le curseur de configuration.
+   - Sélectionnez **N’importe quel réseau ou emplacement**.
 
 7. Sous **Contrôles d’accès** trouvez la section **Accorder**, et sélectionnez **Aucun contrôle sélectionné**.
 
@@ -79,7 +82,7 @@ Nous allons maintenant examiner comment configurer des règles de stratégie d�
 
 10. Sélectionnez **Sélectionner**.
 
-11. Définissez **Activer la stratégie** sur **Activé**.
+11. Définissez l’option **Appliquer la stratégie** sur **Activé**.
 
 12. Sélectionnez **Créer** pour créer la stratégie.
 
@@ -110,6 +113,7 @@ Enfin, nous allons voir comment configurer MFA pour les comptes d’utilisateur.
 2. Sélectionnez **Utilisateurs**, puis **Tous les utilisateurs**.
 
 3. Sélectionnez **MFA par utilisateur** dans le menu supérieur du volet Utilisateurs .
+  - REMARQUE : vous devrez peut-être utiliser les points de suspension (...) pour accéder à l’élément de menu MFA par utilisateur.
 
    ![Capture d’écran montrant l’option MFA](./media/lp2-mod1-users-mfa.png)
 
@@ -120,7 +124,7 @@ Enfin, nous allons voir comment configurer MFA pour les comptes d’utilisateur.
    ![Capture d’écran montrant les options MFA](./media/lp2-mod1-mfa-service-settings-and-users.png)
 
 5. Cochez la case **Adele Vance**.
-6. Sélectionnez l’option **Activer** sous Étapes rapides.
+6. Sélectionnez l’option **Activer la MFA** sous Étapes rapides.
 7. Lisez la fenêtre contextuelle de notification si vous l’obtenez, puis sélectionnez le bouton **Activer l’authentification multifacteur**.
 8. Sélectionnez **Fermer**.
 9. Notez que Adele a maintenant **activé** son statut MFA.

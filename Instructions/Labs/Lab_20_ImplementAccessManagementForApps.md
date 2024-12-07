@@ -7,6 +7,8 @@ lab:
 
 # Labo 20 : Implémenter la gestion des accès pour les applications
 
+### Type de connexion = Administrateur Microsoft 365
+
 ## Scénario de labo
 
 Votre organisation exige que seuls des utilisateurs ou des groupes spécifiques aient accès aux applications d’entreprise. Affecte un utilisateur spécifique à une application.
@@ -47,9 +49,11 @@ Votre organisation exige que seuls des utilisateurs ou des groupes spécifiques 
 
 4. Sur la page Ajouter une affectation, sous **Utilisateurs et groupes**, sélectionnez **Aucune sélection**.
 
-5. Dans le volet Utilisateurs et groupes, sélectionnez votre compte administrateur, puis **Sélectionner**.
+5. Dans le volet Utilisateurs et groupes, sélectionnez Adele Vance et votre compte administrateur MOD.
+
+6. Sélectionnez **Sélectionner**.
 
     ![Image d’écran affichant l’ajout d’une attribution de compte d’utilisateur à une application avec le bouton Sélectionner mis en surbrillance. ](./media/lp3-mod1-add-app-assignment.png)
 
-6. Sélectionnez **Attribuer**.
+7. Sélectionnez **Attribuer**.
 

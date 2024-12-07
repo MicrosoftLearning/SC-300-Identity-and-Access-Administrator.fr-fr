@@ -7,6 +7,8 @@ lab:
 
 # Labo 17 : Détection de l’application Defender pour le cloud et gestion des restrictions
 
+### Type de connexion = Administrateur Microsoft 365
+
 ## Scénario de labo
 
 Microsoft Defender for Cloud Apps exploite les journaux du trafic réseau pour identifier les applications auxquelles les utilisateurs accèdent.° Les journaux de trafic provenant de pare-feu locaux fournissent un rapport d’instantané sur les applications les plus courantes et les utilisateurs qui y accèdent.° Le trafic provenant d’appareils gérés sera transmis dans le tableau de bord vue d’ensemble de la détection des applications Microsoft Defender for Cloud Apps
@@ -29,6 +31,11 @@ Microsoft Defender for Cloud Apps exploite les journaux du trafic réseau pour i
 
 1. Vous pourrez accéder à ce site web.
 
+1. Fermez l’onglet de Dropbox.
+
+1. Revenez à l’écran Defender for Cloud Apps, puis sélectionnez les trois points à droite de Dropbox.
+
+1. Sélectionnez **Approuvé**, puis le bouton **Suivant**. 
 
 #### Tâche 2 : restreindre des applications dans Defender for Cloud Apps
 
@@ -38,9 +45,6 @@ Microsoft Defender for Cloud Apps exploite les journaux du trafic réseau pour i
 
 1. Ce processus vous permet de bloquer les applications qui ne sont pas approuvées dans votre stratégie d’entreprise, limitant l’informatique fantôme au sein de votre organisation.
 
-**Remarque** : il existe un délai entre l’annulation de l’approbation d’une application et le blocage de l’application.
+**Remarque** : il y a un délai lors de l’approbation ou de la désapprobation d’une application et de cette application. Vous devrez peut-être attendre jusqu’à 5 minutes.
 
 Une fois l’application bloquée comme non approuvée, l’application ne sera plus accessible via le navigateur, le navigateur privé ou le téléchargement du magasin sur un client intégré à MDE (Microsoft Defender pour point de terminaison) intégré à Microsoft Defender for Cloud Apps.
-
-
-

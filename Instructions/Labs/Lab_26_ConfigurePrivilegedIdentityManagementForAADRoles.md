@@ -7,6 +7,8 @@ lab:
 
 # Labo 26 : Configuration de Privileged Identity Management pour les rôles Microsoft Entra
 
+### Type de connexion = Administrateur Microsoft 365
+
 ## Scénario de labo
 
 Un administrateur de rôle privilégié peut personnaliser Privileged Identity Management (PIM) dans son organisation Microsoft Entra, y compris modifier l’expérience d’un utilisateur qui active une attribution de rôle éligible. Vous devez vous familiariser avec la configuration de PIM.
@@ -55,7 +57,7 @@ Si vous définissez plusieurs approbateurs, l’approbation est accomplie dès q
 
 5. Une fois que vous avez spécifié les paramètres de rôle, sélectionnez **Mettre à jour** pour enregistrer vos modifications.
 
-### Exercice 2 - PIM avec les rôles Microsoft Entra
+### Exercice 2 : utiliser PIM pour attribuer les rôles Microsoft Entra
 
 #### Tâche 1 : attribuer un rôle
 

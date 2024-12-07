@@ -7,13 +7,15 @@ lab:
 
 # Labo 13 : Implémenter et tester une stratégie d’accès conditionnel
 
-## Scénario du labo
+### Type de connexion = Administrateur Microsoft 365
+
+## Scénario de labo
 
 Votre organisation doit pouvoir limiter l’accès utilisateur à ses applications internes. Vous devez déployer une stratégie d’accès conditionnel Microsoft Entra.
 
 **Remarque** : pour les stratégies d’accès conditionnel, vous pouvez désactiver les valeurs par défaut de sécurité, puisque les points clés à mémoriser proviennent de la formation.  Vous trouverez des informations supplémentaires sur les valeurs par défaut de sécurité en suivant ce lien : <https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/concept-fundamentals-security-defaults>
 
-#### Durée estimée : 30 minutes
+#### Durée estimée : 20 minutes
 
 ### Exercice 1 : Définir une stratégie d’accès conditionnel pour empêcher DebraB d’accéder à Sway
 
@@ -24,12 +26,16 @@ Votre organisation doit pouvoir limiter l’accès utilisateur à ses applicatio
 2. Connectez-vous à [https://www.office.com](https://www.office.com) 
 3. Lorsque l’invite s’ouvre, connectez-vous en tant que DebraB :
 
-   | Paramètre | Valeur |
-   | :--- | :--- |
-   | Nom d’utilisateur | **DebraB@**`<<your lab domain>>.onmicrosoft.com` |
-   | Mot de passe | Entrez le mot de passe administrateur du locataire (reportez-vous à l’onglet Ressources du labo pour récupérer le mot de passe d’administrateur du locataire). |
+  | Paramètre | Valeur |
+  | :--- | :--- |
+  | Nom d’utilisateur | **DebraB@**`<<your lab domain>>.onmicrosoft.com` |
+  | Mot de passe | Entrez le mot de passe administrateur du locataire (reportez-vous à l’onglet Ressources du labo pour récupérer le mot de passe d’administrateur du locataire). |
     
-4. Sélectionnez l’icône **Sway** pour vérifier qu’elle se charge correctement.
+4. Ignorez les écrans d’accueil et d’introduction.
+
+5. Ouvrez la page **Applications**, puis sélectionnez l’icône **Sway** pour voir qu’elle se charge correctement.
+
+6. Déconnectez-vous d’Office et fermez votre session de navigateur.
 
 #### Tâche 2 : créer une stratégie d’accès conditionnel.
 
@@ -122,6 +128,7 @@ Vous devez tester vos stratégies d’accès conditionnel pour vous assurer qu�
 1. Sélectionnez **What if**. Vous recevrez un rapport en bas de la vignette pour les **stratégies qui s’appliqueront** et les **stratégies qui ne s’appliqueront** pas.
 
 Cela vous permet de tester les stratégies et leur affectivité avant de les activer.
+
 
 ### Configurer des contrôles de fréquence de connexion à l’aide d’une stratégie d’accès conditionnel
 
