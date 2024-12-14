@@ -109,7 +109,7 @@ Vous devez ajouter et supprimer des licences via le Centre d’administration Mi
 
    ![Image d’écran du site web Office.com avec Delia Dennis connecté(e). Les applications Office sont disponibles, car une licence est attribuée.](./media/delia-office-license.png)
     
-5. Fermez la fenêtre du navigateur. 
+5. Fermez la fenêtre du navigateur.
 
 ### Exercice 2 – Créer un groupe Microsoft 365 dans Microsoft Entra ID
 
