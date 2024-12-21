@@ -32,10 +32,10 @@ Vous utiliseriez Microsoft Entra ID pour créer un domaine que vous avez achet
 1. Dans le champ **Nom de domaine personnalisé**, créez un sous-domaine personnalisé pour le locataire de labo en plaçant **ventes** devant le nom de domaine **onmicrosoft.com**.  Le format ressemble à ce qui suit :
 
     ```
-    mydomain.com
+    Sales.###onmicrosoft.com
     ```
 
-1. **Remarque** : vous serez invité(e) à ouvrir le Centre d’administration Microsoft 365 pour effectuer cette action.
+**Remarque** : vous serez invité(e) à ouvrir le Centre d’administration Microsoft 365 pour effectuer cette action.
 
 1. Sélectionnez **Ajouter un domaine** pour ajouter le sous-domaine.
 

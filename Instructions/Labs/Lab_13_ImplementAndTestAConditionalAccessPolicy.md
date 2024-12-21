@@ -156,9 +156,9 @@ Dans le cadre de la configuration d’une sécurité renforcée de votre entrepr
 
 9. Dans le volet Sélectionner, sélectionnez votre compte **Grady Archie**, puis sélectionnez **Sélectionner**.
 
-10. Sélectionnez **Applications ou actions cloud**.
+10. Sélectionnez **Ressources cibles - Aucune ressource cible sélectionnée**.
 
-11. Vérifiez que **Applications cloud** est sélectionné, puis sélectionnez **Sélectionner les applications**.
+11. Dans l’élément **Inclure**, vérifiez que **Sélectionner les ressources** est sélectionné, puis sélectionnez **Aucun** dans la section Sélectionner.
 
 12. Dans le volet Sélectionner, sélectionnez **Office 365**, puis sélectionnez **Sélectionner**.
 

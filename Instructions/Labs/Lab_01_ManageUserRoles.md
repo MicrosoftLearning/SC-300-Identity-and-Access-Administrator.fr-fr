@@ -134,8 +134,8 @@ Cette tâche va utiliser une autre méthode pour supprimer le rôle attribué. E
 2. Dans la zone de recherche, saisissez **Rôles**, puis lancez les rôles et l’administration de Microsoft Entra ID.
 3. Dans **Tous les rôles** de **Rôles et administrateurs**, sélectionnez le rôle **Administrateur de l’application** dans la liste.
 4. Sur la page **Administrateur d’application | Affectations**, vous devriez voir le nom de Chris Green répertorié.
-5. Cochez la case à côté de Chris Green.
-6. Sélectionnez **X Supprimer les affectations** des options en haut de la boîte de dialogue.
+5. Faites défiler jusque tout à droite sur Chris Green.
+6. Sélectionnez **Supprimer ** depuis les options en haut de la boîte de dialogue.
 7. Répondez **Oui** lorsque la boîte de confirmation s’ouvre.
 8. Fermez l’écran.
 

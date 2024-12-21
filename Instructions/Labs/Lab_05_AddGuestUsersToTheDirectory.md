@@ -90,7 +90,7 @@ Un partenariat récent a été établi avec une autre société. Pour l’instan
 
 #### Tâche 2 : inviter des utilisateurs avec PowerShell
 
-1. Ouvrez PowerShell en tant qu’administrateur.Pour ce faire, recherchez PowerShell dans Windows et choisissez Exécuter en tant qu’administrateur. 
+1. Ouvrez PowerShell en tant qu’administrateur. Pour ce faire, recherchez PowerShell dans Windows et choisissez Exécuter en tant qu’administrateur. 
 
 **Remarque** : vous devez disposer de PowerShell version 7.2 ou ultérieure pour que ce labo fonctionne.  Lorsque PowerShell s’ouvre, vous obtenez une version en haut de l’écran. Si vous l’exécutez et que vous avez une version antérieure, mettez à jour ou cette partie du labo échouera.
 

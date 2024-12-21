@@ -7,16 +7,13 @@ lab:
 
 # Labo 07 (FACULTATIF) : Ajouter une identité hybride avec Microsoft Entra Connect
 
-
-
 # Ce labo fonctionne uniquement dans un environnement non-hôte lab. Si vous souhaitez l’essayer à l’aide d’un compte personnel, cela devrait fonctionner. Vous ne serez pas en mesure d’effectuer les tâches dans le cours.
 
 
 
 
-**Remarque** : ce labo nécessite un Pass Azure. Consultez le labo 00 pour obtenir des instructions.
 
-**Remarque 2** : ce labo est à caractère facultatif.  La réalisation de ce labo dure au moins 1 heure et nécessite que vous suiviez avec précision les étapes indiquées.  N’hésitez pas à programmer ces étapes, puisque le temps vous le permet.  Si votre entreprise a déjà effectué sa configuration hybride ou si vous n’envisagez pas d’utiliser Microsoft Entra Connect, passez ce labo.
+**Remarque** : ce labo est facultatif.  La réalisation de ce labo dure au moins 1 heure et nécessite que vous suiviez avec précision les étapes indiquées.  N’hésitez pas à programmer ces étapes, puisque le temps vous le permet.  Si votre entreprise a déjà effectué sa configuration hybride ou si vous n’envisagez pas d’utiliser Microsoft Entra Connect, passez ce labo.
 
 ## Scénario de labo
 
@@ -38,7 +35,7 @@ Votre entreprise dispose de services de domaine Active Directory en local.  Elle
 
    **Remarque** : la configuration de base à 3 machines virtuelles approvisionne un contrôleur de domaine Active Directory Windows Server 2016 nommé DC1 à l’aide du nom de domaine que vous spécifiez et d’un serveur membre de domaine nommé APP1 exécutant Windows Server 2016. Elle offre également une option permettant d’approvisionner une machine virtuelle cliente exécutant Windows 10, mais nous ne l’utiliserons pas dans notre labo (principalement en raison des exigences de licence applicables lors de l’exécution de machines virtuelles Windows 10 dans Azure). Le serveur membre de domaine (APP1) a installé automatiquement .NET 4.5 et IIS.  
    
-   **Remarque** : la machine virtuelle requise pour ce labo est **DC1**.  Si vous utilisez un Pass Azure, il existe une limitation de 2 machines virtuelles, ce qui explique que la machine virtuelle cliente peut échouer.  Cela n’est pas nécessaire pour ce labo.
+   **Remarque** : la machine virtuelle requise pour ce labo est **DC1**.
 
 3. Sur la page **Déploiement personnalisé**, spécifiez les paramètres suivants, sélectionnez **Vérifier + Créer**, puis **Créer**.
 
