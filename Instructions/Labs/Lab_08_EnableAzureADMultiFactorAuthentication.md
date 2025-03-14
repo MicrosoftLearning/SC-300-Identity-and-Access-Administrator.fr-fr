@@ -7,7 +7,7 @@ lab:
 
 # Labo 08 : Activer l’authentification multifacteur.
 
-### Type de connexion = Administrateur Microsoft 365
+### Type de connexion = connexion client Microsoft 365 + E5
 
 ## Scénario de labo
 
@@ -63,28 +63,29 @@ Nous allons maintenant examiner comment configurer des règles de stratégie d�
 5. Sous Ressources cibles, sélectionnez **Aucune ressource cible sélectionnée**.
 
    - Dans la liste déroulante, vérifiez que **Cloud Apps** est sélectionné.
-   - Sous Inclure, marquez **Toutes les Cloud Apps** et souvenez-vous de l’avertissement sur le verrouillage possible de votre accès. 
-   - Maintenant, dans la section Sélectionner, choisissez l’élément **Aucun**.
+   - Sous Inclure, marquez **Ressources (anciennement applications cloud)** et notez l’avertissement qui s’affiche sur votre verrouillage possible. 
+   - Maintenant, dans la section Inclure, choisissez l’élément **Sélectionner des ressources**.
+   - Dans la section **Sélectionner**, sélectionnez le lien **Aucun**.
    - Dans la boîte de dialogue nouvellement ouverte, choisissez **Office 365**.
       - **Rappel :** dans un labo précédent, nous avons donné à Delia Dennis une licence Office 365 et nous sommes connectés pour s’assurer qu’elle fonctionnait.
    - Choisissez **Sélectionner**.
 
-6. Passez en revue la section Conditions.
+6. Choisissez un emplacement réseau dans la section Conditions, puis sélectionnez **Non configuré**.
 
-   - Choisissez **Oui** pour le curseur de configuration.
+   - Dans la section **Conditions**, choisissez le lien **0 condition sélectionnée**.
+   - En bas du menu nouvellement ouvert, recherchez la section **Emplacements**, puis sélectionnez **Non configuré**.
+   - Choisissez **Oui** pour l’élément **Configurer**.
    - Sélectionnez **N’importe quel réseau ou emplacement**.
 
-7. Sous **Contrôles d’accès** trouvez la section **Accorder**, et sélectionnez **Aucun contrôle sélectionné**.
+7. Sous **Contrôles d’accès**, recherchez la section **Accorder** et sélectionnez le lien **0 contrôle sélectionné**.
 
-8. Cochez la case **Exiger l’authentification multifacteur** pour appliquer la MFA
+   - Cochez la case **Exiger l’authentification multifacteur** pour appliquer la MFA
+   - Vérifiez que l’option **Exiger tous les contrôles sélectionnés** est sélectionnée.
+   - Sélectionnez **Sélectionner**.
 
-9. Vérifiez que l’option **Exiger tous les contrôles sélectionnés** est sélectionnée.
+8. Définissez l’option **Appliquer la stratégie** sur **Activé**.
 
-10. Sélectionnez **Sélectionner**.
-
-11. Définissez l’option **Appliquer la stratégie** sur **Activé**.
-
-12. Sélectionnez **Créer** pour créer la stratégie.
+9. Sélectionnez le bouton **Créer** pour créer la stratégie.
 
     ![Capture d’écran montrant toute la boîte de dialogue Ajouter une stratégie](./media/lp2-mod1-conditional-access-new-policy-complete.png)
 

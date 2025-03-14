@@ -15,13 +15,14 @@ Ce labo dispose de deux options de connexion différentes, utilisées pour diff�
 
   - Connexions basées sur les ressources Azure
   - Connexion client Microsoft 365 + E5
+      - Compte Administrateur MOD
 
 Vous serez informé de la connexion à utiliser dans chacun des labos.
 
 
 # Labo 01 : gérer les rôles utilisateur
 
-### Type de connexion = Administrateur Microsoft 365
+### Type de connexion = connexion client Microsoft 365 + E5
 
 ## Scénario de labo
 
@@ -93,14 +94,17 @@ En utilisant Microsoft Entra ID, vous pouvez désigner des administrateurs limit
 3. Sélectionnez **Tous les utilisateurs** sous la section Gérer du menu.
 4. Sélectionnez le compte **Chris Green**.
 5. Choisissez **Rôles attribués** dans le menu Gérer.
-6. Sélectionnez **+ Ajouter des attributions** et marquez le rôle `Application administrator`.
-7. Sélectionnez **Ajouter**
+6. Sélectionnez **+ Ajouter des affectations**.
+7. Sélectionnez le rôle `Application administrator` dans la liste déroulante.
+8. Sélectionnez le bouton **Suivant**.
+9. Marquez la valeur **Active** pour **Type d’affectation**.
+10. Sélectionnez **Attribuer**.
 
     ![Page Rôles affectés, affichant le rôle sélectionné](./media/directory-role-select-role.png)
 
 **Remarque** : si l’environnement de labo a déjà activé Microsoft Entra ID Premium P2, Privileged Identity Management (PIM) est activé et vous devez sélectionner **Suivant** et attribuer un Rôle permanent à cet utilisateur.
 
-9. Sélectionnez le bouton **Rafraîchir**.
+11. Sélectionnez le bouton **Actualiser**.
 
 **Remarque - Le rôle Administrateur d’application qui vient d’être attribué s’affiche dans la page Rôles affectés de l’utilisateur.**
 
@@ -118,11 +122,11 @@ En utilisant Microsoft Entra ID, vous pouvez désigner des administrateurs limit
 4. Recherchez et sélectionnez **Applications d'entreprise** dans la boîte de dialogue de recherche en haut de l’écran.
 5. Notez que **+ Nouvelle application** est disponible maintenant.
 6. Sélectionnez **+ Nouvelle application**
-7. Affichez **« **+ Créer votre propre application** n’est pas grisé. Si vous choisissez une application de galerie, vous verrez que le bouton **Créer** est disponible.
+7. Assurez-vous que l’option **+ Créer votre propre application** n’est pas grisée. Si vous choisissez une application de galerie, vous verrez que le bouton **Créer** est disponible.
 
    **Remarque - Ce rôle a désormais la possibilité d’ajouter des applications au locataire. Nous allons expérimenter davantage cette fonctionnalité dans les laboratoires ultérieurs.**
 
-7. Déconnectez-vous de l’instance Chris Green du portail et fermez le navigateur.
+8. Déconnectez-vous de l’instance Chris Green du portail et fermez le navigateur.
 
 ### Exercice 3 - Supprimer une attribution de rôle
 
@@ -157,7 +161,7 @@ Cette tâche va utiliser une autre méthode pour supprimer le rôle attribué. E
 
     Vous pouvez modifier ce fichier pour ajouter des utilisateurs en bloc.  Notez que vous n’avez pas besoin de remplir tout le champ.  En fonction des exemples de données fournis, vous devez principalement ajouter les informations de nom et de nom d’utilisateur.
 
-6. Un exemple de fichier CSV a été fourni dans le dossier Allfiles/Lab1 -- **SC300BulkUser.csv**.
+6. Un exemple de fichier CSV a été fourni dans le dossier Allfiles/Labs/Lab1 -- **SC300BulkUser.csv**.
    1. Ouvrez le Bloc-notes.
      - Dans l’environnement de labo, sélectionnez le bouton DÉMARRER et saisissez Bloc-notes.  
    1. Ouvrez le fichier SC300BulkUser.csv
@@ -166,7 +170,7 @@ Cette tâche va utiliser une autre méthode pour supprimer le rôle attribué. E
 
 7. Dans la boîte de dialogue **Créer des utilisateurs en bloc**, sélectionnez l’icône de dossier de fichiers à l’étape 3.
 
-8. Chemin d’accès au dossier Allfiles/Lab1 et sélectionnez le fichier**SC300BulkUser.csv**.
+8. Chemin d’accès au dossier Allfiles/Labs/Lab1 et sélectionnez le fichier**SC300BulkUser.csv**.
 
 9. Sélectionnez **Ouvrir**.
 
@@ -180,6 +184,8 @@ Une fois que les utilisateurs ont été créés, vous serez invité à indiquer 
 
 **Remarque** : vous devez disposer de PowerShell version 7.2 ou ultérieure pour que ce labo fonctionne.  Lorsque PowerShell s’ouvre, vous obtenez une version en haut de l’écran. Si vous l’exécutez et que vous avez une version antérieure, suivez les instructions à l’écran pour accéder à https://aka.ms/PowerShell-Release?tag=7.3.9. Faites défiler jusqu’à la section Ressources et sélectionnez powershell-7.3.1-win-x64.msi. Une fois le téléchargement terminé, sélectionnez Ouvrir le fichier. Procédez à l’installation en utilisant toutes les valeurs par défaut.
 
+**Conseil du labo** : TouchType ne fonctionne pas correctement avec PowerShell dans l’environnement de labo.  Pour contourner ce problème, vous ouvrez Bloc-notes dans votre environnement de labo. Ensuite, utilisez la fonctionnalité TouchType pour placer le script dans Bloc-notes, puis utilisez enfin Copier et coller pour placer la commande dans PowerShell.  Nous nous excusons pour cette étape supplémentaire.
+
 2. Vous devez installer le module PowerShell Microsoft.Graph si vous ne l’avez pas déjà utilisé.  Exécutez la commande suivante, puis confirmez l’opération lorsque vous y êtes invité(e) :
 
     ```
@@ -192,7 +198,7 @@ Une fois que les utilisateurs ont été créés, vous serez invité à indiquer 
     ```
     
 
-4. Ensuite, vous devez vous connecter à Azure en exécutant :  
+4. Ensuite, vous devez vous connecter à l’API Microsoft Graph en exécutant :  
 
     ```
     Connect-MgGraph -Scopes "User.ReadWrite.All"
@@ -298,7 +304,7 @@ Vous devez ajouter et supprimer des licences via le Centre d’administration Mi
 
 1. Ouvrez un nouvel onglet dans votre navigateur.
 
-2. Connectez-vous au Centre d’administration Microsoft 365 à l’adresse http://admin.microsoft.com.
+2. Connectez-vous au Centre d’administration Microsoft 365 à l’adresse [https://admin.microsoft.com](https://admin.microsoft.com).
 
 3. Connectez-vous en tant que compte d’administrateur si vous y êtes invité.
 
@@ -306,7 +312,7 @@ Vous devez ajouter et supprimer des licences via le Centre d’administration Mi
 
 5. Sélectionnez la licence **Windows 10/11 Entreprise E3** dans la liste.
 
-6. Choisissez l’élément **+ Ajouter une licence**.
+6. Choisissez l’élément **+ Affecter des licences**.
 
 7. Recherchez **Raul Razo** dans la liste.
 
