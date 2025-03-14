@@ -31,7 +31,7 @@ Vous devez activer les paramètres de collaboration externe pour votre organisat
 1. Connectez-vous à la plateforme  [https://entra.microsoft.com](https://entra.microsoft.com) en tant qu’administrateur client.
 2. Sélectionnez  **Identité**.
 3. Sélectionnez  **Identités externes**, puis cliquez sur le bouton **Tous les fournisseurs d’identité**.
-4. Sélectionnez le lien de notification **de code secret  à usage unique par e-mail** que vous voyez en haut de l’écran.
+4. Sélectionnez l’élément **Code secret à usage unique par e-mail** dans la liste des fournisseurs, puis sélectionnez **Configuré**.
 
     **Remarque** : un code secret unique est un moyen très sécurisé d’inviter un utilisateur à rejoindre votre organisation.
     
@@ -43,7 +43,7 @@ Vous devez activer les paramètres de collaboration externe pour votre organisat
 9. Sous  **Accès utilisateur invité**, passez en revue les niveaux d’accès disponibles, puis sélectionnez **L’accès des utilisateurs invités est limité aux propriétés et aux membres de leurs propres objets de répertoire (le plus restrictif)**.
 
     **REMARQUE**
-    - Les utilisateurs invités ont le même accès que les membres (le plus inclusif) : cette option donne aux invités le même accès aux ressources Microsoft Entra et aux données d’annuaire que les utilisateurs membres.
+    - Les utilisateurs invités ont le même accès que les membres (le plus inclusif) : Cette option donne aux invités le même accès aux ressources Microsoft Entra et aux données d’annuaire que les utilisateurs membres.
     - Les utilisateurs invités ont un accès limité aux propriétés et aux appartenances des objets d’annuaire : Ce paramètre empêche les invités d’effectuer certaines tâches d’annuaire, telles que l’énumération d’utilisateurs, de groupes ou d’autres ressources de répertoire. Les invités peuvent voir l’appartenance de tous les groupes non masqués.
     - L’accès utilisateur invité est limité aux propriétés et aux abonnements de ses propres objets d’annuaire (le plus restrictif) : avec ce paramètre, les invités ne peuvent accéder qu’à leurs propres profils. Les invités ne sont pas autorisés à voir les profils, groupes ou appartenances à des groupes d’autres utilisateurs.
 

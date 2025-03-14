@@ -65,7 +65,7 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
 1. Configurez les paramètres suivants :
   - **Rôle de fonction de tâche**
   - **Rôle** : connexion de l’administrateur aux machines virtuelles
-  - **Membres** : choisissez un utilisateur, un groupe ou un principal de service.  Utilisez ensuite **+ Sélectionner des membres** pour ajouter **Joni Sherman** en tant qu’utilisateur spécifique pour la machine virtuelle.
+  - **Membres** : choisissez un utilisateur, un groupe ou un principal de service.  Utilisez ensuite **+ Sélectionner des membres** pour ajouter **User2** en tant qu’utilisateur spécifique pour la machine virtuelle.
 
 1. Sélectionnez **Examiner et attribuer** pour terminer le processus.
 
@@ -133,30 +133,30 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
 1. Cliquez sur **OK**.
 
 1. Dans la boîte de dialogue de connexion, saisissez les informations suivantes :
-   - Nom d’utilisateur = **AzureAD\JoniS@ votre nom de domaine**
+   - Nom d’utilisateur = **AzureAD\User2@ votre nom de domaine**
    - Mot de passe : entrez le mot de passe d’administrateur communiqué par votre fournisseur d’hébergement de labo.
 
-   REMARQUE : JoniS est l’utilisateur que nous avons autorisé à se connecter en tant qu’administrateur pendant la tâche 1.
+   NOTE : User2 est l’utilisateur que nous avons autorisé à se connecter en tant qu’administrateur pendant la tâche 1.
 
-1. Windows Server doit confirmer la connexion et s’ouvrir au tableau de bord Gestionnaire de serveur normal.
+1. Windows doit confirmer la connexion et ouvrir le bureau normal.
 
 #### Tâche 6 – Test facultatif pour explorer la connexion Microsoft Entra ID
 
-1. Vérifiez que JoniS était le seul utilisateur ajouté au groupe Administrateurs.
+1. Vérifiez que User2 était le seul utilisateur ajouté au groupe Administrateurs.
 
 1. Cliquez avec le bouton droit sur le bouton DÉMARRER, puis sélectionnez **Gestion de l’ordinateur** dans le menu contextuel.
 
 1. Ouvrez **utilisateurs et groupes locaux**, puis accédez à **Groupes, Administrateurs**.
 
-1. Vous devriez voir **Azure\JoniSherman…** dans la liste.
+1. Vous devriez voir **Azure\User2…** dans la liste.
 
 1. Vérifiez si d’autres membres Microsoft Entra ID peuvent se connecter.
 
 1. Quittez la session Bureau à distance.
 
-1. Lancez à nouveau le fichier **<<server name>>-AzureAD.RDP**.
+1. Lancez à nouveau le fichier **<<server name>>-EntraID.RDP**.
 
-1. Essayez de vous connecter en tant qu’autres membres Azure AD comme AdeleV ou AlexW ou DiegoS.
+1. Essayer de vous connecter sous le nom d’autres membres Microsoft Entra ID.
 
 1. Vous devez remarquer que ces utilisateurs n’ont pas accès.
 

@@ -19,9 +19,9 @@ Votre organisation exige que seuls des utilisateurs ou des groupes spécifiques 
 
 #### Tâche 1 : ajouter une application à votre locataire Microsoft Entra
 
-1. Connectez-vous au  [https://entra.microsoft.com](https://entra.microsoft.com)  en utilisant un compte d’administrateur général.
+1. Connectez-vous sur  [https://entra.microsoft.com](https://entra.microsoft.com) à l’aide du compte Administrateur fourni.
 
-2. Ouvrez le menu du portail, puis sélectionnez  **Microsoft Entra ID**.
+2. Regardez le menu sur le côté gauche de l’écran.
 
 3. Dans le menu Identité, sous **Applications**, sélectionnez **Applications d’entreprise**.
 

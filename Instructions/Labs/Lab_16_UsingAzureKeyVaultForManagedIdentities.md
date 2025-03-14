@@ -55,6 +55,8 @@ Lorsque vous utilisez des identités managées pour les ressources Azure, votre 
   | Mot de passe | Définissez un mot de passe sécurisé dont vous pouvez vous souvenir. |
   | Gestion des licences | Confirmez que vous disposez d’une licence éligible. |
 
+1. Assurez-vous de cocher la case **Confirmer la licence**.
+
 1. Utilisez le bouton **Suivant** pour accéder à l’onglet **Gestion**.
 
 1. Sous l’onglet **Gestion**, cochez la case en regard de **Activer l’identité managée affectée par le système**.

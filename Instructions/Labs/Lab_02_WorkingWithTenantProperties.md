@@ -7,7 +7,7 @@ lab:
 
 # Labo 02 : Utiliser les propriétés du locataire
 
-### Type de connexion = Administrateur Microsoft 365
+### Type de connexion = connexion client Microsoft 365 + E5
 
 ## Scénario de labo
 
@@ -32,14 +32,14 @@ Vous utiliseriez Microsoft Entra ID pour créer un domaine que vous avez achet
 1. Dans le champ **Nom de domaine personnalisé**, créez un sous-domaine personnalisé pour le locataire de labo en plaçant **ventes** devant le nom de domaine **onmicrosoft.com**.  Le format ressemble à ce qui suit :
 
     ```
-    Sales.###onmicrosoft.com
+    Sales.labTenantName.onmicrosoft.com
     ```
 
 **Remarque** : vous serez invité(e) à ouvrir le Centre d’administration Microsoft 365 pour effectuer cette action.
 
 1. Sélectionnez **Ajouter un domaine** pour ajouter le sous-domaine.
 
-1. Entrez le nom `sales.tenantname.onmicrosoft.com` du sous-domaine dans la boîte de dialogue.
+1. Entrez le nom `sales.tenantname.onmicrosoft.com` du sous-domaine dans la boîte de dialogue. N’oubliez pas de remplacer *tenantname* par le nom de votre locataire.
 
 1. Sélectionnez le bouton **Utiliser ce domaine** en bas de l’écran.
 
@@ -87,6 +87,8 @@ Les abonnements Azure ont une relation d’approbation avec Microsoft Entra ID
 1. Sous **Propriétés du locataire**, localisez **ID du locataire**. Il s’agit de l’identificateur unique de votre locataire.
 
     ![Capture d’écran affichant la page Propriétés du locataire avec la zone ID du locataire mise en surbrillance](./media/portal-tenant-id.png)
+
+**Note** : il est utile d’enregistrer votre Tenant-ID dans Bloc-notes ou un autre emplacement pour une utilisation lors de prochains labos.
 
 ### Exercice 3 : Configuration de vos informations de confidentialité
 

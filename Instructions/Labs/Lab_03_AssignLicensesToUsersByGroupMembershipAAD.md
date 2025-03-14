@@ -7,7 +7,7 @@ lab:
 
 # Labo 03 : Attribution d’une licence à l’aide de l’appartenance au groupe
 
-### Type de connexion = Administrateur Microsoft 365
+### Type de connexion = connexion client Microsoft 365 + E5
 
 ## Scénario de labo
 
@@ -23,10 +23,10 @@ Votre organisation a décidé d’utiliser des groupes de sécurité dans Micros
 2. Se connecter à [https://www.office.com](https://www.office.com).
 3. Sélectionnez Se connecter et connectez-vous en tant que Delia Dennis.
 
-   | **Paramètre**| **Valeur**|
+   | **Paramètre** | **Valeur** |
    | :--- | :--- |
-   | Nom d’utilisateur | DeliaD@`your domain name.com`|
-   | Mot de passe| Saisissez le mot de passe de l’administrateur général à partir des ressources|
+   | Nom d’utilisateur | DeliaD@`your domain name.com` |
+   | Mot de passe| Entrez le mot de passe de l’utilisateur fourni pour DeliaD. |
 
 4. Vous devez vous connecter au site web Office.com et voir un message indiquant que vous n’avez pas de licence.
 
@@ -60,7 +60,7 @@ Votre organisation a décidé d’utiliser des groupes de sécurité dans Micros
 
 #### Tâche 3 : ajouter une licence Office à sg-SC300-O365
 
-Vous devez ajouter et supprimer des licences via le Centre d’administration Microsoft 365. Il s’agit d’un changement relativement nouveau.
+**Conseil du labo** : vous devez ajouter et supprimer des licences via le Centre d’administration Microsoft 365. Il s’agit d’un changement relativement nouveau.
 
 1. Ouvrez un nouvel onglet dans votre navigateur.
 
@@ -74,11 +74,11 @@ Vous devez ajouter et supprimer des licences via le Centre d’administration Mi
 
 6. Sélectionnez l’onglet **Groupes** dans l’écran des licences.
 
-7. Choisissez l’élément **+ Ajouter une licence**.
+7. Choisissez l’élément **+ Affecter des licences**.
 
 8. Recherchez le groupe **sg-SC300-O365**, puis sélectionnez-le dans la liste.
 
-8. Une fois que vous avez ajouté Raul, sélectionnez **Attribuer**.
+8. Une fois que vous avez ajouté le groupe, sélectionnez **Attribuer**.
  
 9. Fermez le message de confirmation.
 
@@ -86,7 +86,7 @@ Vous devez ajouter et supprimer des licences via le Centre d’administration Mi
 
 11. Revenez à **Tous les groupes** dans le volet de navigation gauche, sous **Identité**, sélectionnez **Groupes**.
 
-12. Dans la page Utilisateurs, sélectionnez **sg-SC300-O365**.
+12. Dans la page Groupes, sélectionnez **sg-SC300-O365**.
 
 13. Dans le volet de navigation gauche, sélectionnez **Licences**.
 
@@ -103,7 +103,7 @@ Vous devez ajouter et supprimer des licences via le Centre d’administration Mi
    | **Paramètre**| **Valeur**|
    | :--- | :--- |
    | Nom d’utilisateur | DeliaD@`your domain name.com`|
-   | Mot de passe| Saisissez le mot de passe de l’administrateur général à partir des ressources|
+   | Mot de passe| Entrez le mot de passe de l’utilisateur fourni.  |
 
 4. Vous devez vous connecter au site web Office.com et ne voir aucun message concernant la licence. Toutes les application Office sont disponibles à gauche.
 
@@ -143,7 +143,7 @@ Une partie de vos tâches en tant qu’administrateur Microsoft Entra consiste �
 
 À mesure que votre entreprise se développe, la gestion manuelle des groupes devient de plus en plus longue. Depuis la normalisation du répertoire, vous pouvez désormais tirer parti des groupes dynamiques. Vous devez créer un groupe dynamique pour vous assurer que vous êtes prêt(e) à créer un groupe dynamique en production.
 
-1. Connectez-vous au [https://entra.microsoft.com](https://entra.microsoft.com) en utilisant un compte attribué au rôle d’administrateur général ou d’administrateur d’utilisateurs dans le locataire.
+1. Connectez-vous sur [https://entra.microsoft.com](https://entra.microsoft.com) avec un compte Administrateur fourni. Vous avez besoin d’au moins un rôle Administrateur d’utilisateur dans le locataire.
 
 2. Sélectionnez **Identité**.
 
@@ -164,10 +164,10 @@ Une partie de vos tâches en tant qu’administrateur Microsoft Entra consiste �
 9. Dans le volet « Modifier la syntaxe de la règle », entrez l’expression suivante dans la zone **Syntaxe de la règle** :
 
    ```powershell
-   user.objectid -ne null
+   user.objectId -ne null
    ```
 
-   **Avertissement** : la `user.objectid` est sensible à la casse.
+   **Avertissement** : la `user.objectId` est sensible à la casse.
 
 10. Cliquez sur **OK**. La règle s’affiche dans la zone « Syntaxe de la règle ».
 
@@ -194,8 +194,10 @@ Une partie de vos tâches en tant qu’administrateur Microsoft Entra consiste �
 
 1. Essayez de créer un groupe comprenant uniquement **les utilisateurs invités** :
 
-   - (user.objectid -ne null) et (user.userType -eq « Guest »)
+   - (user.objectId -ne null) et (user.userType -eq "Guest")
 
 2. Essayez de créer un groupe comprenant uniquement les **Membres** des utilisateurs de Microsoft Entra.
 
-   - (user.objectid -ne null) et (user.userType -eq "Member")
+   - (user.objectId -ne null) et (user.userType -eq "Member")
+
+**Conseil pour le labo** : si vous obtenez un message d’échec de création du groupe mentionnant un opérateur non valide, vérifiez l’orthographe de l’opérateur.  Note : I dans objectId et T dans userType sont des lettres majuscules.

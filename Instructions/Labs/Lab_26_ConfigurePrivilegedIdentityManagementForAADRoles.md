@@ -112,7 +112,7 @@ Suivez ces étapes pour rendre un utilisateur éligible pour un rôle d’admini
    | Champ | Valeur |
    | :--- | :--- |
    | Nom d’utilisateur | **MiriamG@**`<<your domain.onmicrosoft.com>>` |
-   | Mot de passe |  Entrez le mot de passe administrateur du locataire (reportez-vous à l’onglet Ressources du labo pour récupérer le mot de passe d’administrateur du locataire). |
+   | Mot de passe |  Entrez le mot de passe administrateur du client fourni. |
 
 4. Dans le menu **Identité**, ouvrez **Utilisateurs**, puis sélectionnez **Tous les utilisateurs**.
 5. Rechercher **Miriam** dans la liste des utilisateurs
@@ -144,7 +144,7 @@ Lorsque vous devez assumer un rôle Microsoft Entra, vous pouvez demander l’ac
 
     **Remarque** importante : le principe du plus bas niveau de privilège, veut que vous n’activiez le compte que pour la durée nécessaire.  Si le travail devant être effectué ne prend que 1 h 30, définissez la durée sur deux heures.  De même, si vous savez que vous ne pourrez pas effectuer le travail après 15 h 00, choisissez une heure d’activation personnalisée.
 
-8. Sélectionnez **Activer**.
+8. Cliquez sur **Activer**.
 
 #### Tâche 4 : affecter un rôle avec une étendue restreinte
 
