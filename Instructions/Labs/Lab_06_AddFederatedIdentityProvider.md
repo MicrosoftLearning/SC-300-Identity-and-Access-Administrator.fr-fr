@@ -65,6 +65,13 @@ Votre entreprise travaille avec de nombreux fournisseurs et, à l’occasion, vo
        (where <tenant name> is your tenant name)
    ```
 
+**Conseil de labo** : les résultats doivent ressembler à ceci, avec votre ID de locataire et votre nom de locataire.
+| URI # | Lien |
+| :--- | :--- |
+| URI 1 | https://login.microsoftonline.com |
+| URI 2 | https://login.microsoftonline.com/te/aaaa1111bbbb2222cccc |
+| URI 3 | https://login.microsoftonline.com/te/MyTenantName.onmicrosoft.com/oauth |
+
 16. Sélectionnez **Créer**. Copiez vos **ID client** et **clé secrète client**. Vous les utiliserez lorsque vous ajouterez le fournisseur d’identité dans le portail Azure.
 
 17. Vous pouvez laisser votre projet sur le statut de publication Test.

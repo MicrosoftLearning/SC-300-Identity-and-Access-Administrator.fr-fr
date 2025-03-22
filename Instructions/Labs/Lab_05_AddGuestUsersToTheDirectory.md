@@ -57,7 +57,7 @@ Un partenariat récent a été établi avec une autre société. Pour l’instan
 
 4. Sur la page Utilisateurs, dans le menu, sélectionnez **Opérations en bloc - Invitation en bloc**.
 
-     ![Capture d’écran affichant la page « Tous les utilisateurs » avec les options de menu « Opérations en bloc » et « Invitation en bloc » en surbrillance](./media/lp1-mod3-bulk-invite-option.png)
+   ![Capture d’écran affichant la page « Tous les utilisateurs » avec les options de menu « Opérations en bloc » et « Invitation en bloc » en surbrillance](./media/lp1-mod3-bulk-invite-option.png)
 
 5. Dans le Panneau utilisateurs d’invitation en bloc, sélectionnez **Télécharger** vers un exemple de modèle CSV avec les propriétés de l’invitation.
 
@@ -69,6 +69,8 @@ Un partenariat récent a été établi avec une autre société. Pour l’instan
     - **URL de redirection** : URL vers laquelle l’utilisateur invité est transféré après avoir accepté l’invitation.
 
     ![Capture d’écran affichant l’exemple de fichier CSV d’invitation en bloc](./media/lp1-mod3-template-csv.png)
+
+**Conseil pour le labo** : les utilisateurs répertoriés dans la capture d’écran et les fichiers de modèle sont des exemples, ils n’existent pas vraiment.  Vous devrez ajouter des utilisateurs réels pour tester entièrement cette fonctionnalité.
 
 8. Enregistrez le fichier.
 
@@ -93,6 +95,8 @@ Un partenariat récent a été établi avec une autre société. Pour l’instan
 1. Ouvrez PowerShell en tant qu’administrateur. Pour ce faire, recherchez PowerShell dans Windows et choisissez Exécuter en tant qu’administrateur. 
 
 **Remarque** : vous devez disposer de PowerShell version 7.2 ou ultérieure pour que ce labo fonctionne.  Lorsque PowerShell s’ouvre, vous obtenez une version en haut de l’écran. Si vous l’exécutez et que vous avez une version antérieure, mettez à jour ou cette partie du labo échouera.
+
+**Conseil pour le labo** : la fonctionnalité TouchType dans l’environnement de labo présente des problèmes de saisie dans PowerShell. Si vous lancez le Bloc-notes dans votre labo, utilisez TouchType pour charger les instructions PowerShell dans le Bloc-notes. Vous pouvez utiliser **Copier et coller** pour les saisir dans PowerShell sans taper.
 
 2. Vous devez installer le module PowerShell Microsoft.Graph si vous ne l’avez pas déjà utilisé.  Exécutez la commande suivante, puis confirmez l’opération lorsque vous y êtes invité(e) :
 
