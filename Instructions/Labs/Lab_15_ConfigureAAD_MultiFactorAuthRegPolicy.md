@@ -52,7 +52,7 @@ L'authentification multifacteur permet de vérifier l'identité d'une personne e
 
 1. Sous **Affectations**, sélectionnez **Tous les utilisateurs** sous Utilisateurs, puis sélectionnez un utilisateur pour appliquer l’authentification multifacteur.
 
-1. Définissez **Application de la stratégie** sur **Activé**.
+1. Recherchez le champ **Application de la stratégie** dans la boîte de dialogue.  Définissez la valeur sur **Activé**.
 
 1. Cliquez sur **Enregistrer**.
 

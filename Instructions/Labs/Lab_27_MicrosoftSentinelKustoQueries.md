@@ -5,7 +5,9 @@ lab:
   module: Module 04 - Plan and Implement and Identity Governance Strategy
 ---
 
-# Labo 27 : Requêtes Kusto Microsoft Sentinel pour les sources de données Microsoft Entra
+# Labo 27 (facultatif) : requêtes Kusto Microsoft Sentinel pour les sources de données Microsoft Entra
+
+**Note** : ce labo ne peut pas être réalisé pour l’instant dans l’environnement de labo de formation fourni.  Nous laissons l’étape du labo ici. Vous pouvez donc éventuellement l’essayer sur votre environnement BYOS (Bring You Own Subscription).  Lisez les étapes pour voir ce qui est possible.  Nous travaillons activement à mettre à jour ce labo pour trouver une solution dans l’environnement de labo, et nous le mettrons à jour bientôt.
 
 ### Type de connexion = Connexion à la ressource Azure
 
