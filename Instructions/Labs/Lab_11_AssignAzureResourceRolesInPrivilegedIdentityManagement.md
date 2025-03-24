@@ -9,7 +9,9 @@ lab:
 
 ### Type de connexion = Connexion à la ressource Azure
 
-## Scénario de labo
+**Remarque** : ce labo nécessite un Pass Azure. Consultez le labo 00 pour obtenir des instructions.
+
+## Scénario du labo
 
 Microsoft Entra Privileged Identity Management (PIM) peut gérer les rôles de ressources intégrés Azure, ainsi que les rôles personnalisés, notamment (liste non exhaustive) :
 
