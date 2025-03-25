@@ -17,7 +17,7 @@ lab:
 
 L’inscription de votre application établit une relation d’approbation entre votre application et la plateforme d’identités Microsoft. L’approbation est unidirectionnelle : votre application approuve la plateforme d’identités Microsoft, et non le contraire.
 
-1. Connectez-vous [https://entra.microsoft.com](https://entra.microsoft.com) en utilisant un compte d’administrateur général.
+1. Connectez-vous sur [https://entra.microsoft.com](https://entra.microsoft.com) à l’aide du compte Administrateur fourni.
 
 2. Ouvrez le menu du portail, puis sélectionnez  **Microsoft Entra ID**.
 
@@ -53,7 +53,7 @@ Pour ajouter et modifier des URI de redirection pour vos applications inscrites,
 
     | Plateforme| Paramètres de configuration|
     | :--- | :--- |
-    | Web| Saisissez un  **URI de redirection**  pour votre application, qui est l’emplacement où la plateforme d’identités Microsoft redirige le client d’un utilisateur et envoie des jetons de sécurité après authentification. Sélectionnez cette plateforme pour les applications web standard qui s’exécutent sur un serveur.|
+    | web| Saisissez un  **URI de redirection**  pour votre application, qui est l’emplacement où la plateforme d’identités Microsoft redirige le client d’un utilisateur et envoie des jetons de sécurité après authentification. Sélectionnez cette plateforme pour les applications web standard qui s’exécutent sur un serveur.|
     | Application monopage| Saisissez un  **URI de redirection**  pour votre application, qui est l’emplacement où la plateforme d’identités Microsoft redirige le client d’un utilisateur et envoie des jetons de sécurité après authentification. Sélectionnez cette plateforme si vous générez une application web côté client dans JavaScript ou avec un framework comme Angular, Vue.js, React.js ou Blazor WebAssembly.|
     | iOS/macOS| Entrez l’ **ID de bundle** de l’application, qui se trouve dans Xcode dans  *Info.plist*  ou Paramètres de build. Un URI de redirection est automatiquement généré quand vous spécifiez un ID de bundle.|
     | Android| Entrez le  **Nom du package** de l’application, que vous trouverez dans le fichier AndroidManifest.xml. Générez et saisissez ensuite le  **code de hachage signature**. Un URI de redirection est automatiquement généré quand vous spécifiez ces paramètres.|
