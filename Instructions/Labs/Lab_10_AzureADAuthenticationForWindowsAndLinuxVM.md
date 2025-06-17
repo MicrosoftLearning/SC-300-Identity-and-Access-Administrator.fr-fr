@@ -190,4 +190,7 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
     - **Rôle** : Connexion de l’administrateur aux machines virtuelles ou Connexion de l’utilisateur aux machines virtuelles
     - **Attribuer l’accès à** : Un utilisateur, à un groupe, à un principal de service ou à une identité managée.
 
-1. Pour connaître les étapes détaillées, consultez Attribuer des rôles Azure à l’aide du portail Azure.
+##### Partie labo de défi
+
+Essayez de terminer le reste de ce labo par vous-même. Il est très similaire à la version de Windows. Si vous avez besoin des étapes détaillées, consultez l’article « Attribuer des rôles Azure à l’aide du portail Azure » dans la documentation Learn.
+

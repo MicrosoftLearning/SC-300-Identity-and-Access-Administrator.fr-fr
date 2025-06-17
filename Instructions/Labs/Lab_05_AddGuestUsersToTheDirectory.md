@@ -92,7 +92,7 @@ Un partenariat récent a été établi avec une autre société. Pour l’instan
 
 #### Tâche 2 : inviter des utilisateurs avec PowerShell
 
-1. Ouvrez PowerShell en tant qu’administrateur. Pour ce faire, recherchez PowerShell dans Windows et choisissez Exécuter en tant qu’administrateur. 
+1. Ouvrez PowerShell. Cela peut se faire en recherchant PowerShell dans Windows.
 
 **Remarque** : vous devez disposer de PowerShell version 7.2 ou ultérieure pour que ce labo fonctionne.  Lorsque PowerShell s’ouvre, vous obtenez une version en haut de l’écran. Si vous l’exécutez et que vous avez une version antérieure, mettez à jour ou cette partie du labo échouera.
 
@@ -101,7 +101,7 @@ Un partenariat récent a été établi avec une autre société. Pour l’instan
 2. Vous devez installer le module PowerShell Microsoft.Graph si vous ne l’avez pas déjà utilisé.  Exécutez la commande suivante, puis confirmez l’opération lorsque vous y êtes invité(e) :
 
     ```
-    Install-Module Microsoft.Graph
+    Install-Module Microsoft.Graph -Scope CurrentUser -Verbose
     ```
 3. Vérifiez que le module Microsoft.Graph est installé :
 
