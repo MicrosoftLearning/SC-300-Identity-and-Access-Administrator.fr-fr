@@ -180,7 +180,7 @@ Une fois que les utilisateurs ont été créés, vous serez invité à indiquer 
 
 #### Tâche 2 - Ajout en bloc d’utilisateurs à l’aide de PowerShell
 
-1. Ouvrez PowerShell en tant qu’administrateur.Pour ce faire, recherchez PowerShell dans Windows et choisissez Exécuter en tant qu’administrateur. 
+1. Ouvrez PowerShell.Vous pouvez le faire en recherchant PowerShell dans Windows. 
 
 **Remarque** : vous devez disposer de PowerShell version 7.2 ou ultérieure pour que ce labo fonctionne.  Lorsque PowerShell s’ouvre, vous obtenez une version en haut de l’écran. Si vous l’exécutez et que vous avez une version antérieure, suivez les instructions à l’écran pour accéder à https://aka.ms/PowerShell-Release?tag=7.3.9. Faites défiler jusqu’à la section Ressources et sélectionnez powershell-7.3.1-win-x64.msi. Une fois le téléchargement terminé, sélectionnez Ouvrir le fichier. Procédez à l’installation en utilisant toutes les valeurs par défaut.
 
@@ -189,7 +189,7 @@ Une fois que les utilisateurs ont été créés, vous serez invité à indiquer 
 2. Vous devez installer le module PowerShell Microsoft.Graph si vous ne l’avez pas déjà utilisé.  Exécutez la commande suivante, puis confirmez l’opération lorsque vous y êtes invité(e) :
 
     ```
-    Install-Module Microsoft.Graph
+    Install-Module Microsoft.Graph -Scope CurrentUser -Verbose
     ```
 3. Vérifiez que le module Microsoft.Graph est installé :
 
@@ -211,7 +211,7 @@ Une fois que les utilisateurs ont été créés, vous serez invité à indiquer 
     Get-MgUser 
     ```
     
-7. Pour affecter un mot de passe temporaire commun à tous les nouveaux utilisateurs, exécutez la commande suivante et remplacez le <Enter a complex Password> par le mot de passe que vous souhaitez fournir à vos utilisateurs.  
+6. Pour affecter un mot de passe temporaire commun à tous les nouveaux utilisateurs, exécutez la commande suivante et remplacez le <Enter a complex Password> par le mot de passe que vous souhaitez fournir à vos utilisateurs.  
 
     ``` 
     $PWProfile = @{
@@ -220,7 +220,7 @@ Une fois que les utilisateurs ont été créés, vous serez invité à indiquer 
     }
     ```
 
-8. Vous êtes prêt à créer un nouvel utilisateur.  La commande suivante est remplie avec les informations de l’utilisateur et s’exécute.  Si vous avez plusieurs utilisateurs à ajouter, vous pouvez utiliser un fichier txt du bloc-notes pour ajouter les informations utilisateur et copier/coller dans PowerShell. 
+7. Vous êtes prêt à créer un nouvel utilisateur.  La commande suivante est remplie avec les informations de l’utilisateur et s’exécute.  Si vous avez plusieurs utilisateurs à ajouter, vous pouvez utiliser un fichier txt du bloc-notes pour ajouter les informations utilisateur et copier/coller dans PowerShell. 
 
     ```
     New-MgUser `
@@ -245,7 +245,7 @@ Vous pouvez ajouter et supprimer des utilisateurs avec la page Microsoft Entra�
 
 Il peut arriver qu’un compte soit supprimé, puis qu’il doive être récupéré. Vous devez vérifier que vous pouvez récupérer un compte qui a été supprimé récemment.
 
-1. Accédez à [https://entra.micrososft.com](Microsoft Entra admin center).
+1. Accédez à [https://entra.microsoft.com](Microsoft Entra admin center).
 
 2. Dans le volet de navigation de gauche, sous **Identité**, sélectionnez **Utilisateurs**.
 
