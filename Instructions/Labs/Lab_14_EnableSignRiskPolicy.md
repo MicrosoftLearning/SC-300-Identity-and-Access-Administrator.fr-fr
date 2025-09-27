@@ -22,13 +22,11 @@ Afin de bénéficier d’une couche de sécurité supplémentaire, activez et co
 
 1. Connectez-vous à [https://entra.microsoft.com]( https://entra.microsoft.com) en utilisant un compte d’administrateur général.
 
-2. Ouvrez le menu du portail, puis sélectionnez  **Microsoft Entra ID**.
+2. Ouvrez le menu du portail, puis sélectionnez  **Entra ID**.
 
-3. Dans le menu, sous **Identité**, sélectionnez **Protection**.
+3. Dans le menu, sous **Protection des identités**, sélectionnez **Tableau de bord**.
 
-4. Sur la page Sécurité, dans le volet de navigation de gauche, sélectionnez **Protection de l’identité**.
-
-5. Dans le panneau Protection de l’identité, dans le volet de navigation de gauche, sélectionnez **Stratégie d’utilisateur à risque**.
+4. 5. Dans le tableau de bord Protection des identités, dans la navigation de gauche, sélectionnez **Stratégie de risque utilisateur**.
 
     ![Image de l’écran affichant la page Stratégie d’utilisateur à risque et le chemin de navigation en surbrillance](./media/lp2-mod4-browse-to-identity-protection.png)
 
