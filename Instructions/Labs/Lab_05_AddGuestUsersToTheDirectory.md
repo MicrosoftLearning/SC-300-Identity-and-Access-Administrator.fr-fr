@@ -92,7 +92,7 @@ Un partenariat récent a été établi avec une autre société. Pour l’instan
 
 #### Tâche 2 : inviter des utilisateurs avec PowerShell
 
-1. Ouvrez PowerShell. Cela peut se faire en recherchant PowerShell dans Windows.
+1. Ouvrez PowerShell. Vous pouvez le faire en recherchant PowerShell dans Windows.
 
 **Remarque** : vous devez disposer de PowerShell version 7.2 ou ultérieure pour que ce labo fonctionne.  Lorsque PowerShell s’ouvre, vous obtenez une version en haut de l’écran. Si vous l’exécutez et que vous avez une version antérieure, mettez à jour ou cette partie du labo échouera.
 

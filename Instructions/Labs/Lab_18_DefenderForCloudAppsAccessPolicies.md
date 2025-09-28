@@ -70,7 +70,7 @@ Microsoft Defender for Cloud Apps nous permet de créer des stratégies d’acc�
 
 #### Tâche 1 : se protéger avec le contrôle d’application par accès conditionnel Microsoft Defender for Cloud Apps
 
-L’inscription de votre application établit une relation d’approbation entre votre application et la plateforme d’identités Microsoft. L’approbation est unidirectionnelle : votre application approuve la plateforme d’identités Microsoft, et non le contraire.
+L’inscription de votre application établit une relation d’approbation entre votre application et la plateforme d’identités Microsoft. L’approbation est unidirectionnelle : votre application approuve la plateforme d’identités Microsoft, et non le contraire.
 
 1. Connectez-vous à [https://security.microsoft.com](https://security.microsoft.com) en utilisant un compte d’administrateur général.
 

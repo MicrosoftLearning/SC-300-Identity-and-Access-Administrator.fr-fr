@@ -11,7 +11,7 @@ lab:
 
 ## Scénario de labo
 
-Pour les applications développées par votre organisation ou inscrites directement dans votre locataire Microsoft Entra, vous pouvez accorder le consentement administrateur au niveau locataire à partir de « Inscriptions d'applications » dans le Portail Azure.
+Pour les applications développées par votre organisation ou inscrites directement dans votre locataire Microsoft Entra, vous pouvez accorder le consentement administrateur au niveau locataire à partir de « Inscriptions d'applications » dans le Portail Azure.
 
 #### Durée estimée : 15 minutes
 
