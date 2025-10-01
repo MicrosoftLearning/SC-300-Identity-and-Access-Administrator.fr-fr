@@ -21,11 +21,13 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
 
 1. Accéder : [https://portal.azure.com](https://portal.azure.com)
 
+**Conseil de labo** : si vous êtes invité à enregistrer vos informations d’identification, choisissez Jamais.  Et annulez la visite guidée, sauf s’il s’agit de la première fois que vous utilisez le portail Microsoft Azure.
+
 1. Sélectionnez **+ Créer une ressource**.
 
 1. Saisissez **Windows 11** dans la barre de recherche de la Place de marché, puis **Entrée **.
 
-1. Dans la zone **Windows 11**, sélectionnez **Créer v** et choisissez **Windows 11 Entreprise, version 22H2** dans le menu qui s’ouvre.
+1. Recherchez la zone **Microsoft Windows 11**, puis sélectionnez **Créer** et choisissez **Windows 11 Entreprise, version 22H2** dans le menu qui s’ouvre.
 
 1. Créez la machine virtuelle à l’aide des valeurs suivantes sous l’onglet **Informations de base** :
 
@@ -36,7 +38,7 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
   | Nom de la machine virtuelle | vmEntraLogin |
   | Région | *default* |
   | Options de disponibilité | Aucune redondance de l’infrastructure requise |
-  | Type de sécurité | standard |
+  | Type de sécurité | Standard |
   | Taille | Standard DC1s_v3 -  processeur virtuel, 8 Gio de mémoire |
   | Nom de l’utilisateur administrateur | vmEntraAdmin |
   | Mot de passe administrateur | Utilisez celui fourni par l’environnement de labo ou créez un mot de passe sécurisé que vous pouvez mémoriser |

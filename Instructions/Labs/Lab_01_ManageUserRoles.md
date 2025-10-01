@@ -37,18 +37,18 @@ Votre entreprise a récemment embauché un nouvel employé qui effectuera des t�
 1. Connectez-vous à la plateforme  [https://entra.microsoft.com](https://entra.microsoft.com) en tant qu’administrateur global.
  - Utilisez le compte d’**administrateur Microsoft 365**.
 
-2. Dans le menu de gauche, sélectionnez **Identité**.
+2. Dans le menu de gauche, développez la liste déroulante **Entra ID**, si elle n’est pas déjà ouverte.
 
 3. Dans le menu de navigation de gauche, sous **Utilisateurs**, sélectionnez **Tous les utilisateurs**, puis sélectionnez **+ Nouvel utilisateur** et **Créer nouvel utilisateur**.
 
-4. Marquez le bouton **Créer un utilisateur**. Créez ensuite un utilisateur à l’aide des informations suivantes :
+4. Créez un utilisateur avec les informations suivantes :
 
     | **Paramètre**| **Valeur**|
     | :--- | :--- |
     | Nom d’utilisateur principal| ChrisG|
     | Nom d’affichage| Chris Green|
 
-5. Marquez l’option **Générer automatiquement le mot de passe**.
+5. Vérifiez que l’option **Générer automatiquement le mot de passe** est cochée.
 
 6. Copiez le mot de passe généré dans un emplacement que vous pouvez mémoriser pour la tâche suivante.
 
@@ -74,11 +74,13 @@ Votre entreprise a récemment embauché un nouvel employé qui effectuera des t�
     | Nouveau mot de passe| Saisissez un mot de passe unique et sécurisé |
     | Confirmer le mot de passe| Saisissez à nouveau un mot de passe unique et sécurisé |
 
-4. Recherchez et sélectionnez **Applications d'entreprise** dans la boîte de dialogue de recherche en haut de l’écran.
+  **Conseil de labo** : il est recommandé d’utiliser le mot de passe utilisateur fourni dans l’environnement du labo.
+
+4. Recherchez et sélectionnez +++Applications d’entreprise+++ dans la boîte de dialogue de recherche en haut de l’écran.
 
 5. Sélectionnez **+ Nouvelle application**. Notez que **+ Créer votre propre application** n’est pas disponible.
 
-6. Essayez de sélectionner certains des autres paramètres tels que **Proxy d’application**, **Paramètres utilisateur** et d’autres pour voir que **Chris Green** n’a pas de droits.
+6. Essayez de sélectionner l’un des autres paramètres tels que **Consentement et autorisations**, et **Paramètres utilisateur** pour vérifier que **Chris Green** n’a pas de droits.
 
 7. Sélectionnez le nom de **ChrisG** dans le coin supérieur droit et déconnectez-vous.
 
@@ -89,7 +91,7 @@ Votre entreprise a récemment embauché un nouvel employé qui effectuera des t�
 
 En utilisant Microsoft Entra ID, vous pouvez désigner des administrateurs limités pour gérer les tâches d'identité dans des rôles moins privilégiés. Les administrateurs peuvent se voir attribuer des responsabilités comme l’ajout ou le changement d’utilisateurs, l’attribution de rôles d’administrateur, la réinitialisation des mots de passe utilisateur, la gestion des licences utilisateur et la gestion des noms de domaine.
 
-1. Si vous n’êtes pas déjà connecté en tant que rôle de Global Administrator, ouvrez le Centre d’administration Microsoft Entra et connectez-vous.
+1. Si vous n’êtes pas déjà connecté en tant que rôle Administrateur, ouvrez le Centre d’administration Microsoft Entra et connectez-vous.
 2. Accédez à Identité, puis sélectionnez Page Utilisateurs.
 3. Sélectionnez **Tous les utilisateurs** sous la section Gérer du menu.
 4. Sélectionnez le compte **Chris Green**.
@@ -98,7 +100,7 @@ En utilisant Microsoft Entra ID, vous pouvez désigner des administrateurs limit
 7. Sélectionnez le rôle `Application administrator` dans la liste déroulante.
 8. Sélectionnez le bouton **Suivant**.
 9. Marquez la valeur **Active** pour **Type d’affectation**.
-10. Sélectionnez **Attribuer**.
+10. Entrez la justification suivante : +++Nécessaire pour le labo+++. Ensuite, sélectionnez **Attribuer**.
 
     ![Page Rôles affectés, affichant le rôle sélectionné](./media/directory-role-select-role.png)
 
@@ -111,22 +113,21 @@ En utilisant Microsoft Entra ID, vous pouvez désigner des administrateurs limit
 #### Tâche 2 - Vérifier les autorisations d’application
 
 1. Lancez une nouvelle fenêtre du navigateur InPrivate.
-2. Ouvrez le centre d’administration Microsoft Entra [https://entra.microsoftcom](https://entra.microsoft.com) en tant que Chris Green.
+2. Ouvrez le centre d’administration Microsoft Entra à +++https://entra.microsoftcom+++ en tant que Chris Green.
 
     | **Paramètre**| **Valeur**|
     | :--- | :--- |
     | Nom d'utilisateur| ChrisG@`your domain name.com`|
     | Mot de passe| Saisissez le mot de passe unique et sécurisé que vous avez créé. |
 
-3. Si vous voyez une boîte de dialogue **Bienvenue dans Microsoft Azure** , sélectionnez le bouton **Peut-être plus tard**.
-4. Recherchez et sélectionnez **Applications d'entreprise** dans la boîte de dialogue de recherche en haut de l’écran.
-5. Notez que **+ Nouvelle application** est disponible maintenant.
-6. Sélectionnez **+ Nouvelle application**
-7. Assurez-vous que l’option **+ Créer votre propre application** n’est pas grisée. Si vous choisissez une application de galerie, vous verrez que le bouton **Créer** est disponible.
+3. Recherchez et sélectionnez +++Applications d’entreprise+++ dans la boîte de dialogue de recherche en haut de l’écran.
+4. Notez que **+ Nouvelle application** est disponible maintenant.
+5. Sélectionnez **+ Nouvelle application**
+6. L’affichage **+ Créer votre propre application** n’est plus grisé.  Si vous choisissez une application de galerie, vous verrez que le bouton **Créer** est disponible.
 
    **Remarque - Ce rôle a désormais la possibilité d’ajouter des applications au locataire. Nous allons expérimenter davantage cette fonctionnalité dans les laboratoires ultérieurs.**
 
-8. Déconnectez-vous de l’instance Chris Green du portail et fermez le navigateur.
+7. Déconnectez-vous de l’instance Chris Green du portail et fermez le navigateur.
 
 ### Exercice 3 - Supprimer une attribution de rôle
 
@@ -134,8 +135,8 @@ En utilisant Microsoft Entra ID, vous pouvez désigner des administrateurs limit
 
 Cette tâche va utiliser une autre méthode pour supprimer le rôle attribué. Elle va utiliser l’option **Rôles et administrateurs** dans Microsoft Entra ID.
 
-1. Si vous n’êtes pas déjà connecté en tant que Global Admin, lancez le Centre d’administration Microsoft Entra et connectez-vous maintenant.
-2. Dans la zone de recherche, saisissez **Rôles**, puis lancez les rôles et l’administration de Microsoft Entra ID.
+1. Si vous n’êtes pas déjà connecté en tant qu’administrateur, lancez le Centre d’administration Microsoft Entra et connectez-vous maintenant.
+2. Dans la zone de recherche, tapez **Rôles**, puis lancez **Rôles et administration de Microsoft Entra**.
 3. Dans **Tous les rôles** de **Rôles et administrateurs**, sélectionnez le rôle **Administrateur de l’application** dans la liste.
 4. Sur la page **Administrateur d’application | Affectations**, vous devriez voir le nom de Chris Green répertorié.
 5. Faites défiler jusque tout à droite sur Chris Green.
@@ -304,7 +305,7 @@ Vous devez ajouter et supprimer des licences via le Centre d’administration Mi
 
 1. Ouvrez un nouvel onglet dans votre navigateur.
 
-2. Connectez-vous au Centre d’administration Microsoft 365 à l’adresse [https://admin.microsoft.com](https://admin.microsoft.com).
+2. Connectez-vous au Centre d’administration Microsoft 365 à l’adresse +++https://admin.microsoft.com+++.
 
 3. Connectez-vous en tant que compte d’administrateur si vous y êtes invité.
 
