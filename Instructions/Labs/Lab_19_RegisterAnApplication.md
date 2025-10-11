@@ -15,7 +15,7 @@ lab:
 
 #### Tâche 1 : inscrire une application
 
-L’inscription de votre application établit une relation d’approbation entre votre application et la plateforme d’identités Microsoft. L’approbation est unidirectionnelle : votre application approuve la plateforme d’identités Microsoft, et non le contraire.
+L’inscription de votre application établit une relation d’approbation entre votre application et la plateforme d’identités Microsoft. L’approbation est unidirectionnelle : votre application approuve la plateforme d’identités Microsoft, et non le contraire.
 
 1. Connectez-vous sur [https://entra.microsoft.com](https://entra.microsoft.com) à l’aide du compte Administrateur fourni.
 
@@ -37,7 +37,7 @@ L’inscription de votre application établit une relation d’approbation entre
 
 Les paramètres de chaque type d’application, y compris les URI de redirection, sont configurés dans  **Configurations de plateforme**  dans le Portail Azure. Certaines plateformes, comme les  **applications web**  et les  **applications monopages**, nécessitent de spécifier manuellement un URI de redirection. Pour les autres plateformes, comme les plateformes mobiles et de bureau, vous pouvez sélectionner des URI de redirection générés automatiquement quand vous configurez leurs autres paramètres.
 
-Pour configurer des paramètres d’application en fonction de la plateforme ou de l’appareil ciblé :
+Pour configurer des paramètres d’application en fonction de la plateforme ou de l’appareil ciblé :
 
 Pour ajouter et modifier des URI de redirection pour vos applications inscrites, vous devez configurer leurs paramètres de plateforme.
 
@@ -95,9 +95,9 @@ Une fois votre application web inscrite, vous êtes prêt à ajouter les étendu
 
 #### Étape 5 : ajouter une étendue
 
-Le code d’une application cliente demande l’autorisation d’effectuer des opérations définies par votre API web en transmettant un jeton d’accès avec ses demandes à la ressource protégée (l’API web). Votre API web effectue ensuite l’opération demandée uniquement si le jeton d’accès qu’elle reçoit contient les étendues (également appelées « autorisations d’application ») requises pour l’opération.
+Le code d’une application cliente demande l’autorisation d’effectuer des opérations définies par votre API web en transmettant un jeton d’accès avec ses demandes à la ressource protégée (l’API web). Votre API web effectue ensuite l’opération demandée uniquement si le jeton d’accès qu’elle reçoit contient les étendues (également appelées « autorisations d’application ») requises pour l’opération.
 
-Tout d’abord, effectuez les étapes suivantes pour créer un exemple d’étendue nommé « Employees.Read.All » :
+Tout d’abord, effectuez les étapes suivantes pour créer un exemple d’étendue nommé « Employees.Read.All » :
 
 1. Sélectionnez  **Identité**, puis **Applications**  et enfin  **Inscriptions d’application**, puis sélectionnez l’inscription de votre application d’API.
 
@@ -109,18 +109,18 @@ Tout d’abord, effectuez les étapes suivantes pour créer un exemple d’éten
 
   - Remarque : l’URI d’ID d’application, qui doit être globalement unique, fait office de préfixe pour les étendues que vous référencerez dans le code de votre API. Vous pouvez utiliser la valeur par défaut fournie, qui se présente sous la forme api://<application-client-id\>, ou spécifier un URI plus lisible comme  `https://contoso.com/api`.
 
-4. Sélectionnez **Enregistrer et continuer**.
+4. Sélectionnez **Enregistrer** et continuez.
 
 5. Spécifiez ensuite les attributs de l’étendue dans le volet  **Ajouter une étendue**. Pour cette procédure pas à pas, utilisez les valeurs de la 3ème colonne : **Valeur**.
 
     | Champ| Description| active |
     | :--- | :--- | :--- |
-    | Nom de l'étendue| Nom de votre étendue. Une convention d’affectation de noms d’étendue courante est resource.operation.constraint.| Employees.Read.All|
-    | Qui peut donner son consentement| Indique si cette étendue peut être consentie par des utilisateurs ou si le consentement d’un administrateur est nécessaire. Sélectionnez administrateurs uniquement pour des autorisations à privilèges élevés.| Administrateurs et utilisateurs|
-    | Nom d’affichage du consentement administrateur| Courte description de l’objectif de l’étendue que seuls les administrateurs verront.| Accès en lecture seule aux enregistrements des employés|
-    | Description du consentement de l'administrateur| Description plus détaillée de l’autorisation accordée par l’étendue que seuls les administrateurs verront.| Autorisez l’application à avoir un accès en lecture seule à toutes les données de l’employé.|
-    | Nom d'affichage du consentement de l'utilisateur| Courte description de l’objectif de l’étendue. Affichée aux utilisateurs uniquement si vous définissez Qui peut donner son consentement sur Administrateurs et utilisateurs.| Accès en lecture seule à vos enregistrements sur les employés|
-    | Description du consentement de l'utilisateur| Description plus détaillée de l’autorisation accordée par l’étendue. Affichée aux utilisateurs uniquement si vous définissez Qui peut donner son consentement sur Administrateurs et utilisateurs.| Autorisez l’application à avoir un accès en lecture seule à vos données sur l’employé.|
+    | Nom de l’étendue| Nom de votre étendue. Une convention d’affectation de noms d’étendue courante est resource.operation.constraint.| Employees.Read.All|
+    | Qui peut donner son consentement| Indique si cette étendue peut être consentie par des utilisateurs ou si le consentement d’un administrateur est nécessaire. Sélectionnez Administrateurs uniquement pour des autorisations à privilèges élevés.| Administrateurs et utilisateurs|
+    | Nom d’affichage du consentement de l’administrateur| Courte description de l’objectif de l’étendue que seuls les administrateurs verront.| Accès en lecture seule aux enregistrements des employés|
+    | Description du consentement de l’administrateur| Description plus détaillée de l’autorisation accordée par l’étendue que seuls les administrateurs verront.| Autorisez l’application à avoir un accès en lecture seule à toutes les données de l’employé.|
+    | Nom d’affichage du consentement de l’utilisateur| Courte description de l’objectif de l’étendue. Affichée aux utilisateurs uniquement si vous définissez Qui peut donner son consentement sur Administrateurs et utilisateurs.| Accès en lecture seule à vos enregistrements sur les employés|
+    | Description du consentement de l’utilisateur| Description plus détaillée de l’autorisation accordée par l’étendue. Affichée aux utilisateurs uniquement si vous définissez Qui peut donner son consentement sur Administrateurs et utilisateurs.| Autorisez l’application à avoir un accès en lecture seule à vos données sur l’employé.|
 
 7. Définissez le  **Statut**  sur  **Activé**, puis sélectionnez  **Ajouter une étendue**.
 
@@ -128,7 +128,7 @@ Tout d’abord, effectuez les étapes suivantes pour créer un exemple d’éten
 
    1. Sous  **Applications clientes autorisées**, sélectionnez  **Ajouter une application cliente.**
 
-   2. Entrez l’ **ID d’application (client)**  de l’application cliente que vous souhaitez préautoriser, par exemple celui d’une application web que vous avez inscrite précédemment.
+   2. Entrez l’ **ID d’application (client)**  de l’application cliente que vous souhaitez préautoriser, Par exemple celui d’une application web que vous avez inscrite précédemment.
 
    3. Sous  **Étendues autorisées**, sélectionnez les étendues pour lesquelles vous souhaitez supprimer les invites de consentement, puis sélectionnez  **Ajouter une application**.
 
@@ -136,7 +136,7 @@ Tout d’abord, effectuez les étapes suivantes pour créer un exemple d’éten
 
 #### Tâche 6 : ajouter une étendue nécessitant un consentement administrateur
 
-Ajoutez ensuite un autre exemple d’étendue nommé « Employees.Write.All » auquel seuls les administrateurs peuvent donner leur consentement. Les étendues qui nécessitent le consentement de l’administrateur sont généralement utilisées pour fournir l’accès à des opérations avec des privilèges plus élevés, et souvent par des applications clientes qui s’exécutent en tant que services back-end ou en tant que démons qui ne connectent pas un utilisateur de manière interactive.
+Ajoutez ensuite un autre exemple d’étendue nommé « Employees.Write.All » auquel seuls les administrateurs peuvent donner leur consentement. Les étendues qui nécessitent le consentement de l’administrateur sont généralement utilisées pour fournir l’accès à des opérations avec des privilèges plus élevés, et souvent par des applications clientes qui s’exécutent en tant que services back-end ou en tant que démons qui ne connectent pas un utilisateur de manière interactive.
 
 1. Pour ajouter l’exemple d’étendue « Employees.Write.All », effectuez les étapes décrites ci-dessus, puis spécifiez ces valeurs dans le volet  **Ajouter une étendue**  :
 
@@ -144,9 +144,9 @@ Ajoutez ensuite un autre exemple d’étendue nommé « Employees.Write.All »
     | :--- | :--- |
     | Nom de l’étendue| Employees.Write.All|
     | Qui peut donner son consentement| Administrateurs uniquement|
-    | Nom d'affichage du consentement administrateur| Accès en écriture aux enregistrements des employés|
-    | Description du consentement de l'administrateur| Autorisez l’application à avoir un accès en écriture à toutes les données de l’employé.|
-    | Nom d'affichage du consentement de l'utilisateur| Aucune (laisser vide)|
+    | Nom d’affichage du consentement de l’administrateur| Accès en écriture aux enregistrements des employés|
+    | Description du consentement de l’administrateur| Autorisez l’application à avoir un accès en écriture à toutes les données de l’employé.|
+    | Nom d’affichage du consentement de l’utilisateur| Aucune (laisser vide)|
     | Description du consentement de l’utilisateur| Aucune (laisser vide)|
 
 2. Assurez-vous que l’état est défini sur **Activé**, puis sélectionnez **Ajouter une étendue**.
@@ -160,7 +160,7 @@ Ajoutez ensuite un autre exemple d’étendue nommé « Employees.Write.All »
   **Remarque** : par exemple, si l’URI d’ID d’application de votre API web est `https://contoso.com/api` et si le nom de l’étendue est Employees.Read.All, l’étendue complète est : `https://contoso.com/api/Employees.Read.All`
 
   **Remarque** : ensuite, vous allez configurer l’inscription d’une application cliente avec un accès à votre API web et les étendues que vous avez définies en suivant les étapes ci-dessus.
-  Une fois qu’une inscription d’application cliente est autorisée à accéder à votre API web, la plateforme d’identités Microsoft peut émettre un jeton d’accès OAuth 2.0 pour le client. Quand le client appelle l’API web, il présente un jeton d’accès dont la revendication d’étendue (scp) est définie sur les autorisations que vous avez spécifiées dans l’inscription d’application du client. Vous pouvez exposer des étendues supplémentaires ultérieurement si nécessaire. Considérez que votre API web peut exposer plusieurs étendues associées à plusieurs opérations. Votre ressource peut contrôler l’accès à l’API web lors de l’exécution, en évaluant la ou les revendications de l’étendue (scp) dans le jeton d’accès OAuth 2.0 qu’elle reçoit.
+  Une fois qu’une inscription d’application cliente est autorisée à accéder à votre API web, la plateforme d’identités Microsoft peut émettre un jeton d’accès OAuth 2.0 pour le client. Quand le client appelle l’API web, il présente un jeton d’accès dont la revendication d’étendue (scp) est définie sur les autorisations que vous avez spécifiées dans l’inscription d’application du client. Vous pouvez exposer des étendues supplémentaires ultérieurement si nécessaire. Considérez que votre API web peut exposer plusieurs étendues associées à plusieurs opérations. Votre ressource peut contrôler l’accès à l’API web lors de l’exécution, en évaluant la ou les revendications de l’étendue (scp) dans le jeton d’accès OAuth 2.0 qu’elle reçoit.
 
 
 ### Exercice 2 : Créer un rôle personnalisé pour gérer l’inscription d’application

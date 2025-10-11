@@ -29,7 +29,7 @@ Votre organisation doit pouvoir limiter l’accès utilisateur à ses applicatio
   | Paramètre | Valeur |
   | :--- | :--- |
   | Nom d’utilisateur | **DebraB@**`<<your lab domain>>.onmicrosoft.com` |
-  | Mot de passe | Entrez le mot de passe administrateur du locataire (reportez-vous à l’onglet Ressources du labo pour récupérer le mot de passe d’administrateur du locataire). |
+  | Mot de passe | Entrez le mot de passe fourni. |
     
 4. Ignorez les écrans d’accueil et d’introduction.
 
@@ -83,13 +83,13 @@ L’accès conditionnel Microsoft Entra est une fonctionnalité avancée de Micr
 
 Vous devez tester vos stratégies d’accès conditionnel pour vous assurer qu’elles fonctionnent comme prévu.
 
-1. Ouvrez un nouvel onglet de navigateur, puis accédez au [https://sway.office.com](https://sway.office.com).
+1. Ouvrez un nouvel onglet de navigateur, puis accédez au [https://sway.cloud.microsoft](https://sway.cloud.microsoft).
     - Lorsque l’invite s’ouvre, connectez-vous en tant que DebraB :
 
    | Paramètre | Valeur |
    | :--- | :--- |
    | Nom d’utilisateur | **DebraB@**`<<your lab domain>>.onmicrosoft.com` |
-   | Mot de passe | Entrez le mot de passe administrateur du locataire (reportez-vous à l’onglet Ressources du labo pour récupérer le mot de passe d’administrateur du locataire). |
+   | Mot de passe | Entrez le mot de passe fourni. |
      
 2. Vérifiez que vous ne pouvez pas accéder à Microsoft Sway.
 

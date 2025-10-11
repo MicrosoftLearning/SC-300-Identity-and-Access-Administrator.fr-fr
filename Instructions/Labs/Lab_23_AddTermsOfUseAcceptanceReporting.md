@@ -103,7 +103,7 @@ Après avoir finalisé le document relatif à vos conditions d’utilisation, ef
 
 #### Tâche 1 (suite) : créer la stratégie d’accès conditionnel
 
-16. Une fois les conditions d’utilisation créées, vous êtes automatiquement redirigé vers la page de Stratégie d’accès conditionnel. Dans la page, dans la zone **Nom** , entrez **Appliquer les conditions d’utilisation**.
+16. Une fois les conditions d’utilisation créées, vous êtes automatiquement redirigé vers la page de Stratégie d’accès conditionnel. Dans la page, dans la zone **Nom**, entrez **Appliquer les conditions d’utilisation**.
 
 17. Sous **Affectations**, sélectionnez **Identités des utilisateurs**.
 

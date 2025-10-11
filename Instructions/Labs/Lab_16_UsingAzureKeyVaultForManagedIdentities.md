@@ -13,7 +13,7 @@ lab:
 
 Lorsque vous utilisez des identités managées pour les ressources Azure, votre code peut obtenir des jetons d’accès pour s’authentifier auprès des ressources qui prennent en charge l’authentification Microsoft Entra.Toutefois, tous les services Azure ne prennent pas en charge l’authentification Microsoft Entra. Pour utiliser des identités managées pour les ressources Azure avec ces services, stockez les informations d’identification des services dans Azure Key Vault, puis utilisez des identités managées afin d’accéder à Key Vault pour récupérer les informations d’identification.
 
-#### Durée estimée : 20 minutes
+#### Durée estimée : 35 minutes
 
 ### Exercice 1 : Utiliser Azure Key Vault pour gérer les identités de la machine virtuelle
 
@@ -50,7 +50,7 @@ Lorsque vous utilisez des identités managées pour les ressources Azure, votre 
   | Champ | Valeurs |
   | :--   | :--    |
   | Nom de la machine virtuelle | vmKeyVault |
-  | Options de disponibilité | Aucune redondance de l’infrastructure requise |
+  | Options de disponibilité | Aucune redondance d’infrastructure requise |
   | Nom de l’utilisateur administrateur | adminKeyVault |
   | Mot de passe | Définissez un mot de passe sécurisé dont vous pouvez vous souvenir. |
   | Gestion des licences | Confirmez que vous disposez d’une licence éligible. |
@@ -103,7 +103,7 @@ Lorsque vous utilisez des identités managées pour les ressources Azure, votre 
 
 1. Accédez à **vmKeyVault** et utilisez RDP pour vous connecter à votre machine virtuelle en tant qu’**adminKeyVault**.
 
-1. Sur la machine virtuelle du labo, ouvrez PowerShell.  
+1. Ouvrez la **machine virtuelle Windows 11** déployée précédemment dans ce labo. Sur la machine virtuelle du labo, ouvrez PowerShell.  
 
 1. Dans PowerShell, appelez la requête web sur le client pour obtenir le jeton de l’hôte local dans le port spécifique pour la machine virtuelle.  
 

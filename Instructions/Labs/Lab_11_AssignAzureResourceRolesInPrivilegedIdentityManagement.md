@@ -9,9 +9,7 @@ lab:
 
 ### Type de connexion = Connexion à la ressource Azure
 
-**Remarque** : ce labo nécessite un Pass Azure. Consultez le labo 00 pour obtenir des instructions.
-
-## Scénario du labo
+## Scénario de labo
 
 Microsoft Entra Privileged Identity Management (PIM) peut gérer les rôles de ressources intégrés Azure, ainsi que les rôles personnalisés, notamment (liste non exhaustive) :
 
@@ -31,7 +29,7 @@ Vous devez rendre un utilisateur éligible pour un rôle de ressource Azure.
 
 1. Connectez-vous sur [https://entra.microsoft.com](https://entra.microsoft.com) à l’aide du compte Administrateur fourni.
 
-2. Recherchez, puis sélectionnez **Privileged Identity Management**.
+2. Recherchez, puis sélectionnez **Microsoft Entra Privileged Identity Management.**
 
 3. Sur la page Privileged Identity Management du volet de navigation de gauche, sélectionnez **Ressources Azure**.
 

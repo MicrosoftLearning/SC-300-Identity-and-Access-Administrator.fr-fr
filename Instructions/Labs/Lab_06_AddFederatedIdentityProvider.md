@@ -75,8 +75,8 @@ Votre entreprise travaille avec de nombreux fournisseurs et, à l’occasion, vo
 | URI # | Lien |
 | :--- | :--- |
 | URI 1 | https://login.microsoftonline.com |
-| URI 2 | https://login.microsoftonline.com/te/aaaa1111bbbb2222cccc |
-| URI 3 | https://login.microsoftonline.com/te/MyTenantName.onmicrosoft.com/oauth |
+| URI 2 | https://login.microsoftonline.com/te/aaaa1111bbbb2222cccc/oauth2/authresp |
+| URI 3 | https://login.microsoftonline.com/te/MyTenantName.onmicrosoft.com/oauth2/authresp |
 
 16. Cliquez sur le bouton **Créer**.
 
@@ -131,7 +131,7 @@ Cette opération termine la configuration de Google en tant que fournisseur d’
 #### Tâche 2 : inviter le compte d’utilisateur test
 1. Si vous avez utilisé un compte Gmail existant, n’oubliez pas de supprimer le compte via **Identités externes | Tous les fournisseurs d’identité**. Vous pouvez également revenir à la console du développeur Google et supprimer le projet que vous avez créé.
 
-2. Ouvrez Microsoft Entra ID.
+2. Ouvrez Microsoft Entra ID.
 
 3. Accédez à Utilisateurs, puis sélectionnez **Tous les utilisateurs**.
 

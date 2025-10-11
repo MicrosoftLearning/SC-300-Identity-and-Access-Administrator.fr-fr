@@ -67,7 +67,7 @@ Pour inclure des ressources dans un package d’accès, les ressources doivent e
 
    | Type de ressource | Valeur |
    | :------------- | :---------- |
-   |  **Groupes et équipes** | Retail |
+   |  **Groupes et équipes** | Commerce |
    |  **Applications** | Box |
    |  **Applications** | Salesforce |
    |  **Sites SharePoint** | Marque : sélectionnez ce site SharePoint à partir de la liste de vos sites disponibles. |
