@@ -27,7 +27,7 @@ La société a décidé que Microsoft Entra ID doit être utilisé pour l’acc�
 
 1. Saisissez**Windows 11** dans la barre de recherche de la Place de marché, puis**Entrée**.
 
-1. Recherchez la zone**Microsoft Windows 11**, puis sélectionnez**Créer** et choisissez**Windows 11 Entreprise, version 22H2** dans le menu qui s’ouvre.
+1. Trouvez la zone**Microsoft Windows 11**, puis sélectionnez**Créer** et choisissez**Windows 11 Entreprise, version 25H2** dans le menu qui s’ouvre.
 
 1. Créez la machine virtuelle à l’aide des valeurs suivantes sous l’onglet**Informations de base** :
 
