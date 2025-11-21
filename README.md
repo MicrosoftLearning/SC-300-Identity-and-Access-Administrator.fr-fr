@@ -1,5 +1,3 @@
-**⚠️ This GitHub repo will retire on 28th November 2025.**
-
 # SC-300 : administrateurs des identités et des accès
 
 - **[Lien vers les labos (format HTML)](https://microsoftlearning.github.io/SC-300-Identity-and-Access-Administrator/)**
